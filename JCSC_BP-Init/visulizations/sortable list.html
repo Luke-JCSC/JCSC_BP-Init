@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Team Organizer</title>
+    <style>
+        .team {
+            vertical-align: top;
+            padding: 1em;
+        }
+
+            .team > label {
+                display: block;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: .25em;
+            }
+
+            .team ul label {
+                display: block;
+                min-width: 8em;
+                padding: .5em .5em .5em .5em;
+                cursor: pointer;
+            }
+
+            .team .grade-12 label:before {
+                content: "12";
+                padding-right: 4px;
+            }
+
+            .team .grade-11 label:before {
+                content: "11";
+                padding-right: 4px;
+            }
+
+            .team .grade-10 label:before {
+                content: "10";
+                padding-right: 4px;
+            }
+
+            .team .grade-9 label:before {
+                content: "9";
+                padding-right: 12px;
+            }
+
+            .team .grade-8 label:before {
+                content: "8";
+                padding-right: 12px;
+            }
+
+            .team .grade-7 label:before {
+                content: "7";
+                padding-right: 12px;
+            }
+
+            .team .grade-6 label:before {
+                content: "6";
+                padding-right: 12px;
+            }
+
+        .player {
+            margin-bottom: .5em;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#eee');
+            background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+            background: -moz-linear-gradient(top, #fff, #eee);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.22);
+            -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.22);
+        }
+
+            .player > label {
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+            }
+
+        .grade-12 > label {
+            color: #4a47ff;
+        }
+
+        .grade-11 > label {
+            color: #b60000;
+        }
+
+        .grade-10 > label {
+            color: #672491;
+        }
+
+        .grade-9 > label {
+            color: #115a5d;
+        }
+
+        .grade-8 > label {
+            color: #c25b0f;
+        }
+
+        .grade-7 > label {
+            color: #2e9ea8;
+        }
+
+        .grade-6 > label {
+            color: #b050ad;
+        }
+
+        .beingDragged {
+            height: 30px;
+            margin-bottom: .5em;
+            border: 2px dotted #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="team">
+                <label>Team 1</label>
+                <ul id="firstTeam">
+                    <li class="player grade-12"><label>No One</label></li>
+                    <li class="player grade-11"><label>Zach P.</label></li>
+                    <li class="player grade-9"><label>Scottie</label></li>
+                    <li class="player grade-7"><label>Izzy</label></li>
+                </ul>
+            </td>
+            <td class="team">
+                <label>Team 2</label>
+                <ul>
+                    <li class="player grade-12"><label>No One 2</label></li>
+                    <li class="player grade-10"><label>Scottie</label></li>
+                    <li class="player grade-7"><label>Izzy</label></li>
+                    <li class="player grade-6"><label>John-Parker</label></li>
+                </ul>
+            </td>
+            <td class="team">
+                <label>Team 3</label>
+                <ul class="team3">
+                    <li class="player grade-9"><label>Scottie</label></li>
+                    <li class="player grade-8"><label>Jana</label></li>
+                    <li class="player grade-7"><label>Katie</label></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        $('.team > ul').sortable({
+            connectWith: ".team > ul",
+            placeholder: "beingDragged",
+            revert: true
+        }).disableSelection();
+    </script>
+</body>
+</html>

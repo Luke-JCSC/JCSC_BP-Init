@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        //Referances
+
+        // http://www2.owen.vanderbilt.edu/Germain.Boer/mgt413/cvp/cvp.html
+
+    </script>
+   
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Units', 'Fixed Costs', 'Total Costs', 'Revanues','Sales','Profit'],
+              ['0', 322006, 1322006, 0, 1205,0],
+              ['125', 322006, 498861, 284250, 131006,88888],
+              ['249', 322006, 64301, 566226, 1322006,90000],
+              ['375', 322006, 852570, 85250, 125690,909000],
+              ['498', 322006, 16595, 1132452, 125,0]
+            ]);
+
+            var options = {
+                title: 'Projected Cost Anyalisis',
+                vAxis: { title: "Costs" },
+                hAxis: { title: "Units" }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+        </head>
+        <body>
+
+
+            <center>
+
+
+
+
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+
+                <hr />
+                <table>
+                    <tr>
+                        <td><b>Sales</b></td>
+                        <td>$322,006.57</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Cost of Goods Sold</b></td>
+                        <td>$1,4014.84</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sales Forecast</b></td>
+                        <td>1,132,909.17</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Gross Margin</b></td>
+                        <td>$2,283,794.00</td>
+                    </tr>
+                    <hr />
+                    <tr>
+                        <td><b>Operating Expenses</b></td>
+                        <td>$922,006.57</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Sales & Marketing Expenses</b></td>
+                        <td>$1,4014.84</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sales Forecast</b></td>
+                        <td>1,132,909.17</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Gross Margin</b></td>
+                        <td>$2,283,794.00</td>
+                    </tr>
+                </table>
+                <hr />
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Units Sold</b></td>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Sales{in &hearts;'s}</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Units</b></td>
+                        <td>375</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>
+                <hr />
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Total Revanues</b></td>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Cost of Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Gross Profit on Sales</b></td>
+                        <td>375</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Managment Costs</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Cost of Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Operating Costs</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Financial Costs</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Net Profit</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table><hr />
+                <table style="border:groove,thick">
+                    <thead>
+                        <tr>
+                            <th>Milestone ID</th>
+                            <th>Costs Goods Sold</th>
+                            <th>Total Costs</th>
+                            <th>Total Sales</th>
+                            <th>Revanues</th>
+                            <th>Profits</th>
+                        </tr>
+                    </thead>
+                    <tr style="border:groove,thick">
+                        <td>0</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>-$322,006.57</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>$498,861.22</td>
+                        <td>$284,250.00</td>
+                        <td>-$214,611.22</td>
+                    </tr>
+                    <tr>
+                        <td>249</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>$322,006.57</td>
+                        <td>$566,266.00</td>
+                        <td>-$108,075.03</td>
+                    </tr>
+                    <tr>
+                        <td>375</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>$852,750.00</td>
+                        <td>$179.48</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>498</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$1,132,452.00</td>
+                        <td>$105,856.50</td>
+                    </tr>
+                </table><hr />
+            </center>
+        </body>
+        </html>

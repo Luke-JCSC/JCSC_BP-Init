@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/cesarfarias/pen/IkJrp-->
+    <title></title>
+    <script>
+        // Layout by Ionut Zamfir
+        // http://dribbble.com/shots/1142200-Location-Stats
+
+
+    </script>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300);
+
+        body {
+            background: #525667;
+            font-family: 'Open Sans';
+        }
+
+        #badge {
+            background-image: url(http://distilleryimage7.s3.amazonaws.com/9bbd6768ecbf11e2b3e122000a1f9a4f_7.jpg);
+            background-size: 100% 270px;
+            background-position: top;
+            background-repeat: no-repeat;
+            margin: 30px auto;
+            width: 350px;
+            box-shadow: 0px 1px 3px black, inset 0px 0px 2px white;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        header {
+            height: 270px;
+            padding: 0;
+            border-bottom: 5px solid #f96243;
+        }
+
+        .heart {
+            border: 3px solid white;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.2);
+            opacity: 0.2;
+            transition: opacity .4s;
+            color: white;
+            font-size: 26px;
+            padding: 4px 0 0 9px;
+            box-sizing: border-box;
+            float: right;
+            margin-right: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+            .heart:hover {
+                opacity: 0.7;
+            }
+
+        section.all {
+            padding: 20px 10px;
+        }
+
+        .info {
+            padding: 0 10px 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .total {
+            font-size: 14px;
+            float: left;
+        }
+
+            .total span {
+                font-size: 32px;
+                font-weight: bold;
+            }
+
+        button {
+            float: right;
+            background: #1bd5a7;
+            border: none;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s background;
+        }
+
+            button:hover {
+                background: #63f2cf;
+            }
+
+        .mask {
+            background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 99%);
+            background-image: -moz-linear-gradient(bottom, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 99%);
+            background-image: -ms-linear-gradient(bottom, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 99%);
+            background-image: -o-linear-gradient(bottom, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 99%);
+            background-image: linear-gradient(bottom, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 99%);
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            margin-top: 100px;
+        }
+
+        .list {
+            height: 140px;
+            padding: 0 10px;
+            overflow: auto;
+        }
+
+            .list section.first {
+                margin-top: -20px;
+            }
+
+            .list section {
+                margin-bottom: 40px;
+            }
+
+        img {
+            float: left;
+            width: 75px;
+            height: 75px;
+            border-radius: 80px;
+            margin-right: 15px;
+        }
+
+        .comments h3 {
+            font-size: 18px;
+            margin-bottom: -10px;
+            margin-top: 30px;
+        }
+
+        .comments p {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+            transition: 0.3s color;
+        }
+
+            a:hover {
+                color: #1bd5a7;
+            }
+
+    </style>
+</head>
+<body>
+    <div id="badge">
+
+        <header>
+            <div class="heart">♥</div>
+        </header>
+
+        <section class="all">
+
+            <div class="info">
+                <div class="total">
+                    <span>2</span> Comments
+                </div>
+                <button>Add Comment</button>
+                <div style="clear: both;"></div>
+            </div>
+
+
+            <div class="list">
+                <div class="mask"></div>
+                <section class="first">
+
+                    <div class="img">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/36763/profile/profile-512_1.jpg" alt="" />
+                    </div>
+
+                    <div class="comments">
+                        <h3>Cesar Farias</h3>
+                        <p>Damn, how awesome is Ionut's design?</p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="img">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/36763/profile/profile-512_1.jpg" alt="" />
+                    </div>
+
+                    <div class="comments">
+                        <h3>Cesar Farias</h3>
+                        <p>Oh, also don't forget to follow me on twitter: <a href="http://twitter.com/guriboy007">@guriboy007</a></p>
+                    </div>
+
+                </section>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+</html>

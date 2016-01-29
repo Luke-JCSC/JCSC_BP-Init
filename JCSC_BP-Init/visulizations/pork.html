@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/ian-pvd/pen/qyBuC -->
+    <title></title>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $.ScalePoster = function () {
+                $('#Feature img.middle').css('top', (($('#Feature').height() - $('#Feature img').height()) / 2));
+            }
+
+            $(window).bind("load", function () {
+                $.ScalePoster();
+            });
+
+            $(window).resize(function () {
+                $.ScalePoster();
+            });
+        });
+
+        var posters = new Array(
+            '<img src="http://demo.pvdindustrial.com/plastichouse.com/wp-content/uploads/2012/06/Dever_014-MED1.jpg" class="top"/>',
+            '<img src="http://demo.pvdindustrial.com/plastichouse.com/wp-content/uploads/2012/06/Dever_010-MED1.jpg" class="middle"/>',
+            '<img src="http://demo.pvdindustrial.com/plastichouse.com/wp-content/uploads/2012/06/Dever_009-MED1.jpg" class="bottom"/>'
+        );
+
+        $(function () {
+            $('#Feature').html(posters[Math.floor(Math.random() * posters.length)]);
+        });
+    </script>
+    <style>
+        @import "http://fonts.googleapis.com/css?family=Oswald:700|Quattrocento+Sans";
+        /* Fonts */
+        /* Styles */
+        html,
+        body {
+            height: 100%;
+            font: 18px/1.5 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            overflow-y: scroll;
+            background: #333333 url('http://codepen.io/images/classy_fabric.png');
+        }
+
+        #Feature {
+            display: block;
+            width: 100%;
+            min-height: 240px;
+            height: 75%;
+            position: relative;
+            overflow: hidden;
+            background: black;
+            border-bottom: 4px solid black;
+        }
+
+            #Feature img {
+                width: 100%;
+                left: 0;
+                position: absolute;
+            }
+
+                #Feature img.top {
+                    top: 0;
+                }
+
+                #Feature img.middle {
+                    /* Fallback Placment */
+                    top: 0;
+                }
+
+                #Feature img.bottom {
+                    bottom: 0;
+                }
+
+        #Content {
+            width: 80%;
+            max-width: 60em;
+            margin: -15% auto 0;
+            padding: 0 0 4em;
+            overflow: hidden;
+        }
+
+            #Content article {
+                width: 65%;
+                float: left;
+                box-sizing: border-box;
+                background: #FFF;
+                padding: 2em;
+                position: relative;
+            }
+
+                #Content article h2 {
+                    font: 2em/1.2 'Oswald', Helvetica, sans-serif;
+                    text-transform: uppercase;
+                    margin: 0 0 1rem;
+                }
+
+                #Content article p {
+                    text-indent: 2em;
+                    text-align: justify;
+                    margin: 0 0 1.5em;
+                }
+
+        @media only screen and (min-width: 481px) and (max-width: 1024px) {
+            #Feature {
+                max-height: 50%;
+            }
+
+            #Content {
+                width: 90%;
+                min-width:;
+            }
+
+                #Content article {
+                    font-size: 80%;
+                }
+        }
+
+        @media only screen and (max-width: 480px) {
+            #Feature {
+                max-height: 25%;
+            }
+
+            #Content {
+                width: 100%;
+                margin-top: 0;
+            }
+
+                #Content article {
+                    font-size: 75%;
+                    width: 100%;
+                    display: block;
+                }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Feature">
+        <img src="http://demo.pvdindustrial.com/plastichouse.com/wp-content/uploads/2012/06/Dever_014-MED1.jpg" class="middle" />
+    </div>
+    <div id="Content" role="main">
+        <article>
+            <h2>No man, I don't eat pork</h2>
+
+            <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
+            <p>The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die. </p>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>FriendBlink Invoice</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/invoice_style.css' />
+	<link rel='stylesheet' type='text/css' href='css/invoice_style.css' media="print" />
+	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+	<script type='text/javascript' src='js/invoice_example.js'></script>
+
+</head>
+
+<body>
+
+	<div id="page-wrap">
+
+		<textarea id="header">INVOICE</textarea>
+		
+		<div id="identity">
+		
+            <textarea id="address">JCSC.biz
+612 Warf Avenue
+Jewett City, CT 06351
+
+Phone: {860.501.9042}</textarea>
+
+            <div id="logo">
+
+              <div id="logoctr">
+                <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a>
+                <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
+                |
+                <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
+                <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
+              </div>
+
+              <div id="logohelp">
+                <input id="imageloc" type="text" size="50" value="" /><br />
+                (max width: 540px, max height: 300px)
+              </div>
+              <img id="image" src="images/logo.png" alt="logo" />
+            </div>
+		
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div id="customer">
+
+            <div id="customer-title">Adalytic @ <a href="http://adalyticapp.com">http://adalyticapp.com</a></div>
+
+            <table id="meta">
+                <tr>
+                    <td class="meta-head">Invoice #</td>
+                    <td><textarea>000123</textarea></td>
+                </tr>
+                <tr>
+
+                    <td class="meta-head">Date</td>
+                    <td><div id="date">September 7, 2015</div></td>
+                </tr>
+                <tr>
+                    <td class="meta-head">Amount Due</td>
+                    <td><div class="due">$588.00</div></td>
+                </tr>
+
+            </table>
+		
+		</div>
+		
+		<table id="items">
+		
+		  <tr>
+		      <th>Item</th>
+		      <th>Description</th>
+		      <th>Unit Cost</th>
+		      <th>Quantity</th>
+		      <th>Price</th>
+              <th>Due Date</th>
+		  </tr>
+            <tr class="item-row">
+                <td class="item-name"><div class="delete-wpr"><textarea>Name Server Switch</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                <td class="description">Will be done by the client. <a href="http://support.hostgator.com/articles/hosting-guide/lets-get-started/dns-name-servers/how-do-i-change-my-dns-or-name-servers">Instructions!</a> or <a href="http://www.tucowsdomains.com/name-server-dns-changes/how-do-i-change-my-name-servers-dns/">Instructions!!</a></td>
+                <td><textarea class="cost">$0.00</textarea></td>
+                <td><textarea class="qty">1</textarea></td>
+                <td><span class="price">$0.00</span></td>
+                <td><span class="DueDate">Immediately</span></td>
+            </tr>
+            <tr class="item-row">
+                <td class="item-name"><div class="delete-wpr"><textarea>Initial User Creation</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                <td class="description"><textarea>Will be done by Luke@JCSC. { ftp &amp; host }</textarea></td>
+                <td><textarea class="cost">$0.00</textarea></td>
+                <td><textarea class="qty">1</textarea></td>
+                <td><span class="price">$0.00</span></td>
+                <td><span class="DueDate">Immediately</span></td>
+            </tr>
+            <tr class="item-row">
+                <td class="item-name"><div class="delete-wpr"><textarea>Domain Maintiance</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                <td class="description"><textarea>Will be done by the client.</textarea></td>
+                <td><textarea class="cost">$0.00</textarea></td>
+                <td><textarea class="qty">1</textarea></td>
+                <td><span class="price">$0.00</span></td>
+                <td><span class="DueDate">Immediately</span></td>
+            </tr>
+            <tr class="item-row">
+                <td class="item-name"><div class="delete-wpr"><textarea>Hosting Setup&amp;Maintiance</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                <td class="description"><textarea>Will be provided by JCSC.biz using { http://PowerDNN.com }</textarea></td>
+                <td><textarea class="cost">$0.00</textarea></td>
+                <td><textarea class="qty">1</textarea></td>
+                <td><span class="price">$0.00</span></td>
+                <td><span class="DueDate">Immediately</span></td>
+            </tr>
+            <tr class="item-row">
+                <td class="item-name"><div class="delete-wpr"><textarea>Initial Setup</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                <td class="description"><textarea>Initial Setup for Adalytic @ http://adalyticapp.com (Sep. 10 - Oct. 30, 2015) Using DNN, Hosted by PowerDNN.</textarea></td>
+                <td><textarea class="cost">$50.00</textarea></td>
+                <td><textarea class="qty">1</textarea></td>
+                <td><span class="price">$50.00</span></td>
+                <td><span class="DueDate">Immediately</span></td>
+            </tr>
+		  <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr"><textarea>Web Updates</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+		      <td class="description">Monthly web updates for http://adalyticapp.com (Sep. 10 - Sep. 30, 2016) :: Needs to be request by Client</td>
+		      <td><textarea class="cost">$50.00</textarea></td>
+		      <td><textarea class="qty">0</textarea></td>
+		      <td><span class="price">$0.00</span></td>
+             
+              <td><span class="DueDate">Immediately{}</span></td>
+		  </tr>
+		  <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr">Secure Server &amp; Maintiance<a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+		      <td class="description"><textarea>Monthly hosting fees for http://node.adalyticapp.com (Sep. 10 - Sep. 30, 2016)</textarea></td>
+		      <td><textarea class="cost">$50.00</textarea></td>
+		      <td><textarea class="qty">12</textarea></td>
+              <td><span class="price">$100.00</span></td>
+              
+              <td><span class="DueDate">Montly {1 & Last}</span></td>
+		  </tr>
+		  <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr"><textarea>Training &amp; Support</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+
+		      <td class="description"><textarea>Yearly support {40hrs} &Amp; training { 6 people @ 25 hours }  to main domain and no subdomains, to help resolve issues with the system.</textarea></td>
+		      <td><textarea class="cost">$400.00</textarea></td>
+		      <td><textarea class="qty">1</textarea></td>
+		      <td><span class="price">$400.00</span></td>
+              <td><span class="DueDate">Immediately</span></td>
+		  </tr>
+            
+            <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr">JavaScrip &amp; Server Implimentation<a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+
+		      <td class="description">Build a roubust and Scalable NodeJS server to handel the needs for this project {59hrs estimate} &Amp; API { 25 hours }  a simple test UI will be generated to test the individual parts</td>
+		      <td><textarea class="cost">$475.00</textarea></td>
+		      <td><textarea class="qty">1</textarea></td>
+		      <td><span class="price">$475.00</span></td>
+              <td><span class="DueDate">Upon Milestone</span></td>
+		  </tr>
+            
+            <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr"><textarea>Device Testing</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+
+		      <td class="description">Testing device Conectivity and data loging capaboilities {40hrs} &Amp; Providing the mechanics for multiple devices and group managment { 15 hours } Once solid data can be relyed the system is ready for extra devices</td>
+		      <td><textarea class="cost">$400.00</textarea></td>
+		      <td><textarea class="qty">1</textarea></td>
+		      <td><span class="price">$400.00</span></td>
+            <td><span class="DueDate">Upon Milestone After Server Built</span></td>
+		  </tr>
+            
+            <tr class="item-row">
+		      <td class="item-name"><div class="delete-wpr">Software Installation<a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+
+		      <td class="description">Finilizing the project by installing all componets tocal to device and testing begin product testing {5hrs} &Amp; training</td>
+		      <td><textarea class="cost">$140.00</textarea></td>
+		      <td><textarea class="qty">1</textarea></td>
+		      <td><span class="price">$140.00</span></td>
+                <td><span class="DueDate">Once the Node Server is installed on device</span></td>
+		  </tr>
+		  
+		  <tr id="hiderow">
+		    <td colspan="6"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
+		  </tr>
+		  
+		  <tr>
+		      <td colspan="3" class="blank"> </td>
+		      <td colspan="2" class="total-line">Subtotal</td>
+		      <td class="total-value"><div id="subtotal">$2065.00</div></td>
+		  </tr>
+            <tr>
+                <td colspan="3" class="blank"> </td>
+                <td colspan="2" class="total-line">Taxes</td>
+                <td class="total-value"><div id="subtotal">$75.00</div></td>
+            </tr>
+		  <tr>
+
+		      <td colspan="3" class="blank"> </td>
+		      <td colspan="2" class="total-line">Year Total</td>
+		      <td class="total-value"><div id="total">$2188.00</div></td>
+		  </tr>
+		  <tr>
+		      <td colspan="3" class="blank"> </td>
+		      <td colspan="2" class="total-line">Amount Paid</td>
+
+		      <td class="total-value"><textarea id="paid">$0.00</textarea></td>
+		  </tr>
+		  <tr>
+		      <td colspan="3" class="blank"> </td>
+		      <td colspan="2" class="total-line balance">Balance Due</td>
+		      <td class="total-value balance"><div class="due">$588.00</div></td>
+		  </tr>
+		
+		</table>
+		
+		<div id="terms">
+            <h5>Specifications</h5>
+            <ul>
+                <li>This is a contract for a year of Support, Training and one moth of development assistance for initial siteset up, and providing rapid function prototype.</li>
+                <li>This contract may be extened or terminated at will in writing by either party.</li>
+                <li>Threasholds of exceeding specified limits may incure costs to enable the team to operate</li>
+                <li><hr /></li>
+                <li>Mobile Testing and device specific optimization has not been included</li>
+            </ul><hr /><br /><br />
+		  <h5>Terms</h5>
+            <ul>
+                <li>Initial Payment and client actions must be made in order for work to begin.</li>
+                <li>The remainder must be made Sep 23th 2015 or 26 days from inital payment.</li>
+                <li>Payment could be sent via <a href="paypal.com">PayPal</a> to LukeShields@gmail.com {Other payment options are available, please inquire.}</li>
+            </ul>
+		  <textarea>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
+		</div>
+        <div id="ProjectSpecifics">
+            <h5>Project Specifics</h5>
+            <ul>
+                <li>Here is a link to the inital documentation.</li>
+                <li>Here is a link to the inital NDA.</li>
+                <li></li>
+
+            </ul>
+            <textarea></textarea>
+        </div>
+        <div id="ProjectTimeline">
+            <h5>Project Timeline</h5>
+            <ul><lable>Milestones</lable>
+                <li>Initial Page Adding and content managment.</li>
+                <li>Provide for oAuth federation</li>
+                <li>Dashboard</li>
+                <li>Data Logging</li>
+                <li>GPS Testing</li>
+                <li>Provide documentation for available chat options</li>
+                <li>Provide training and create intial blog entries</li>
+                <li>Continue providing Value Adding content</li>
+                <li>Provide ongoning assistance</li>
+                <li>Ensure customer can maintian progress</li>
+
+            </ul>
+            <textarea>By providing customer empowerment of thier content can build a reptuable system when the true industry experts are in charge of the content and how it will be consumed.</textarea>
+        </div>
+	</div>
+	
+</body>
+
+</html>

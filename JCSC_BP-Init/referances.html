@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        /*
+	Ratings Stars
+	(with as little code as possible)
+*/
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+
+            .rating > span {
+                display: inline-block;
+                position: relative;
+                width: 1.1em;
+            }
+
+                .rating > span:hover,
+                .rating > span:hover ~ span {
+                    color: transparent;
+                }
+
+                    .rating > span:hover:before,
+                    .rating > span:hover ~ span:before {
+                        content: "\2605";
+                        position: absolute;
+                        left: 0;
+                        color: gold;
+                    }
+
+
+
+
+        body {
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+<!-- Star Voting -->
+    <div class="rating">
+        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </div><hr /><br />
+    http://salman-w.blogspot.com/2013/10/google-analytics-screen-resolutions-report.html
+    http://css-tricks.com/webkit-sibling-bug/
+    http://dabblet.com/gist/1709019
+    http://www.codeproject.com/Articles/26905/Simple-Voting-Control-In-JavaScript
+    http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+    http://css-tricks.com/examples/StarRating/
+
+    http://www.sociallystacked.com/2012/12/style-the-vote-count-in-your-voting-widget-css-tip/#sthash.4JLIkNKr.dpbs
+    http://www.dillerdesign.com/css/cookbook/component_star_rater.html
+    http://komodomedia.com/blog/index.php/2006/01/09/css-star-rating-part-deux/
+    http://www.pmob.co.uk/temp/star-rating.htm
+    http://www.designshack.co.uk/tutorials/10-great-css-star-raters
+    http://css-tricks.com/star-ratings/
+    http://www.thecssninja.com/css/custom-inputs-using-css
+    http://speckyboy.com/2010/04/21/15-javascript-and-plugins-and-tutorials-for-adding-ratings/
+    http://wbotelhos.com/raty/
+    http://stackoverflow.com/questions/578573/jquery-star-rating-plugin-disable-after-vote-submission
+    http://devcrapshoot.com/javascript/javascript-5-star-rating-system
+    http://www.nickstakenburg.com/projects/starbox/
+    http://dtbaker.net/web-development/simple-javascript-star-rating-thingey/
+    http://reignwaterdesigns.com/ad/tidbits/rateme/ratingsys.js
+    http://www.fyneworks.com/jquery/star-rating/
+    http://www.sociallystacked.com/2012/12/style-the-vote-count-in-your-voting-widget-css-tip/#sthash.4JLIkNKr.dpbs
+    http://designshack.net/articles/10-great-css-star-raters/
+    http://rog.ie/blog/css-star-rater
+    http://masugadesign.com/software/unobtrusive-ajax-star-rating-bar
+    http://www.search-this.com/2007/05/23/css-the-star-matrix-pre-loaded/
+    http://www.pmob.co.uk/temp/star-rating.htm
+    http://salman-w.blogspot.com/2012/08/star-ratings-using-css-sprites.html
+    http://speckyboy.com/2010/04/21/15-javascript-and-plugins-and-tutorials-for-adding-ratings/
+    http://www.9lessons.info/2009/09/favourite-rating-with-jquery-and-ajax.html
+    http://www.fyneworks.com/jquery/star-rating/
+    http://devcrapshoot.com/javascript/javascript-5-star-rating-system
+    http://wbotelhos.com/raty/
+    http://www.queness.com/post/1668/9-rating-and-voting-javascript-plugins-and-tutorials
+    http://www.9lessons.info/2014/02/webydos-50k-professional-designers.html
+    http://www.9lessons.info/2013/07/wall-script.html
+    http://www.9lessons.info/2011/10/jquery-notification-plugin.html
+
+    http://www.webdeveloperjuice.com/2010/01/17/star-rating-using-css-sprite-and-jquery-demo/
+    http://www.technabled.com/2009/02/reddit-style-voting-with-php-mysql-and.html
+    http://www.9lessons.info/2012/12/jquery-photo-zoom-plugin.html
+
+
+    http://colorpowered.com/
+    http://www.duarte.com/
+    http://jquery.com/
+    http://www.fyneworks.com/jquery/star-rating/
+    http://msteigerwalt.com/widgets/ratings/v1.5/
+    http://livepipe.net/control/rating
+    http://stackoverflow.com/questions/8118266/integrating-css-star-rating-into-an-html-form
+    http://www.htmldrive.net/items/show/402/CSS-Star-Rating-System
+    http://www.htmldrive.net/items/show/30/Jquery-rating-system-with-beautiful-stars
+    http://www.htmldrive.net/items/show/127/Jquery-simple-rating-system-with-star
+    http://www.htmldrive.net/items/show/27/Jquery-simple-rating-system-with-small-stars
+    http://www.htmldrive.net/items/show/35/Jquery-100-point-rating-system-with-beautiful-stars
+    http://www.dillerdesign.com/css/cookbook/component_star_rater.html
+    http://css-tricks.com/star-ratings/
+
+    http://www.script-tutorials.com/how-to-create-own-voting-system/
+    http://www.script-tutorials.com/demos/155/index.php
+    http://answers.oreilly.com/topic/1007-how-to-create-a-star-ranking-system-using-css/
+    http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+    <!-- End Voting-->
+</body>
+</html>

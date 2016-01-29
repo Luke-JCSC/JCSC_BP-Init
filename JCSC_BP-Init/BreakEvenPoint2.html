@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Tilt Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize%20-%20tilt.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Architects+Daughter'>
+
+        <link rel="stylesheet" href="css/tilt.css">
+
+      <script>
+        //Referances
+
+        // http://www2.owen.vanderbilt.edu/Germain.Boer/mgt413/cvp/cvp.html
+
+      </script>
+
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Units', 'Fixed Costs', 'Total Costs', 'Revanues'],
+              ['0', 322006, 322006, 0],
+              ['125', 322006, 498861, 284250],
+              ['249', 322006, 674301, 566226],
+              ['375', 322006, 852570, 852750],
+              ['498', 322006, 1026595, 1132452]
+            ]);
+
+            var options = {
+                title: 'Projected Break Even Anyalisis',
+                vAxis: { title: "Costs" },
+                hAxis: { title: "Units" }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+      </script>
+  </head>
+
+  <body>
+
+    <div id="paper-back">
+	<nav>
+		<div class="close"></div>
+		<a href="http://www.jcsc.biz/">Home</a>
+		<a href="http://www.jcsc.biz/About">About Us</a>
+		<a href="http://www.jcsc.biz/Blogs">Our Work</a>
+		<a href="Contact.html">Contact</a>
+	</nav>
+</div>
+<div id="paper-window">
+	<div id="paper-front">
+		<div class="hamburger"><span></span></div>
+		<div id="container">
+			<section>
+				<h1>Financial BreakDown</h1>
+				<p>A List of advailable resources</p>
+			</section>
+			<section></section>
+            <section>
+                <center>
+                <table>
+                    <thead>
+                        <th colspan="2"><h1>Financial Specifications: {<a href="https://en.wikipedia.org/wiki/Specification_(technical_standard)">spec</a>}</h1><br /><h3>Services Offered:</h3><hr></th>
+                    </thead>
+                    <tr>
+                    <td><a href="#">Software Development</a>:: Assembly Required</td>
+                        <td>+ $912.95/unit</td>
+                    </tr>
+                    <tr>
+                    <td><a href="#"><a href="#">Hardware Prototyping</a>:: Tested to Work</a></td>
+                        <td>+ $1,209.00/unit</td>
+                    </tr>
+                    
+                    </table>
+                    <br /><img src="http://windowsitpro.com/site-files/windowsitpro.com/files/archive/windowsitpro.com/portals/0/sunblognuke/windowslivewriter/isscaleoutnasthesolutiontosmbstoragespra_c407/storagesprawl_2.jpg" />
+           
+                
+            </section>
+			<section>
+
+
+                <center>
+
+                    <table>
+                        <tr>
+                            <td><b>Fixed Costs</b></td>
+                            <td>$322,006.57</td>
+                            <td></td>
+                            <td></td>
+                            <td><b>Unit Cost</b></td>
+                            <td>$1414.84</td>
+                        </tr>
+                        <tr>
+                            <td><b>Sales Forecast</b></td>
+                            <td>1,132,909.17</td>
+                            <td></td>
+                            <td></td>
+                            <td><b>Unit Price</b></td>
+                            <td>$2,274.00</td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><b>Break Even in Units</b></td>
+                            <td>375</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><b>Break Even in Sales</b></td>
+                            <td>$852,750.00</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table><hr />
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Units</th>
+                                <th>Fixed Costs</th>
+                                <th>Total Costs</th>
+                                <th>Revanues</th>
+                                <th>Profits</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>0</td>
+                            <td>$322,006.57</td>
+                            <td>$322,006.57</td>
+                            <td>$0.0</td>
+                            <td>-$322,006.57</td>
+                        </tr>
+                        <tr>
+                            <td>125</td>
+                            <td>$322,006.57</td>
+                            <td>$498,861.22</td>
+                            <td>$284,250.00</td>
+                            <td>-$214,611.22</td>
+                        </tr>
+                        <tr>
+                            <td>249</td>
+                            <td>$322,006.57</td>
+                            <td>$322,006.57</td>
+                            <td>$566,266.00</td>
+                            <td>-$108,075.03</td>
+                        </tr>
+                        <tr>
+                            <td>375</td>
+                            <td>$322,006.57</td>
+                            <td>$322,006.57</td>
+                            <td>$852,750.00</td>
+                            <td>$179.48</td>
+                        </tr>
+                        <tr>
+                            <td>498</td>
+                            <td>$322,006.57</td>
+                            <td>$322,006.57</td>
+                            <td>$1,132,452.00</td>
+                            <td>$105,856.50</td>
+                        </tr>
+                    </table><hr />
+
+
+                    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                </center>
+
+               
+            </section>
+			<section>
+                <center>
+                <table>
+                    <thead>
+                        <th><h1>Software:</h1></th>
+                    </thead>
+                    <tr>
+                    <td><hr><a href="#">Ubuntu|Debian  -- Operating System</a></td>
+                    </tr>
+                   
+                    <tr>
+                    <td colspan="2"><hr><center><h3>Total Licencing Fees :: $0.00</h3><br><small><p><i>Please Help us continue this and <a href="#DONATE">DONATE</a>!!</i></p></small></center></td>
+                    </table>
+                </center>
+                
+               
+                
+            </section>
+            <section>
+                <center>
+                <table>
+                    <thead>
+                        <th colspan="2"><h1>Charging & Solar Implications:</h1><hr></th>
+                    </thead>
+                    <tr>
+                    <td><a href="#">Charging System Needed</a>::</td>
+                        <td>+ $12.95/unit</td>
+                    </tr>
+                    <tr>
+                    <td><a href="#"><a href="#">Solar is Advailable</a>::</a></td>
+                        <td>+ $129.00/unit</td>
+                    </tr>
+                    
+                    </table>
+                </center>
+               
+                
+            </section>
+		</div>
+	</div>
+</div>
+          
+        <!-- This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div> -->
+	<footer><div class="footer">
+        <small>
+					&copy; 2015  ~  Created by:: Luke<a href="http://jcsc.biz">@jcsc.biz</a>
+				</small></div>
+	</footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/tilt.js"></script>
+
+    
+    
+    
+  </body>
+</html>

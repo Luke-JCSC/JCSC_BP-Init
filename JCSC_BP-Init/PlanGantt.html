@@ -1,0 +1,279 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Adalytic - Gantt View</title>
+    <meta name="description" content="A detailed view of task completion and milestone tracking.">
+    <meta name="author" content="Luke Shields" data-url="jcsc.biz">
+    <meta name="viewport" content="width=800, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/demo.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jsgantt.css" />
+    <script language="javascript" src="js/jsgantt.js"></script>
+    <script language="javascript" src="js/graphics.js"></script>
+    <style type="text/css">
+        <!--
+        .style1 {
+            color: #0000FF;
+        }
+
+        .roundedCorner {
+            display: block;
+        }
+
+            .roundedCorner * {
+                display: block;
+                height: 1px;
+                overflow: hidden;
+                font-size: .01em;
+                background: #0061ce;
+            }
+
+        .roundedCorner1 {
+            margin-left: 3px;
+            margin-right: 3px;
+            padding-left: 1px;
+            padding-right: 1px;
+            border-left: 1px solid #91bbe9;
+            border-right: 1px solid #91bbe9;
+            background: #3f88da;
+        }
+
+        .roundedCorner2 {
+            margin-left: 1px;
+            margin-right: 1px;
+            padding-right: 1px;
+            padding-left: 1px;
+            border-left: 1px solid #e5effa;
+            border-right: 1px solid #e5effa;
+            background: #307fd7;
+        }
+
+        .roundedCorner3 {
+            margin-left: 1px;
+            margin-right: 1px;
+            border-left: 1px solid #307fd7;
+            border-right: 1px solid #307fd7;
+        }
+
+        .roundedCorner4 {
+            border-left: 1px solid #91bbe9;
+            border-right: 1px solid #91bbe9;
+        }
+
+        .roundedCorner5 {
+            border-left: 1px solid #3f88da;
+            border-right: 1px solid #3f88da;
+        }
+
+        .roundedCornerfg {
+            background: #0061ce;
+        }
+
+
+        -->
+    </style>
+    
+
+	</head>
+
+	<body>
+
+		<div class="meny">
+
+			<h2>Project Links</h2>
+			<ul>
+				<li><a href="BreakEvenPoint_WithData.html">Break Even Point</a></li>
+				<li><a href="invoice.html">Invoice</a></li>
+				<li><a href="SOW.html">Statement of Work</a></li>
+				<li><a href="Task%20List.html">Task List</a></li>
+				<li><a href="Task%20List2.html">Task List2</a></li>
+				<li><a href="toc.html">Table of Content</a></li>
+				<li><a href="vTimeline">Time Line</a></li>
+				<li><a href="PlanGantt.html">Gantt Chart</a></li>
+				<li><a href="loading.html">loading</a></li>
+				<li><a href="404.html">404</a></li>
+			</ul>
+		</div>
+
+		<div class="meny-arrow"></div>
+
+		<div class="contents">
+            <!-- content goes here -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="position:absolute; top:0; left:0;">
+                <tbody>
+                    <tr>
+
+                        <td bgcolor="#298eff" style="height:3px;"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td bgcolor="#0061ce" style="padding-top:5px; padding-bottom:5px;">
+                            <font face="Arial,Helvetica" size="5" color="#FFFFFF"><i><strong>&nbsp;&nbsp;Adalytic Project Gantt Chart</strong></i></font>
+                        </td>
+
+                    </tr>
+                    <tr><td bgcolor="#CFCFCF" style="height:3px;"></td></tr>
+
+                    <tr>
+                        <td bgcolor="#ffffff" style="color:#444444;  text-decoration:none;">
+                            <font face="Arial,Helvetica" size="3" color="#FFFFFF">
+                                <i>
+                                    <strong>
+                                        &nbsp;&nbsp;<a href="#tBugs">Hardware Invoice</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tDownload">Project Details</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tLicense">License</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tUsage">Usage</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tExamples">Images</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tCredits">About</a>
+                                    </strong>
+                                </i>
+                            </font>
+                        </td>
+
+                    </tr>
+                    <tr><td bgcolor="#FFFFFF" style="height:2px;"></td></tr>
+
+                    <tr><td bgcolor="#CFCFCF" style="height:1px;"></td></tr>
+
+                </tbody>
+
+            </table>
+            <br><br>
+            <br>
+            <br>
+
+            <p>
+                A mobile advertising platform.
+            </p>
+            
+            <p>
+                <div style="position:relative" class="gantt" id="GanttChartDIV"></div>
+                <script>
+
+
+                    // here's all the html code neccessary to display the chart object
+
+                    // Future idea would be to allow XML file name to be passed in and chart tasks built from file.
+
+                    var g = new JSGantt.GanttChart('g', document.getElementById('GanttChartDIV'), 'day');
+
+                    g.setShowRes(1); // Show/Hide Responsible (0/1)
+                    g.setShowDur(1); // Show/Hide Duration (0/1)
+                    g.setShowComp(1); // Show/Hide % Complete(0/1)
+                    g.setCaptionType('Resource');  // Set to Show Caption (None,Caption,Resource,Duration,Complete)
+
+
+                    //var gr = new Graphics();
+
+                    if (g) {
+
+                        // Parameters             (pID, pName,                  pStart,      pEnd,        pColor,   pLink,          pMile, pRes,  pComp, pGroup, pParent, pOpen, pDepend, pCaption)
+
+                        // You can also use the XML file parser JSGantt.parseXML('project.xml',g)
+
+                        g.AddTaskItem(new JSGantt.TaskItem(1, 'Documentation', '', '', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 0, 1, 0, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(11, 'Web Project Creation', '7/20/2014', '7/20/2014', 'ff00ff', 'http://www.yahoo.com', 1, 'Jon', 100, 0, 1, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(12, 'Task Objects', '', '', '00ff00', '', 0, 'Jon', 40, 1, 1, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(121, 'Reveal JS', '7/21/2014', '8/9/2014', '00ffff', 'http://www.yahoo.com', 0, 'Luke T.', 60, 0, 12, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(122, 'Meny - TOC', '8/6/2014', '8/11/2014', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 60, 0, 12, 1, 121));
+                        g.AddTaskItem(new JSGantt.TaskItem(123, 'Gantt', '8/6/2014', '8/11/2014 12:00', 'ffff00', 'http://BetterStream.com', 0, 'Mike', 60, 0, 12, 1, 121));
+                        g.AddTaskItem(new JSGantt.TaskItem(124, 'Invoice', '8/9/2014', '8/29/2014', 'ff0000', 'http://BetterStream.com', 0, 'Anyone', 60, 0, 12, 1, 0, 'This is another caption'));
+                        g.AddTaskItem(new JSGantt.TaskItem(2, 'Create Prototype', '8/24/2014', '8/25/2014', 'ffff00', 'http://BetterStream.com', 0, 'Luke', 90, 0, 0, 1, 122));
+                        g.AddTaskItem(new JSGantt.TaskItem(3, 'Code Button', '', '', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 0, 1, 0, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(31, 'Define Variables', '7/25/2014', '8/17/2014', 'ff00ff', 'http://BetterStream.com', 0, 'Luke', 30, 0, 3, 1, '', 'Caption 1'));
+                        g.AddTaskItem(new JSGantt.TaskItem(32, 'Calculate', '8/15/2014', '8/24/2014', '00ff00', 'http://BetterStream.com', 0, 'Jon', 40, 0, 3, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(33, 'Draw Taks Items', '', '', '00ff00', 'http://BetterStream.com', 0, 'Someone', 40, 1, 3, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(332, 'Task Label Table', '8/6/2014', '8/11/2014', '0000ff', 'http://BetterStream.com', 0, 'Luke', 60, 0, 33, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(333, 'Task Scrolling Grid', '8/9/2014', '8/20/2014', '0000ff', 'http://BetterStream.com', 0, 'Luke', 60, 0, 33, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(34, 'Draw Task Bars', '', '', '990000', 'http://BetterStream.com', 0, 'Anybody', 60, 1, 3, 0));
+                        g.AddTaskItem(new JSGantt.TaskItem(341, 'Loop each Task', '8/26/2014', '9/11/2014', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 60, 0, 34, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(342, 'Calculate Start/Stop', '9/12/2014', '10/18/2014', 'ff6666', 'http://BetterStream.com', 0, 'Luke', 60, 0, 34, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(343, 'Draw Task Div', '10/13/2014', '10/17/2014', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 60, 0, 34, 1));
+                        g.AddTaskItem(new JSGantt.TaskItem(344, 'Draw Completion Div', '10/17/2014', '11/04/2014', 'ff0000', 'http://BetterStream.com', 0, 'Luke', 60, 0, 34, 1, "342,343"));
+                        g.AddTaskItem(new JSGantt.TaskItem(35, 'Make Updates', '12/17/2014', '2/04/2009', 'f600f6', 'http://BetterStream.com', 0, 'Luke', 30, 0, 3, 1));
+
+
+
+                        g.Draw();
+                        g.DrawDependencies();
+
+                    }
+
+                    else {
+
+                        alert("not defined");
+
+                    }
+
+                </script>
+
+                    <br />
+                    <p>work still needs to be done to help enable basic functions like:</p>
+                    <h1>Add Tasks</h1>
+				Adalytic @ http://adalyticapp.com
+				<p>
+					Instructions and further documentation can be found at <a href="index.html">Adalytic.jcsc.biz</a>.
+				</p>
+				
+				<small>
+					Created by <a href="http://jcsc.biz">luke@jcsc.biz</a>
+				</small>
+			</article>
+
+			<a href="https://github.com/hakimel/meny"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e6" alt="Data is still Incomplete"></a>
+		</div>
+
+		<script src="js/meny.js"></script>
+		<script>
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'left',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: true
+			});
+
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+		</script>
+
+		
+
+	</body>
+</html>

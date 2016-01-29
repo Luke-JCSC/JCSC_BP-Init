@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        $color1: #F27935; $color2: #00AFD1; $color3: #5A5B5E; body {
+            margin: 10px;
+            text-align: center;
+            > div;
+
+        {
+            width: 33%;
+            float: left;
+            > div;
+
+        {
+            margin-bottom: 15px;
+        }
+
+        }
+        }
+
+        .btn-1 {
+            background-color: $color1;
+            .round;
+
+        {
+            background-color: lighten($color1,10%);
+        }
+
+        }
+
+        .btn-2 {
+            background-color: $color2;
+            .round;
+
+        {
+            background-color: lighten($color2,5%);
+        }
+
+        }
+
+        .btn-3 {
+            background-color: $color3;
+            .round;
+
+        {
+            background-color: lighten($color3,10%);
+        }
+
+        }
+
+        a {
+            text-decoration: none;
+            @include border-radius(30px);
+            padding: 12px 53px 12px 23px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-weight: bold;
+            position: relative;
+            @include transition(all .3s);
+            display: inline-block;
+            span;
+
+        {
+            position: relative;
+            z-index: 3;
+        }
+
+        .round {
+            @include border-radius(50%);
+            width: 38px;
+            height: 38px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            @include transition(all .3s ease-out);
+            z-index: 2;
+            i;
+
+        {
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            left: 50%;
+            margin-left: -5px;
+            @include transition(all .3s);
+        }
+
+        }
+        }
+
+        .txt {
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .type-1 {
+            a: hover;
+
+        {
+            padding-left: 48px;
+            padding-right: 28px;
+            .round;
+
+        {
+            width: calc(100% - 6px);
+            @include border-radius(30px);
+            i;
+
+        {
+            left: 12%;
+        }
+
+        }
+        }
+        }
+
+        .type-2 {
+            a: hover;
+
+        {
+            .round;
+
+        {
+            background: none;
+            i;
+
+        {
+            left: 70%;
+        }
+
+        }
+        }
+        }
+
+        .type-3 {
+            .round;
+
+        {
+            background: transparent;
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+            &.btn-1:after;
+
+        {
+            background-color: lighten($color1,10%);
+        }
+
+        &.btn-2:after {
+            background-color: lighten($color2,5%);
+        }
+
+        &.btn-3:after {
+            background-color: lighten($color3,10%);
+        }
+
+        &:after {
+            content: "";
+            @include border-radius(50%);
+            width: 37px;
+            height: 38px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            @include transition(all .3s ease-out);
+        }
+
+        &:hover {
+            &:after;
+
+        {
+            right: 100%;
+            width: 50%;
+        }
+
+        i {
+            margin-left: 4px;
+        }
+
+        }
+        }
+        }
+    </style>
+</head>
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div class="type-1">
+        <div>
+            <a href="" class="btn btn-1">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-2">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-3">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="type-2">
+        <div>
+            <a href="" class="btn btn-1">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-2">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-3">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="type-3">
+        <div>
+            <a href="" class="btn btn-1">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-2">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-3">
+                <span class="txt">Hover me</span>
+                <span class="round"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

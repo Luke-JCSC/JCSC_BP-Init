@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body, html {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            background-color: #6AC5C0;
+        }
+
+        #card {
+            width: 300px;
+            height: 225px;
+            background-color: #DA6E64;
+            margin: 125px auto;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .shadow {
+            width: 0px;
+            height: 0px;
+            border: 151px solid transparent;
+            border-bottom: 100px solid black;
+            position: absolute;
+            opacity: 0.45;
+        }
+
+        .open {
+            width: 0px;
+            height: 0px;
+            border: 150px solid transparent;
+            border-bottom: 113px solid #DA6E64;
+            position: absolute;
+            margin-top: -263px;
+        }
+
+        .flip {
+            width: 0px;
+            height: 0px;
+            border: 113px solid transparent;
+            border-left: 150px solid #F3AE47;
+            z-index: 2;
+            position: absolute;
+        }
+
+        .fold {
+            width: 0px;
+            height: 0px;
+            border: 225px solid transparent;
+            border-right: 300px solid #F8B84E;
+            border-bottom: 0px;
+            position: absolute;
+            margin-left: -225px;
+            z-index: 2;
+        }
+
+        .note {
+            width: 200px;
+            height: 250px;
+            background-color: #FCFEFD;
+            position: absolute;
+            margin-top: -100px;
+            margin-left: 50px;
+            z-index: 1;
+            color: #434449;
+            font-family: Cursive;
+            font-size: 25px;
+            line-height: 50px;
+        }
+    </style>
+    <script>
+        /*
+inpiration: 
+http://codepen.io/alexsafayan/pen/bLmtF
+https://dribbble.com/shots/1624400-You-re-invited?list=following&offset=5
+*/
+    </script>
+</head>
+<body>
+    <div id="card" class="one">
+        <div class="open"></div>
+        <div class="shadow"></div>
+        <div class="flip">a</div>
+        <div class="fold"></div>
+        <div class="note">You're<br>Invited!</div>
+    </div>
+    <br /><audio controls>
+  <source src="sample.ogg" type="audio/ogg">
+  <source src="sample.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</body>
+</html>

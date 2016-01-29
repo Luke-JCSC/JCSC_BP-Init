@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/howbizarre/pen/mCLbd -->
+    <title></title>
+    <script>
+        (function ($) {
+            $.fn.lckDmBg = function (dim) {
+                var opts = $.extend({}, $.fn.lckDmBg.defaults, dim),
+                    $window = $(window);
+
+                return this.each(function () {
+                    var $this = $(this),
+                        o = $.meta ? $.extend({}, opts, $this.data()) : opts;
+
+                    if (!dim) {
+                        $this.height($this.width());
+                        $this.css({ 'background-size': ($this.width() + o.croppedWidth) + o.measures + ' ' + ($this.height() + o.croppedHeight) + o.measures });
+                    }
+                    else {
+                        $this.height(o.initialHeight);
+                        $this.width(o.initialWidth);
+                        $this.css({ 'background-size': ($this.width() + o.croppedWidth) + o.measures + ' ' + ($this.height() + o.croppedHeight) + o.measures });
+                    }
+                });
+            };
+
+            $.fn.lckDmBg.defaults = {
+                croppedWidth: 0,
+                croppedHeight: 0,
+                measures: 'px'
+            };
+        })(jQuery);
+
+        $(document).ready(function () {
+            var $attachment = $('.pictureBox'),
+                $window = $(window);
+
+            $attachment.lckDmBg();
+
+            $window.resize(function () {
+                $attachment.lckDmBg();
+            });
+        });
+    </script>
+    <style>
+        .galleryBox {
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .galleryBox:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        .pictureBox {
+            width: 23%;
+            max-width: 150px;
+            margin: 1%;
+            display: block;
+            float: left;
+            text-decoration: none;
+            border-radius: 25%;
+            box-shadow: 0 3px 2px -2px black, 0 -3px 2px -2px black;
+        }
+
+            .pictureBox:hover {
+                box-shadow: 0 0 5px 0px black;
+            }
+
+            .pictureBox a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+            }
+
+                .pictureBox a span {
+                    position: relative;
+                    top: 10%;
+                    left: 10%;
+                    display: inline-block;
+                    padding: 5px;
+                    background: rgba(255,255,255,.5);
+                    color: #3c3c3c;
+                    border-radius: 55%;
+                    border: 1px solid #fff;
+                }
+    </style>
+</head>
+<body>
+    <ul class="galleryBox">
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7043-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7043/" title="DSC7043"><span>01</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7030-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7030/" title="DSC7030"><span>02</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7023-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7023/" title="DSC7023"><span>03</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7013-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7013/" title="DSC7013"><span>04</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7005-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7005/" title="DSC7005"><span>05</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7004-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7004/" title="DSC7004"><span>06</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC7003-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc7003/" title="DSC7003"><span>07</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6999-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6999/" title="DSC6999"><span>08</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6995-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6995/" title="DSC6995"><span>09</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6985-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6985/" title="DSC6985"><span>10</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6983-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6983/" title="DSC6983"><span>11</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6982-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6982/" title="DSC6982"><span>12</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC69811-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc69811/" title="DC698"><span>13</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6980-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6980/" title="DSC6980"><span>14</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6978-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6978/" title="DSC6978"><span>15</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6977-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6977/" title="Алекfg4"><span>16</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6974-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6974/" title="DSC6974"><span>17</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6970-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6970/" title="DSC6970"><span>18</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6969-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6969/" title="DSC6969"><span>19</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6967-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6967/" title="DSC6967"><span>20</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6966-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6966/" title="DSC6966"><span>21</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6962-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6962/" title="DSC6962"><span>22</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6961-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6961/" title="DSC6961"><span>23</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6958-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6958/" title="DSC6958"><span>24</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6956-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6956/" title="DSC6956"><span>25</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6954-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6954/" title="DSC6954"><span>26</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6953-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6953/" title="DSC6953"><span>27</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6951-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6951/" title="DSC6951"><span>28</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6950-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6950/" title="DSC6950"><span>29</span></a>
+        </li>
+        <li class="pictureBox" style="background:url(http://wn.errazib.com/wp-content/uploads/2011/08/DSC6948-150x150.jpg)">
+            <a href="http://nana.errazib.com/alek/alek-3/attachment/dsc6948/" title="DSC6948"><span>30</span></a>
+        </li>
+    </ul>
+</body>
+</html>

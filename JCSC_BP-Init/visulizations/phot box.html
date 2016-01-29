@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/mel/pen/nLbyK -->
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+            background: #A4CAEF;
+        }
+
+        .item {
+            width: 335px;
+            height: 260px;
+            background: #FFF;
+            position: absolute;
+        }
+
+            .item img {
+                width: 300px;
+                height: 200px;
+                margin: 15px 0 0 18px;
+            }
+
+            .item p {
+                text-align: center;
+                font: italic 18px cursive;
+                color: #333;
+                margin: 5px 0 0;
+            }
+
+    </style>
+    <script>
+        $(function () {
+            var ZIndex = 0;
+            var isDraggable = false;
+            var WindowWidth = 1000;
+            var WindowHeight = 600;
+
+            $(".item").each(function () {
+                var RotateDeg = RandomNumber(300, 420);
+                var CSSItem = { 'left': Math.round(Math.random() * (WindowWidth)), 'top': Math.round(Math.random() * (WindowHeight)), 'transform': 'rotate(' + RotateDeg + 'deg)' };
+                $(this).css(CSSItem);
+            });
+
+            $(".item").mouseup(function () {
+                $(".item").find('p').remove();
+                if (!isDraggable) {
+                    ZIndex++;
+                    var CSSItem = { 'z-index': ZIndex, 'transform': 'rotate(0deg)' };
+                    $(this).css(CSSItem);
+                    var AltText = $(this).find('img').attr('alt');
+                    $(this).append('<p> ' + AltText + ' </p>');
+                }
+            });
+
+            $(".item").draggable({
+                cursor: 'move',
+                start: function () {
+                    isDraggable = true;
+                    ZIndex++;
+                    var CSSItem = { 'z-index': ZIndex };
+                    $(this).css(CSSItem);
+                },
+                stop: function () {
+                    var RotateDeg = RandomNumber(300, 420);
+                    var CSSItem = { 'transform': 'rotate(' + RotateDeg + 'deg)' };
+                    $(this).css(CSSItem);
+                    isDraggable = false;
+                }
+            });
+
+            function RandomNumber(MaxValue, MinValue) {
+                return Math.round(Math.random() * (MaxValue - MinValue) + MinValue);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="item">
+        <img src="http://img7.uploadhouse.com/fileuploads/17462/174622334108f6f379c2a82f372d99bacf5b8e57.png" alt="Color City" />
+    </div>
+    <div class="item">
+        <img src="http://img4.uploadhouse.com/fileuploads/17462/174622329ac28c3253788e6429a78d2890fe0365.png" alt="City Lights" />
+    </div>
+    <div class="item">
+        <img src="http://img4.uploadhouse.com/fileuploads/17462/1746223155ae2f8af0bc4af7f8fb2e86ed332bd2.png" alt="Clouds" />
+    </div>
+    <div class="item">
+        <img src="http://img1.uploadhouse.com/fileuploads/17462/1746223064655a5b463d4aceb348cb2c2a1b7fc1.png" alt="Thunder" />
+    </div>
+    <div class="item">
+        <img src="http://img6.uploadhouse.com/fileuploads/17462/1746222914cd28fb28897cb92144ac3cd03bd237.png" alt="Balloons" />
+    </div>
+    <div class="item">
+        <img src="http://img9.uploadhouse.com/fileuploads/17462/17462228ba3c9e90fc99cc3d9870f5411cda1b34.png" alt="Palms" />
+    </div>
+    <div class="item">
+        <img src="http://img1.uploadhouse.com/fileuploads/17462/17462227c09d0f267007b357f97503e88f17dd30.png" alt="Sea Worlds" />
+    </div>
+    <div class="item">
+        <img src="http://img8.uploadhouse.com/fileuploads/17462/17462226a5870186139cc623792ee6343c9b7425.png" alt="Flower" />
+    </div>
+    <div class="item">
+        <img src="http://img1.uploadhouse.com/fileuploads/17462/17462225ecc54d073ba8c85a4f6a2d8baa12eed8.png" alt="Autumn" />
+    </div>
+</body>
+</html>

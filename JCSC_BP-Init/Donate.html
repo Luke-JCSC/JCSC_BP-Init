@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+      <title>Donate to jcsc.biz</title>
+	<link rel="stylesheet" media="screen" href="Contact.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize%20-%20tilt.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Architects+Daughter'>
+
+        <link rel="stylesheet" href="css/tilt.css">
+
+    
+    
+      <style>
+          * {
+              margin: 0;
+              padding: 0;
+          }
+
+          #page-wrap {
+              width: 960px;
+              margin: 40px auto;
+              overflow: hidden;
+          }
+
+          .hidden {
+              position: absolute;
+              left: -999em;
+              top: -999em;
+              width: 1%;
+          }
+
+          h1 {
+              font-size: 48px;
+              letter-spacing: -1px;
+              color: white;
+              margin: 0 0 15px 0;
+          }
+
+              h1 span {
+                  color: #1f8cc5;
+              }
+
+          h3 {
+              font-size: 18px;
+              letter-spacing: -1px;
+              margin: 0 0 5px 0;
+          }
+
+          p, label {
+              font-family: Georgia, serif;
+              font-style: italic;
+              font-size: 18px;
+              margin: 4px 0;
+          }
+
+
+          fieldset {
+              width: 280px;
+              padding: 15px;
+              float: left;
+              border: none;
+              margin: 0 10px 0 0;
+          }
+
+              fieldset#step_1 {
+                  background: #b2e7ca;
+              }
+
+              fieldset#step_2 {
+                  background: #b2d9e7;
+              }
+
+              fieldset#step_3 {
+                  background: #e7c7b2;
+              }
+
+          legend {
+              font-weight: bold;
+              font-size: 20px;
+              background: white;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              padding: 5px 10px;
+              letter-spacing: -1px;
+          }
+
+          option {
+              padding: 0 5px;
+          }
+
+          .name_wrap {
+              margin: 5px 0;
+          }
+
+              .name_wrap label {
+                  font-size: 12px;
+                  display: block;
+                  width: 102px;
+                  float: left;
+              }
+
+          .push {
+              margin: 20px 0 0 0;
+          }
+
+          #special_accommodations_wrap,
+          #company_name_wrap {
+              margin: 8px 0 0 0;
+          }
+
+              #company_name_wrap label,
+              #special_accommodations_wrap label {
+                  font-size: 12px;
+              }
+
+              #special_accommodations_wrap textarea {
+                  width: 100%;
+                  height: 100px;
+              }
+      </style>
+      <script src="js/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+      <script src="js/form-fun.jquery.js" type="text/javascript" charset="utf-8"></script>
+
+      <!--[if IE]>
+        <style type="text/css">
+            legend {
+                position: relative;
+                top: -30px;
+            }
+
+            fieldset {
+                margin: 30px 10px 0 0;
+            }
+        </style>
+
+        <script type="text/javascript">
+            $(function(){
+                $("#step_2 legend").css({ opacity: 0.5 });
+                $("#step_3 legend").css({ opacity: 0.5 });
+            });
+        </script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div id="paper-back">
+	<nav>
+        <nav>
+            <div class="close"></div>
+            <a href="http://www.jcsc.biz/">Home</a>
+            <a href="http://www.jcsc.biz/About">About Us</a>
+            <a href="http://www.jcsc.biz/Blogs">Our Work</a>
+            <a href="BP-Index.html">Contact</a>
+        </nav>
+</div>
+<div id="paper-window">
+	<div id="paper-front">
+		<div class="hamburger"><span></span></div>
+		<div id="container">
+			<section>
+				<form class="contact_form" action="#" method="post" name="contact_form">
+    <ul>
+        <li>
+             <h2>Contact Us</h2>
+             <span class="required_notification">* Denotes Required Field</span>
+        </li>
+        <li>
+            <label for="name">Name:</label>
+            
+        </li>
+        <li>
+            <label for="email">Email:</label>
+           
+        </li>
+        <li>
+            <label for="website">Website:</label>
+            <input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+"/>
+            <span class="form_hint">Proper format "http://someaddress.com"</span>
+        </li>
+        <li>
+            <label for="message">Message:</label>
+            <textarea name="message" cols="40" rows="6" required ></textarea>
+        </li>
+        <li>
+        	<button class="submit" type="submit">Submit Form</button>
+        </li>
+    </ul>
+</form>
+			</section>
+			<section></section>
+			<section>
+                
+            </section>
+			<section>
+                <div id="page-wrap">
+
+                    <h1>Help Us Grow <span>Donate</span></h1>
+                    <form action="#" method="post">
+                        <fieldset id="step_1">
+
+                            <legend>Who Are You:</legend>
+
+                            <label for="num_attendees">
+                                How many people will be attending?
+                            </label>
+                            <select id="num_attendees">
+                                <option id="opt_0" value="0">Please Choose</option>
+                                <option id="opt_1" value="1">1</option>
+                                <option id="opt_2" value="2">2</option>
+                                <option id="opt_3" value="3">3</option>
+                                <option id="opt_4" value="4">4</option>
+                                <option id="opt_5" value="5">5</option>
+                            </select>
+
+                            <br />
+
+                            <div id="attendee_1_wrap" class="name_wrap push">
+                                <h3>Please provide full name:</h3>
+
+                                <input type="text" placeholder="John Doe" required />
+                                
+                            </div>
+
+                            <div id="attendee_2_wrap" class="name_wrap">
+                                <label for="name_attendee_2">
+                                    Attendee 2 Name:
+                                </label>
+                                <input type="text" id="name_attendee_2" class="name_input"></input>
+                            </div>
+
+                            <div id="attendee_3_wrap" class="name_wrap">
+                                <label for="name_attendee_3">
+                                    Attendee 3 Name:
+                                </label>
+                                <input type="text" id="name_attendee_3" class="name_input"></input>
+                            </div>
+
+                            <div id="attendee_4_wrap" class="name_wrap">
+                                <label for="name_attendee_4">
+                                    Attendee 4 Name:
+                                </label>
+                                <input type="text" id="name_attendee_4" class="name_input"></input>
+                            </div>
+
+                            <div id="attendee_5_wrap" class="name_wrap">
+                                <label for="name_attendee_5">
+                                    Attendee 5 Name:
+                                </label>
+                                <input type="text" id="name_attendee_5" class="name_input"></input>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset id="step_2">
+
+                            <legend>Prefered Payment Method:</legend>
+
+                            <p>
+                                Would you like your company name on your badges?
+                            </p>
+
+
+                            <input type="radio" id="company_name_toggle_on" name="company_name_toggle_group"></input>
+                            <label for="company_name_toggle_on">Yes</label>
+                            &emsp;
+                            <input type="radio" id="company_name_toggle_off" name="company_name_toggle_group"></input>
+                            <label for="company_name_toggle_off">No</label>
+
+                            <div id="company_name_wrap">
+                                <label for="company_name">
+                                    Company Name:
+                                </label>
+                                <input type="text" id="company_name"></input>
+                                <input type="email" name="email" placeholder="john_doe@example.com" required />
+                                <span class="form_hint">Proper format "name@something.com"</span>
+                            </div>
+
+                            <div class="push">
+                                <p>
+                                    Will anyone in your group require special accommodations?
+                                </p>
+
+                                <input type="radio" id="special_accommodations_toggle_on" name="special_accommodations_toggle"></input>
+                                <label for="special_accommodations_toggle_on">Yes</label>
+                                &emsp;
+                                <input type="radio" id="special_accommodations_toggle_off" name="special_accommodations_toggle"></input>
+                                <label for="special_accommodations_toggle_off">No</label>
+                            </div>
+                            <div id="special_accommodations_wrap">
+                                <label for="special_accomodations_text">
+                                    Please explain below:
+                                </label>
+                                <textarea rows="10" cols="10" id="special_accomodations_text"></textarea>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset id="step_3">
+                            <legend>Make a difference:!</legend>
+
+                            <label for="rock">
+                                Are you ready to rock?
+                            </label>
+                            <input type="checkbox" id="rock"></input>
+
+                            <input type="submit" id="submit_button" class="push" value="Complete Registration"></input>
+                        </fieldset>
+                    </form>
+
+                </div>
+                
+            </section>
+		</div>
+	</div>
+</div>
+          
+        <!-- This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div> -->
+	<footer><div class="footer">
+        <small>
+					&copy; 2016  ~  Created by:: Luke<a href="http://jcsc.biz">@jcsc.biz</a>
+				</small></div>
+	</footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/tilt.js"></script>
+
+    
+    
+    
+  </body>
+</html>

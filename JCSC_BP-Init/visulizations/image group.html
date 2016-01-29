@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/shubhra/pen/ntDag  -->
+    <title></title>
+    <style>
+        @import url(http://weloveiconfonts.com/api/?family=entypo);
+
+        [class*="entypo-"]:before {
+            font-family: 'entypo', sans-serif;
+        }
+
+        .post-middle a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            width: 950px;
+            display: block;
+        }
+
+        .post {
+            background: #fff;
+            border-radius: 3px;
+            width: 160px;
+            margin: 30px 0px 0px 30px;
+            max-height: 216px;
+            float: left;
+            display: inline-block;
+            position: relative;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0 inset, rgba(0, 0, 0, 0.2) 0px 12px 20px;
+            -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0 inset, rgba(0, 0, 0, 0.2) 0px 12px 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0 inset, rgba(0, 0, 0, 0.2) 0px 12px 20px;
+            /* ACTIVATE EXPANDING OPTIONS */
+        }
+
+            .post:hover .post-middle, .post:focus .post-middle, .post:active .post-middle {
+                height: 40px;
+                overflow: hidden;
+                position: relative;
+            }
+
+        .post-top {
+            position: relative;
+            display: block;
+            padding-top: 8px;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            z-index: 0;
+        }
+
+            .post-top img {
+                width: 130px;
+                height: 150px;
+                border-radius: 2px;
+                margin-left: 15px;
+                z-index: 0;
+            }
+
+        .post-middle {
+            height: 0px;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            background: #343637;
+            -webkit-box-shadow: black 0px 2px 8px inset;
+            -moz-box-shadow: black 0px 2px 8px inset;
+            box-shadow: black 0px 2px 8px inset;
+            -webkit-transition-property: height;
+            -moz-transition-property: height;
+            -o-transition-property: height;
+            transition-property: height;
+            -webkit-transition-duration: 200ms;
+            -moz-transition-duration: 200ms;
+            -o-transition-duration: 200ms;
+            transition-duration: 200ms;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+            .post-middle a {
+                font-size: 20px;
+                display: block;
+                float: left;
+                padding: 8px 0 14px 0;
+                width: 40px;
+                text-align: center;
+                background: #343637;
+                text-shadow: rgba(0, 0, 0, 0.8) 0 2px 0;
+                -webkit-transition-property: all;
+                -moz-transition-property: all;
+                -o-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: 500ms;
+                -moz-transition-duration: 500ms;
+                -o-transition-duration: 500ms;
+                transition-duration: 500ms;
+            }
+
+                .post-middle a:hover, .post-middle a:active, .post-middle a:focus {
+                    background: #fc4400;
+                }
+
+        .post-last {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            height: 50px;
+            background: #fff;
+            display: block;
+            z-index: 99;
+            position: relative;
+        }
+
+            .post-last h1 {
+                margin-top: 2px;
+                width: 160px;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 600;
+                font-family: "Helvetica Neue", Helvetica, sans-serif;
+            }
+
+            .post-last h2 {
+                width: 160px;
+                text-align: center;
+                font-size: 10px;
+                font-weight: 200;
+                margin-top: -15px;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                font-family: "Helvetica Neue", Helvetica, sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-top">
+                <img src="http://www.lorempixel.com/400/400/" alt="" />
+            </div>
+            <div class="post-middle">
+                <a href="#" title="View Picture" class="entypo-picture"></a>
+                <a href="#" title="Read More" class="entypo-link"></a>
+                <a href="#" title="View Gallery" class="entypo-book"></a>
+                <a href="#" title="Comment" class="entypo-comment"></a>
+            </div>
+            <div class="post-last">
+                <h1>Tourist Spots</h1>
+                <h2>Category: Travel</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

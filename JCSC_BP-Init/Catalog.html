@@ -1,0 +1,40 @@
+﻿<html ng-app="ModelVoteApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script type="text/javascript">
+
+         var app = angular.module("ModelVoteApp", ["firebase"]);
+         app.controller("ModelVoteCtrl", function ($scope, $firebaseArray) {
+             var ref = new Firebase("https://amazon-database.firebaseio.com/Products");
+             // create a synchronized array
+
+             $scope.PhotoList = $firebaseArray(ref);
+             // Attach an asynchronous callback to read the data at our posts reference
+
+                          console.log($scope.PhotoList);
+
+             $scope.PhotoList.$loaded().then(function (PhotoList) {
+                 $scope.TotalPhotos = PhotoList.length
+                 console.log(PhotoList.length); // data is loaded here
+             });
+         });
+    </script>
+</head>
+<body ng-controller="ModelVoteCtrl">
+
+
+    <table>
+        <tr ng-repeat="Photo in PhotoList">
+            <td><img src="{{ Photo.IMG_SRC }}" height="200px" width="200px" /></td>
+            <td>{{ Photo.ListPrice }}</td>
+            <td>{{ Photo.ProductName }}</td>
+            <td>{{ Photo.URL }}</td>
+            <td>{{Photo.Vendor}}</td>
+            <td>{{Photo.VendorURL}}</td>
+        </tr>
+    </table>
+</body>
+</html>

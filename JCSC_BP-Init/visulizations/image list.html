@@ -1,0 +1,337 @@
+﻿<!doctype html>
+<html>
+<head>
+    <!-- http://codepen.io/ScottMarshall/pen/xoqhv -->
+    <!-- http://codepen.io/anon/pen/ivrhz  -->
+    <!--  
+        Not implimented yet
+        http://codepen.io/bananascript/pen/ofiFC
+        http://codepen.io/kaliedarik/pen/BqbiC
+
+        -->
+    <title>Pulsing Image Gallery</title>
+
+
+    <style>
+                /******************************
+        Body
+        ******************************/
+                body {
+                    background: #333;
+                }
+
+                /******************************
+        Wrapper
+        ******************************/
+                #Wrapper {
+                    margin: 0 auto;
+                    width: 1000px;
+                    margin-top: 30px;
+                }
+
+                    #Wrapper h1 {
+                        font-weight: 300;
+                        font-family: "Century Gothic";
+                        text-align: left;
+                        color: #FFF;
+                        text-shadow: 0px 2px #000;
+                        margin-bottom: 30px;
+                    }
+
+                /******************************
+        Image Gallery
+        ******************************/
+                #Images ul li {
+                    float: left;
+                    width: 150px;
+                    height: 125px;
+                    background: #499bea; /* Old browsers */
+                    background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(top, #499bea 0%,#207ce5 100%); /* IE10+ */
+                    background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%); /* W3C */
+                    list-style: none;
+                    margin: 0px 0px 40px 40px;
+                    opacity: 0.6;
+                    box-shadow: #000 0px 0px 5px 0px;
+                    -webkit-animation: scale 3s ease-in-out infinite alternate;
+                }
+
+                    #Images ul li:hover {
+                        opacity: 1.0;
+                    }
+
+                /******************************
+        Animations
+        ******************************/
+                @-webkit-keyframes scale {
+                    0% {
+                    }
+
+                    100% {
+                        -webkit-transform: scale(1.2);
+                    }
+                }
+    </style>
+
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300,200);
+
+        @import url(http://fonts.googleapis.com/css?family=Croissant+One);
+
+
+        @import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+        * {
+        }
+
+        html {
+            background: #E4E4E4;
+        }
+
+        body {
+            padding: 1px;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            color: #666;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* TITLES
+===================================================== */
+        .pageTitle {
+            display: block;
+            margin: 0 0 0.2em 0;
+            font-size: 2.2em;
+            line-height: 1em;
+            color: #3CA0D0;
+        }
+
+        .pageSubtitle {
+            display: block;
+            margin: 0 0 0.4em 0;
+            font-size: 1.4em;
+            line-height: 1em;
+            color: #333;
+        }
+
+        /* EFFECTS
+===================================================== */
+        .roundedCorners {
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .roundedCornersTop {
+            -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .roundedCornersBottom {
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .boxShadow {
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        /* LAYOUT
+===================================================== */
+        .wrapper2 {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        .top {
+            width: 100%;
+            min-height: 300px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .main {
+            width: 96%;
+            padding: 2% 2% 5% 2%;
+            margin: 5% 0;
+            background: none;
+            border-bottom: solid 1px #ccc;
+        }
+
+        .footer {
+            width: 96%;
+            padding: 2%;
+            background: #222;
+            border-top: solid 3px #086FA1;
+        }
+
+        /* GALLERY
+===================================================== */
+        .galleryItem {
+            display: inline-block;
+            ;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            padding: 0;
+            margin: 0 20px;
+            border: solid 10px #fff;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+
+            .galleryItem img {
+                width: 250px;
+                height: 250px;
+            }
+
+        .caption {
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            z-index: 10;
+        }
+
+            .caption::before {
+                content: attr(data-title);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 0;
+                font-family: 'Croissant One', cursive;
+                font-size: 1.8em;
+                font-weight: 600;
+                line-height: 1.4em;
+                color: #086FA1;
+                background: #fff;
+                overflow: hidden;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            .caption::after {
+                content: attr(data-description);
+                position: absolute;
+                bottom: -0;
+                left: 0;
+                width: 250px;
+                height: 0;
+                font-family: 'Poiret One', cursive;
+                font-size: 1.1em;
+                font-weight: 400;
+                line-height: 1.4em;
+                color: #fff;
+                background: #222;
+                overflow: hidden;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            .caption:hover::before {
+                height: 125px;
+            }
+
+            .caption:hover::after {
+                bottom: 0;
+                height: 125px;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper2 roundedCorners">
+
+        <div class="main">
+            <h1 class="pageTitle">Image gallery</h1>
+            <h2 class="pageSubtitle">With caption fom data tags</h2>
+            <p>
+                A nice image gallery with animated caption drawn from the image data tags. Made with CSS3 for modern browsers. Less modern browsers or non-browser
+                (like Internet Explorer) may encounter problems with showing the layout correctly.
+            </p>
+        </div>
+
+    </div>
+
+    <ul class="top">
+        <li class="galleryItem">
+            <a class="caption"
+               href="#"
+               data-title="Colored landscape"
+               data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien condimentum, sagittis erat rhoncus, bibendum nisi.">
+
+                <img src="http://media.digitalcameraworld.com/files/2012/10/Vertorama_landscape_photography_tips_PHO17.insight02and03.vertorama.jpg" alt="Landscape image">
+
+            </a>
+        </li>
+
+        <li class="galleryItem">
+            <a class="caption"
+               href="#"
+               data-title="Black &amp; white photo"
+               data-description="Vivamus ut sem id magna consequat porta vitae ut sem. Proin eget commodo risus, vitae blandit velit. ">
+
+                <img src="http://media.digitalcameraworld.com/files/2012/11/Black_and_white_landscape_photography_DCM131.shoot_creative.main_image_RGB.jpg" alt="Landscape image">
+
+            </a>
+        </li>
+
+    </ul>
+
+    <!--Main Wrapper-->
+    <div id="Wrapper">
+        <h1>Pulsing Image Gallery</h1>
+
+        <!--Image Gallery Begins-->
+        <div id="Images">
+            <ul>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+                <li><!--<a href="Your Link Here"><img src="Your Image Source Here" alt="Description Here"/></a>--></li>
+            </ul>
+            <!--Image Gallery Ends-->
+        </div>
+
+    </div>
+
+</body>
+</html>

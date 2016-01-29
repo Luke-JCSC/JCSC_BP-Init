@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Profit and Loss Projection</title>
+	<meta name="description" content="Profit and Loss Projection">
+	<meta name="author" content="JCSC.biz">
+      
+
+	  <link rel="stylesheet" href="css/Splash_styles.css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=800, user-scalable=no">
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<script src="js/Chart.js"></script>
+		<link rel="stylesheet" href="css/demo.css">
+    <script>
+    var overlayData = {
+        labels: ["January", "Februarya", "March", "April", "May", "Jun", "July"],
+        datasets: [{
+            label: "My First dataset",
+            type: "bar",
+            yAxesGroup: "1",
+            fillColor: "rgba(151,137,200,0.5)",
+            strokeColor: "rgba(151,137,200,0.8)",
+            highlightFill: "rgba(151,137,200,0.75)",
+            highlightStroke: "rgba(151,137,200,1)",
+            data: [28, 48, 40, 19, 86, 27, 90]
+        }, {
+            label: "My Second dataset",
+            type: "line",
+            yAxesGroup: "2",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [8, 38, 30, 29, 46, 67, 80]
+        }],
+        yAxes: [{
+            name: "1",
+            scalePositionLeft: false,
+            scaleFontColor: "rgba(151,137,200,0.8)"
+        }, {
+            name: "2",
+            scalePositionLeft: true,
+            scaleFontColor: "rgba(151,187,205,0.8)"
+        }]
+    };
+
+    window.onload = function() {
+        window.myOverlayChart = new Chart(document.getElementById("canvas").getContext("2d")).Overlay(overlayData, {
+            populateSparseData: true,
+            overlayBars: false,
+            datasetFill: true,
+        });
+
+    }
+    </script>
+            <style>
+    canvas {}
+    </style>
+   
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Units', 'Fixed Costs', 'Total Costs', 'Revanues'],
+              ['0', 322006, 322006, 0],
+              ['125', 322006, 498861, 284250],
+              ['249', 322006, 674301, 566226],
+              ['375', 322006, 852570, 852750],
+              ['498', 322006, 1026595, 1132452]
+            ]);
+
+            var options = {
+                title: 'Projected Break Even Anyalisis',
+                vAxis: { title: "Costs" },
+                hAxis: { title: "Units" }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+     
+
+/**
+ * Footer Styles
+ */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  background-color: #efefef;
+  text-align: center;
+}
+            
+.table-of-contents {
+  float: right;
+  width: 40%;
+  background: #eee;
+  font-size: 0.8em;
+  padding: 1em 2em;
+  margin: 0 0 0.5em 0.5em;
+}
+.table-of-contents ul {
+  padding: 0;
+}
+.table-of-contents li {
+  margin: 0 0 0.25em 0;
+}
+.table-of-contents a {
+  text-decoration: none;
+}
+.table-of-contents a:hover,
+.table-of-contents a:active {
+  text-decoration: underline;
+}
+
+h3:target {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  from { background: yellow; }
+  to { background: white; }
+}
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+  <!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="meny">
+			<h2>Project Links</h2>
+			<ul>
+				<li><a href="BreakEvenPoint_WithData.html">Break Even Point</a></li>
+				<li><a href="invoice.html">Invoice</a></li>
+				<li><a href="SOW.html">Statement of Work</a></li>
+				<li><a href="Task%20List.html">Task List</a></li>
+				<li><a href="Task%20List2.html">Task List2</a></li>
+				<li><a href="toc.html">Table of Content</a></li>
+				<li><a href="vTimeline">Time Line</a></li>
+				<li><a href="PlanGantt.html">Gantt Chart</a></li>
+				<li><a href="loading.html">loading</a></li>
+				<li><a href="404.html">404</a></li>
+			</ul>
+		</div>
+
+		<div class="meny-arrow"></div>
+	<div class="splash fade-in">
+		<h1 class="splash-title fade-in">Jewett City Software Coporation</h1>
+        <h6>A plan for sustianability</h6>
+		<a href="#" class="splash-arrow fade-in"><img src="img/down-arrow.png" alt="" /></a>
+	</div>
+	<div class="contents">
+	<header class="cf">
+			<h1><a href="#">Business Plan</a></h1>
+			<nav>
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+	</header>
+	
+	<section id="main-content">
+		
+
+<div class="wrapper">
+			<article>
+				<h1>Profit and Loss Projections</h1>
+  <h1></h1>
+  
+
+            <center>
+
+                <table>
+                    <tr>
+                        <td><b>Total Sales</b></td>
+                        <td>$2,006.57</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Total Cost of Goods Sold</b></td>
+                        <td>$1414.84</td>
+                    </tr>
+                    <tr><td><canvas id="multi-line-bar"></canvas></td>
+                        <td colspan="2">
+                            <table>
+                    <thead>
+                        <tr>
+                            <th>DptID</th>
+                            <th>Total Costs</th>
+                            <th>Revanues</th>
+                            <th>Profits</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>0</td>
+                        <td>$322,006.57</td>
+                        
+                        <td>$0.0</td>
+                        <td>-$322,006.57</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        
+                        <td>$498,861.22</td>
+                        <td>$284,250.00</td>
+                        <td>-$214,611.22</td>
+                    </tr>
+                    <tr>
+                        <td>249</td>
+                        
+                        <td>$322,006.57</td>
+                        <td>$566,266.00</td>
+                        <td>-$108,075.03</td>
+                    </tr>
+                    <tr>
+                        <td>375</td>
+                        <td>$322,006.57</td>
+                        
+                        <td>$852,750.00</td>
+                        <td>$179.48</td>
+                    </tr>
+                    <tr>
+                        <td>498</td>
+                        
+                        <td>$322,006.57</td>
+                        <td>$1,132,452.00</td>
+                        <td>$105,856.50</td>
+                    </tr>
+                </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Sales Forecast</b></td>
+                        <td>1,132,909.17</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Cost of Overhead</b></td>
+                        <td>$2,274.00</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Units</b></td>
+                        <td>375</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table><hr />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Units</th>
+                            <th>Fixed Costs</th>
+                            <th>Total Costs</th>
+                            <th>Revanues</th>
+                            <th>Profits</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>0</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>-$322,006.57</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        <td>$322,006.57</td>
+                        <td>$498,861.22</td>
+                        <td>$284,250.00</td>
+                        <td>-$214,611.22</td>
+                    </tr>
+                    <tr>
+                        <td>249</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$566,266.00</td>
+                        <td>-$108,075.03</td>
+                    </tr>
+                    <tr>
+                        <td>375</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$852,750.00</td>
+                        <td>$179.48</td>
+                    </tr>
+                    <tr>
+                        <td>498</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$1,132,452.00</td>
+                        <td>$105,856.50</td>
+                    </tr>
+                </table><hr />
+
+
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            </center>
+
+            <center>
+
+                <table>
+                    <tr>
+                        <td><b>Fixed Costs</b></td>
+                        <td>$322,006.57</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Unit Cost</b></td>
+                        <td>$1414.84</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sales Forecast</b></td>
+                        <td>1,132,909.17</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Unit Price</b></td>
+                        <td>$2,274.00</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Units</b></td>
+                        <td>375</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table><hr />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Units</th>
+                            <th>Fixed Costs</th>
+                            <th>Total Costs</th>
+                            <th>Revanues</th>
+                            <th>Profits</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>0</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>-$322,006.57</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        <td>$322,006.57</td>
+                        <td>$498,861.22</td>
+                        <td>$284,250.00</td>
+                        <td>-$214,611.22</td>
+                    </tr>
+                    <tr>
+                        <td>249</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$566,266.00</td>
+                        <td>-$108,075.03</td>
+                    </tr>
+                    <tr>
+                        <td>375</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$852,750.00</td>
+                        <td>$179.48</td>
+                    </tr>
+                    <tr>
+                        <td>498</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$1,132,452.00</td>
+                        <td>$105,856.50</td>
+                    </tr>
+                </table><hr />
+
+
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            </center>
+                <table>
+                <tr>
+                    <td>sales</td>
+                    </tr>
+                    <tr>Operating Expenses</tr>
+                </table>
+                
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <div class="all-questions">
+  
+  <h3 id="one">Executive Summary</h3>
+  
+   <div style="width:30%">
+        <canvas id="canvas" height="450" width="650"></canvas>
+    </div>
+
+  
+  <h3 id="two">Mission Statment</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="three">Marketing Plan</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="four">Market Research</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="five">Product Development</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="six">Many mongerals manifest mountains</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="seven">How would you like a soda drink?</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="eight">I would very much like a soda drink.</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  
+  <h3 id="nine">Thank you for accepting the soda drink.</h3>
+  
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+    
+  </div>
+  
+				
+			</article>
+		<hr />
+	</section>
+
+	<!-- This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div> -->
+	<footer><div class="footer">
+        <small>
+					&copy; 2015  ~  Created by:: Luke<a href="http://jcsc.biz">@jcsc.biz</a>
+				</small></div>
+	</footer>
+	</div> <!-- END .wrapper -->
+<script src="js/meny.min.js"></script>
+		<script>
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'left',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: true
+			});
+
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+		</script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/index.js"></script>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

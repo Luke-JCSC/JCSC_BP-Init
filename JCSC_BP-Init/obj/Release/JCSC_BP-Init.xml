@@ -1,0 +1,247 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+JCSC_BP-Init
+</name>
+</assembly>
+<members>
+<member name="T:JCSC_BP_Init.Components.FeatureController">
+ <summary>
+ The Controller class for JCSC_BP_Init
+ 
+ The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
+ DotNetNuke will poll this class to find out which Interfaces the class implements. 
+ 
+ The IPortable interface is used to import/export content from a DNN module
+ 
+ The ISearchable interface is used by DNN to index the content of a module
+ 
+ The IUpgradeable interface allows module developers to execute code during the upgrade 
+ process for a module.
+ 
+ Below you will find stubbed out implementations of each, uncomment and populate with your own data
+ </summary>
+</member>
+<member name="M:JCSC_BP_Init.Components.FeatureController.GetModifiedSearchDocuments(DotNetNuke.Entities.Modules.ModuleInfo,System.DateTime)">
+ <summary>
+ Gets the modified search documents for the DNN search engine indexer.
+ </summary>
+ <param name="moduleInfo">The module information.</param>
+ <param name="beginDate">The begin date.</param>
+ <returns></returns>
+</member>
+<member name="M:JCSC_BP_Init.Components.FeatureController.ExportModule(System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ExportModule implements the IPortable ExportModule Interface
+ </summary>
+ <param name="moduleId">The Id of the module to be exported</param>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:JCSC_BP_Init.Components.FeatureController.ImportModule(System.Int32,System.String,System.String,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ImportModule implements the IPortable ImportModule Interface
+ </summary>
+ <param name="ModuleID">The Id of the module to be imported</param>
+ <param name="Content">The content to be imported</param>
+ <param name="Version">The version of the module to be imported</param>
+ <param name="UserId">The Id of the user performing the import</param>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:JCSC_BP_Init.Components.FeatureController.UpgradeModule(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ UpgradeModule implements the IUpgradeable Interface
+ </summary>
+ <param name="Version">The current version of the module</param>
+ -----------------------------------------------------------------------------
+</member>
+<member name="T:JCSC_BP_Init.Settings">
+ -----------------------------------------------------------------------------
+ <summary>
+ The Settings class manages Module Settings
+ 
+ Typically your settings control would be used to manage settings for your module.
+ There are two types of settings, ModuleSettings, and TabModuleSettings.
+ 
+ ModuleSettings apply to all "copies" of a module on a site, no matter which page the module is on. 
+ 
+ TabModuleSettings apply only to the current module on the current page, if you copy that module to
+ another page the settings are not transferred.
+ 
+ If you happen to save both TabModuleSettings and ModuleSettings, TabModuleSettings overrides ModuleSettings.
+ 
+ Below we have some examples of how to access these settings but you will need to uncomment to use.
+ 
+ Because the control inherits from JCSC_BP_InitSettingsBase you have access to any custom properties
+ defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+ </summary>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:JCSC_BP_Init.Settings.LoadSettings">
+ -----------------------------------------------------------------------------
+ <summary>
+ LoadSettings loads the settings from the Database and displays them
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:JCSC_BP_Init.Settings.UpdateSettings">
+ -----------------------------------------------------------------------------
+ <summary>
+ UpdateSettings saves the modified settings to the Database
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="T:JCSC_BP_Init.Edit">
+ <summary>
+ The View class displays the content
+ 
+ Typically your view control would be used to display content or functionality in your module.
+ 
+ View may be the only control you have in your project depending on the complexity of your module
+ 
+ Because the control inherits from JCSC_BP_InitModuleBase you have access to any custom properties
+ defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+ 
+ </summary>
+</member>
+<member name="F:JCSC_BP_Init.Edit._lblName">
+<summary>
+lblName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._txtName">
+<summary>
+txtName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._lblDescription">
+<summary>
+lblDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._txtDescription">
+<summary>
+txtDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._lblAssignedUser">
+<summary>
+lblAssignedUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._ddlAssignedUser">
+<summary>
+ddlAssignedUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._btnSubmit">
+<summary>
+btnSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:JCSC_BP_Init.Edit._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:JCSC_BP_Init.Edit.Page_Load(System.Object,System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Page_Load runs when the control is loaded
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="T:JCSC_BP_Init.View">
+ <summary>
+ The View class displays the content
+ 
+ Typically your view control would be used to display content or functionality in your module.
+ 
+ View may be the only control you have in your project depending on the complexity of your module
+ 
+ Because the control inherits from JCSC_BP_InitModuleBase you have access to any custom properties
+ defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+ 
+ </summary>
+</member>
+<member name="F:JCSC_BP_Init.View._rptItemList">
+<summary>
+rptItemList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:JCSC_BP_Init.View.Page_Load(System.Object,System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Page_Load runs when the control is loaded
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:JCSC_BP_Init.View.ModuleActions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Registers the module actions required for interfacing with the portal framework
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+</members>
+</doc>

@@ -1,0 +1,718 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Ballance Sheet - JCSC</title>
+
+    <style>
+        body {
+            font-family: arial;
+            font-size: 10pt;
+        }
+    </style>
+
+    <script type="text/javascript" src="js/treegrid.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/treegrid.css">
+
+    <script type="text/javascript">
+      var treegrid;
+      var data;
+
+      // Called when the page is loaded
+      function drawTreeGrid() {
+          data = [
+               {
+                   "BetterStream": "Asset Sheet",
+                   "EroticArt": [
+                        {
+                            "Assets": "EroticArt#1",
+                            "Purchase Date": "10/01/2014",
+                            "Cost": "$580",
+                            "Cost to Replace":"$8,000",
+                            "Total Assets": "5",
+                            "Revanue per Assets": "$175",
+                            "Net Cost per Assets": "$364,000",
+                            "Current Assets": [
+                              { "Current Assets": "Cash and Equivalents", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                              { "Current Assets": "Net Accounts Recievable", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                              { "Current Assets": "Inventory", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                              { "Current Assets": "Other Current Assets", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                              {
+                                  "Current Assets": "Total Current Assets", "Total Current Assets": [{ "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "$35" }]
+
+
+                              }
+                            ]
+                        },
+                         {
+                             "Title": "1983 26' Camper",
+                             "Cost per Assets": "$35",
+                             "Total Assets": "5",
+                             "Total Cost per Hour": "$175",
+                             "Total Cost per Year": "$364,000",
+                             "Fixed Assets": [
+                               { "Fixed Assets": "Capital Assets", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                               { "Fixed Assets": "Accumulated Depreciation", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                               { "Current Assets": "Inventory", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "$35", "2016": "~$35" },
+                               { "Current Assets": "Other Current Assets", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                               {
+                                   "Current Assets": "Total Fixed Assets", "Total Current Assets": [{ "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "$35" }]
+
+
+                               }
+                             ]
+                         },
+                     {
+                         "Title": "Costs of Goods",
+                         "Cost per Hour": "$35",
+                         "Total Employees": "5",
+                         "Total Cost per Hour": "$175",
+                         "Total Cost per Year": "$364,000",
+                         "Costs of Goods": [
+                           { "Costs of Goods": "Software Developer 1", "Cost per Hour": "$35", "grade": "A" },
+                           { "Costs of Goods": "Software Developer 2", "Cost per Hour": "$29", "grade": "C" },
+                           { "Costs of Goods": "Software Developer 3", "Cost per Hour": "$33", "grade": "A" },
+                           { "Costs of Goods": "Software Developer 4", "Cost per Hour": "$29", "grade": "C" },
+                           { "Costs of Goods": "Software Developer 5", "Cost per Hour": "$30", "grade": "B" }
+                         ]
+                     },
+                     {
+                         "Title": "Costs of Services", "Cost per Hour": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400", "Costs of Services": [{ "Costs of Services": "Software Developer 1", "Cost per Hour": "$35", "grade": "A" },
+                             { "Costs of Services": "Software Developer 2", "Cost per Hour": "$29", "grade": "C" },
+                             { "Costs of Services": "Software Developer 3", "Cost per Hour": "$33", "grade": "A" },
+                             { "Costs of Services": "Software Developer 4", "Cost per Hour": "$29", "grade": "C" },
+                             { "Costs of Services": "Software Developer 5", "Cost per Hour": "$30", "grade": "B" }]
+                     },
+                     {
+                         "Title": "Products Sold", "Cost per Hour": "$15", "Total Employees": "10", "Total Cost per Hour": "$150", "Total Cost per Year": "$312,000", "Products Sold": [{ "Costs of Services": "Software Developer 2", "Cost per Hour": "$29", "grade": "C" },
+                               { "Products Sold": "Embeded PC", "Cost per Hour": "$33", "grade": "A" },
+                               { "Products Sold": "Super Panda", "Cost per Hour": "$29", "grade": "C" },
+                               { "Products Sold": "Monkifi Device", "Cost per Hour": "$30", "grade": "B" }]
+                     },
+                     { "Title": "Data Base Administrator", "Cost per Hour": "$35", "Total Employees": "2", "Total Cost per Hour": "$70", "Total Cost per Year": "$145,600" },
+                     { "Title": "Project Managment", "Cost per Hour": "$75", "Total Employees": "3", "Total Cost per Hour": "$225", "Total Cost per Year": "$468,000" }
+                   ],
+                   "BetterStream.com": [
+                      {
+                          "Business Plan": "Resourses", "ROI": "$20", "BEP_$": "$4,921,429", "BEP_UNITS": "80", "Total OPERATIONS Cost per Year": "$766,400",
+                          "Documentation": [{ "Documentation": "Home.html"},
+                                        { "Documentation": "Splash Page,html" },
+                                         { "Documentation": "index.html" },
+                                          { "Documentation": "Slide Show.html" },
+                                           { "Documentation": "Table of Contents.html" },
+                                            { "Documentation": "Executive Summary.html" },
+                                             { "Documentation": "Financial Summary.html" },
+                                        { "Documentation": "RSS.html"}]
+                      }
+                   ]
+                   ,
+                   "Basic": [
+                        {
+                            "Assets": "Current Customers",
+
+                            "Customers": [
+                              { "Customers": "Bernie MAc", "2013": "$400", "2014": "$-", "2015": "~$400", "2016": "~$400" },
+                               { "Customers": "ErotticHabbit.com", "2013": "E.Q.", "2014": "$-", "2015": "~$%%", "2016": "~$%%" },
+                              { "Customers": "BetterStream", "2009": "$-", "2010": "$-", "2011": "$0", "2012": "$-", "2013": "$300", "2014": "$300", "2015": "~$35", "2016": "~$35" },
+                              { "Customers": "BenjaminJoesups", "2009": "$-", "2010": "$-", "2011": "$-", "2012": "$-", "2013": "$-", "2014": "$-", "2015": "~$3,500", "2016": "~$3,500" },
+                              { "Customers": "GreaseMonkey", "2012": "$0", "2013": "$2,500", "2014": "$800" },
+                              { "Customers": "Monkifi.com", "2014": "$200", "2015": "~$35", "2016": "~$35" },
+                               {
+                                   "Customers": "Total Customers Revanue", "Total LongTerm Liabilities": [{ "2009": "$-", "2010": "$300", "2011": "$0", "2012": "$2,500", "2013": "$3,500", "2014": "$900", "2015": "$50-YTD", "2016": "~$35" }]
+
+
+                              }
+                            ]
+                        }, {
+                           "Assets": "Digital PRoperty",
+
+                           "Custom Software": [
+                             { "Computer Hardware": "Home.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "splash page.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "BreakEven.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "ProfitandLoss.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "login.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "admin.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "loading.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Landing Page#9.html", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#10", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#11", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#12", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#13", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#14", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Old PC#15", "Cost": "~$35", "Price": "$75" },
+                             { "Computer Hardware": "Rassberry PI", "Cost": "$45", "Price": "$55" },
+
+                             { "Computer Hardware": "MISC Sound", "Cost": "$95", "Price": "$295" },
+                             { "Computer Hardware": "Video Cards", "Cost": "$2,195", "Price": "$2,905" },
+
+                             {
+                                 "Current Inventory": "Total Current Inventory", "Total Current Inventory": [{ "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "$35" }]
+
+
+                             }
+                           ]
+                       },
+
+                       {
+                           "Assets": "Software Licenses",
+
+                           "LongTerm Liabilities": [
+                             { "Software Licenses": "DNN", "2014": "$-", "2015": "~$5505", "2016": "~$5505" },
+                             { "Software Licenses": "Telerik", "2009": "$-", "2010": "$-", "2011": "$0", "2012": "$-", "2013": "$-", "2014": "$0", "2015": "~$35", "2016": "~$35" },
+                             { "Software Licenses": "Hosting", "2009": "$-", "2010": "$-", "2011": "$0", "2012": "$0", "2013": "$-", "2014": "$0", "2015": "~$3,500", "2016": "~$3,500" },
+                             { "Software Licenses": "Sublime Text", "2012": "$0", "2013": "$0", "2014": "$0", "2015": "~$75", "2016": "~$0" },
+                             { "Software Licenses": "Lucid Charts", "2014": "$0", "2015": "~$35", "2016": "~$35" },
+                             { "Software Licenses": "Google Apps for Domain", "2009": "$0", "2010": "$0", "2011": "$0", "2012": "$0", "2013": "$0", "2014": "$0", "2015": "~$55", "2016": "~$835" },
+                             { "Software Licenses": "Other ", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                             { "Software Licenses": "Other Needs", "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "~$35" },
+                             {
+                                 "Software Licenses": "Total Software Costs", "Total LongTerm Liabilities": [{ "2009": "$35", "2010": "$35", "2011": "$35", "2012": "$35", "2013": "$35", "2014": "$35", "2015": "~$35", "2016": "$35" }]
+
+
+                             }
+                           ]
+                       },
+
+                     {
+                         "Assets": "Prototypes & Projects", "Total": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400", "Costs of Services": [{ "Costs of Services": "Software Developer 1", "Cost per Hour": "$35", "grade": "A" },
+                             { "Costs of Services": "Software Developer 2", "Cost per Hour": "$29", "grade": "C" },
+                             { "Costs of Services": "Software Developer 3", "Cost per Hour": "$33", "grade": "A" },
+                             { "Costs of Services": "Software Developer 4", "Cost per Hour": "$29", "grade": "C" },
+                             { "Costs of Services": "Software Developer 5", "Cost per Hour": "$30", "grade": "B" }]
+                     },
+                      {
+                          "Assets": "Office Equipment", "Total": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                                "Utilities": [{ "Utilities": "Total ISP COST", "Cost per Hour": "$35", "grade": "A" },
+                                              { "Utilities": "Total Eletrical COST", "Cost per Hour": "$29", "grade": "C" },
+                                              { "Utilities": "Total Water COSTS", "Cost per Hour": "$33", "grade": "A" },
+                                              { "Utilities": "Total Sewage COSTS", "Cost per Hour": "$29", "grade": "C" },
+                                              { "Utilities": "Total RENT", "Cost per Hour": "$30", "grade": "B" }]
+                      },
+                      {
+                          "Assets": "Periferials", "Total": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                          "Periferials": [{ "Periferials": "USB - LAN", "Cost per Hour": "$55", "grade": "A" },
+                                        { "Periferials": "2TB External Backup", "Cost": "$149", "grade": "A" },
+                                        { "Periferials": "Cables", "Cost": "$0", "grade": "A" },
+                                        { "Periferials": "MISC USB STORAGE", "Cost per": "$29", "grade": "C" },
+                                        { "Periferials": "Monitors", "Cost per": "$130", "grade": "B" }]
+                      },
+
+                     { "Title": [{ "Maintiance": "Total Cost $30000" }, { "Equipment Depreciation": "33" }] }
+                   ],
+
+                   "AquaTraz.biz": [
+                       {
+                           "Title": "Inventory in Progress", "Cost per Materials": "$2,090", "Total Employees": "1", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                           "Aquadic Arangments": [
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL":"URL", "Price": "$29", "Description":"URL#PARTNUMB"},
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL": "URL", "Price": "$29", "Description": "URL#PARTNUMB" },
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL": "URL", "Price": "$29", "Description": "URL#PARTNUMB" },
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL": "URL", "Price": "$29", "Description": "URL#PARTNUMB" },
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL": "URL", "Price": "$29", "Description": "URL#PARTNUMB" },
+                                         { "Aquadic Arangments": "Part#1", "Cost": "$3", "HoursIN": "30", "Picture_URL": "URL", "Price": "$29", "Description": "URL#PARTNUMB" },
+                                         { "Aquadic Arangments": "Total Parts", "Count":"93", " Possible Revanue": "~$350", "Cost per Item": "$30", "grade": "B" }]
+                       },
+                   {
+                           "Title": "Domain", "Cost": "$60", "URL": "AquaTraz.biz", "QR-Code": "#sand", "Total Cost per Year": "$~$12",
+                           "Aquatraz Web Presense": [{ "Web Presense": "Site Revanue", "Revanue": "$350", "Cost per Hour": "$35", "grade": "A" },
+                                         { "Web Presense": "Inventory Development Revanue", "Revanue": "$0", "Cost per Item": "$9", "grade": "C" },
+                                         { "Web Presense": "eCommerce Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Web Presense": "Research Development Docs", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Web Presense": "Wages Payable", "Revanue": "$350", "Cost per Hour": "$33", "grade": "A" },
+                                         { "Web Presense": "Training Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Web Presense": "Total Revanues", "Revanue": "$350", "Cost per Hour": "$30", "grade": "B" }]
+      }
+                   ]
+                   ,
+
+                   "ITLS": [
+                       {
+                           "1985 f250": "Plow Truck #1", "Cost of Ownership": "$5,470", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                           "Parts NEEDED": [{ "Parts NEEDED": "Slave Cylender", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Clutch", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Caliper", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Brake Shoes", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Rotors", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Shoes", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Exauhst", "URL": "URL", "Part#": "0", "Part Cost": "$1,350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Glow Plugs", "URL": "URL", "Part#": "0", "Part Cost": "$550", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Shoes", "URL": "URL", "Part#": "0", "Part Cost": "$1,350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Oil Change", "URL": "URL", "Part#": "0", "Part Cost": "$150", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Frame Repair", "URL": "URL", "Part#": "0", "Part Cost": "$950", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Bed Trailer", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" },
+                                         { "Parts NEEDED": "Slave Cylender", "URL": "URL", "Part#": "0", "Part Cost": "$350", "Cost per Hour": "$35", "Time to Install": "3h" }]
+                       }
+                   ]
+                   ,
+
+                   "Hostyle Motor Group": [
+                       {
+                           "Title": "Revanues", "Cost per Hour": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                           "Aquadic Arangments": [{ "Aquadic Arangments": "Ad Feed Revanue", "Revanue": "$350", "Cost per Hour": "$35", "grade": "A" },
+                                         { "Aquadic Arangments": "Web Site Development Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Aquadic Arangments": "Wages Payable", "Revanue": "$350", "Cost per Hour": "$33", "grade": "A" },
+                                         { "Aquadic Arangments": "Training Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Aquadic Arangments": "Total Revanues", "Revanue": "$350", "Cost per Hour": "$30", "grade": "B" }]
+                       }
+                   ]
+                   ,
+
+                   "AmazingPhotographyServices": [
+                       {
+                           "Title": "Revanues", "Cost per Hour": "$20", "Total Employees": "4", "Total Cost per Hour": "$80", "Total Cost per Year": "$166,400",
+                           "Aquadic Arangments": [{ "Aquadic Arangments": "Ad Feed Revanue", "Revanue": "$350", "Cost per Hour": "$35", "grade": "A" },
+                                         { "Aquadic Arangments": "Web Site Development Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Aquadic Arangments": "Wages Payable", "Revanue": "$350", "Cost per Hour": "$33", "grade": "A" },
+                                         { "Aquadic Arangments": "Training Revanue", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                         { "Aquadic Arangments": "Total Revanues", "Revanue": "$350", "Cost per Hour": "$30", "grade": "B" }]
+                       },
+                   {
+                       "Title": "Domain", "Cost": "$60", "URL": "AquaTraz.biz", "QR-Code": "#sand", "Total Cost per Year": "$~$12",
+                       "Web Presense": [{ "Web Presense": "Site Revanue", "Revanue": "$350", "Cost per Hour": "$35", "grade": "A" },
+                                     { "Web Presense": "AmazingPhotographyServices.biz Development", "Revanue": "$0", "Cost": "$9" },
+                                     { "Web Presense": "eCommerce Revanue", "Revanue": "$0", "Cost": "$189"},
+                                     { "Web Presense": "Research Development Docs", "Revanue": "$350", "Cost per Hour": "$29", "grade": "C" },
+                                     { "Web Presense": "Advertising Revanue", "Revanue": "$0", "Cost": "$t"},
+                                     { "Web Presense": "Total Revanues", "Revanue": "-t", "Cost per Hour": "$33"}]
+                   }
+                   ]
+               }
+
+
+
+        ];
+
+        // specify options
+        var options = {
+          'width': '800px',
+          'height': '800px'
+        };
+
+        // Instantiate our treegrid object.
+        var container = document.getElementById('mytreegrid');
+        treegrid = new links.TreeGrid(container, options);
+
+        data = new links.DataTable(data);
+
+        // Draw our treegrid with the created data and options
+        treegrid.draw(data);
+      }
+
+    </script>
+    <meta name="author" content="JCSC.biz">
+
+    <link rel="stylesheet" href="css/Splash_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=800, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/demo.css">
+
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+        /**
+                     *  http://codepen.io/raevenk/pen/ojXMzV
+          * Cube Styles
+          */
+        body {
+            background: #F8FFE5;
+        }
+
+        .perspective {
+            -webkit-perspective: 76em;
+            perspective: 76em;
+            -webkit-perspective-origin: 50% 50px;
+            perspective-origin: 50% 50px;
+            width: 494px;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            color: #fff;
+            text-align: center;
+        }
+
+        input {
+            display: none;
+        }
+
+        .tab {
+            position: absolute;
+            width: 80px;
+            height: 70px;
+            background: pink;
+            right: 0;
+            line-height: 70px;
+            font-weight: 300;
+        }
+
+            .tab:nth-child(1) {
+                top: -5px;
+                background: #06D6A0;
+            }
+
+            .tab:nth-child(2) {
+                top: 69px;
+                background: #1B9AAA;
+            }
+
+            .tab:nth-child(3) {
+                top: 143px;
+                background: #EF476F;
+            }
+
+        .cube {
+            position: relative;
+            margin: 60px auto 0;
+            width: 300px;
+            height: 200px;
+            -webkit-transform-origin: 0 100px;
+            -ms-transform-origin: 0 100px;
+            transform-origin: 0 100px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: -webkit-transform 0.5s ease-in;
+            transition: transform 0.5s ease-in;
+        }
+
+        .tab-content {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+        }
+
+            .tab-content h1 {
+                font-size: 25px;
+                margin: 75px 0 10px;
+                font-weight: 300;
+            }
+
+            .tab-content p {
+                font-size: 12px;
+            }
+
+            .tab-content:nth-child(2) {
+                -webkit-transform: translateZ(100px);
+                transform: translateZ(100px);
+                background: #1B9AAA;
+            }
+
+            .tab-content:nth-child(1) {
+                -webkit-transform: rotateX(-270deg) translateY(-100px);
+                transform: rotateX(-270deg) translateY(-100px);
+                -webkit-transform-origin: top left;
+                -ms-transform-origin: top left;
+                transform-origin: top left;
+                background: #06D6A0;
+            }
+
+            .tab-content:nth-child(3) {
+                -webkit-transform: rotateX(-90deg) translateY(100px);
+                transform: rotateX(-90deg) translateY(100px);
+                -webkit-transform-origin: bottom center;
+                -ms-transform-origin: bottom center;
+                transform-origin: bottom center;
+                background: #EF476F;
+            }
+
+        #tab-top:checked ~ .cube {
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+        }
+
+        #tab-front:checked ~ .cube {
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+
+        #tab-bottom:checked ~ .cube {
+            -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+        }
+
+
+        /**
+          * Footer Styles
+          */
+
+        .footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            background-color: #efefef;
+            text-align: center;
+        }
+
+
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+
+        .table-of-contents {
+            float: right;
+            width: 40%;
+            background: #eee;
+            font-size: 0.8em;
+            padding: 1em 2em;
+            margin: 0 0 0.5em 0.5em;
+        }
+
+            .table-of-contents ul {
+                padding: 0;
+            }
+
+            .table-of-contents li {
+                margin: 0 0 0.25em 0;
+            }
+
+            .table-of-contents a {
+                text-decoration: none;
+            }
+
+                .table-of-contents a:hover,
+                .table-of-contents a:active {
+                    text-decoration: underline;
+                }
+
+        h3:target {
+            animation: highlight 1s ease;
+        }
+
+        @keyframes highlight {
+            from {
+                background: yellow;
+            }
+
+            to {
+                background: white;
+            }
+        }
+    </style>
+
+
+
+    <script src="js/prefixfree.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onload="drawTreeGrid();">
+
+    <div class="meny">
+        <h2>Project Links</h2>
+        <ul>
+            <li><a href="BreakEvenPoint_WithData.html">Break Even Point</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="SOW.html">Statement of Work</a></li>
+            <li><a href="Task%20List.html">Task List</a></li>
+            <li><a href="Task%20List2.html">Task List2</a></li>
+            <li><a href="toc.html">Table of Content</a></li>
+            <li><a href="vTimeline">Time Line</a></li>
+            <li><a href="PlanGantt.html">Gantt Chart</a></li>
+            <li><a href="loading.html">loading</a></li>
+            <li><a href="404.html">404</a></li>
+        </ul>
+    </div>
+    <div class="meny-arrow"></div>
+    <div class="splash fade-in">
+        <h1 class="splash-title fade-in">Jewett City Software Coporation</h1>
+        <h6>A plan for sustianability</h6>
+        <a href="#" class="splash-arrow fade-in"><img src="img/down-arrow.png" alt="" /></a>
+    </div>
+    <div class="contents">
+        <header class="navbar-wrapper">
+            <h1><a href="#">Asset List</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="main-content">
+
+
+            <article>
+                <h1>Resources and Assets advailable to the organization as a whole</h1>
+                <h1></h1>
+                <div class="perspective">
+                    <label class="tab" for="tab-top">TOP</label>
+                    <label class="tab" for="tab-front">FRONT</label>
+                    <label class="tab" for="tab-bottom">BOTTOM</label>
+                    <input type="radio" name="tabs" id="tab-top">
+                    <input type="radio" name="tabs" id="tab-front">
+                    <input type="radio" name="tabs" id="tab-bottom">
+                    <div class="cube">
+                        <div class="tab-content">
+                            <h1>TOP CONTENT</h1>
+                            <p>THIS IS AWESOME</p>
+                        </div>
+                        <div class="tab-content">
+                            <h1>FRONT CONTENT</h1>
+                            <p>THIS IS COOL</p>
+                        </div>
+                        <div class="tab-content">
+                            <h1>BOTTOM CONTENT</h1>
+                            <p>THIS IS SWEET</p>
+                        </div>
+                    </div>
+                </div>
+                <p>Please scroll Down this is just space filler</p>
+
+
+                <div class="all-questions">
+
+                    <h3 id="one">Asset Summary</h3>
+
+                    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Created By: Luke@jcsc.biz-->
+                        <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+                        <g>
+                            <title>Layer 1</title>
+                            <text stroke="#000000" transform="matrix(1.90141 0 0 2.8409 -474.599 -53.2698)" id="svg_3" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="43.410223" x="461.337901" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Action Steps for Successful Managment</text>
+                            <path id="svg_34" d="m522.406311,511.047211c0.000061,-0.000977 0.000122,-0.001953 0.000122,-0.00296c0,-0.017273 -0.013977,-0.03125 -0.03125,-0.03125c-0.013367,0 -0.02478,0.008453 -0.029236,0.020294c-0.00293,-0.003235 -0.007141,-0.00531 -0.011841,-0.00531c-0.008911,0 -0.016113,0.007233 -0.016113,0.016113c0,0.001038 0.000122,0.002075 0.000305,0.003052c-0.011841,0.001953 -0.020935,0.012177 -0.020935,0.024597c0,0.013824 0.01123,0.024994 0.025024,0.024994l0.011536,0c-0.00061,-0.001312 -0.000977,-0.002777 -0.000977,-0.004303c0,-0.002655 0.001038,-0.005188 0.00293,-0.00705l0.021606,-0.021667c0.001892,-0.001862 0.004395,-0.002899 0.00708,-0.002899c0.002686,0 0.005188,0.001038 0.00708,0.00293l0.021606,0.021637c0.001892,0.001862 0.00293,0.004395 0.00293,0.00705c0,0.001526 -0.000366,0.002991 -0.000977,0.004303l0.006531,0c0.013855,0 0.025024,-0.011169 0.025024,-0.024994c0,-0.012268 -0.00885,-0.0224 -0.020447,-0.024536zm-0.038208,0.02005c-0.000977,-0.000977 -0.002258,-0.001465 -0.00354,-0.001465s-0.002563,0.000488 -0.00354,0.001465l-0.021606,0.021637c-0.001953,0.001953 -0.001953,0.005127 0,0.00708l0.002747,0.002777c0.001953,0.001953 0.004822,0.002258 0.006409,0.000702s0.002808,-0.00061 0.002808,0.002136l0,0.006195c0,0.002747 0.002258,0.005005 0.005005,0.005005l0.016357,0c0.002747,0 0.005005,-0.002258 0.005005,-0.005005l0,-0.006195c0,-0.002747 0.001282,-0.003723 0.002808,-0.002136c0.001587,0.001556 0.004456,0.001251 0.006409,-0.000702l0.002747,-0.002777c0.001953,-0.001953 0.001953,-0.005127 0.000061,-0.00708l-0.021667,-0.021637z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#000000" />
+                            <circle stroke="#000000" id="svg_40" r="70.734344" cy="324.545434" cx="131.90909" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none" />
+                            <path transform="rotate(-89.035 62.1264 327.122)" stroke="#000000" id="svg_42" d="m63.699032,327.121826l-15.572586,-18.474152l28.000004,18.474152l-28.000004,18.474121l15.572586,-18.474121z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path id="svg_43" d="m117.154984,290.157654l-0.278542,-0.5l0.500824,0.5l-0.500824,0.5l0.278542,-0.5z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000ff" />
+                            <path id="svg_44" d="m126.109985,248.367645l-0.278542,-0.5l0.500824,0.5l-0.500824,0.5l0.278542,-0.5z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000ff" />
+                            <path id="svg_45" stroke="#000000" d="m130.663513,255.090912l-15.572601,-18.474121l28,18.474121l-28,18.474121l15.572601,-18.474121z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path transform="rotate(177.604 130.091 394.091)" id="svg_46" stroke="#000000" d="m131.663513,394.090942l-15.572601,-18.474121l28,18.474121l-28,18.474121l15.572601,-18.474121z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path transform="rotate(93.5274 204.091 323.091)" id="svg_47" stroke="#000000" d="m205.663513,323.090912l-15.572601,-18.474121l28,18.474121l-28,18.474152l15.572601,-18.474152z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <text id="svg_48" stroke="#000000" transform="matrix(0.655406 0 0 0.820113 401.762 -72.8737)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="546.563047" x="-407.643354" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">CHECK</text>
+                            <text id="svg_49" stroke="#000000" transform="matrix(0.864278 0 0 0.853715 5.20263 -36.644)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="433.332269" x="194.250982" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">DO</text>
+                            <text id="svg_50" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="413.431354" x="55.935551" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">ACT</text>
+                            <text stroke="#000000" transform="matrix(0.784914 0 0 0.848341 18.8137 67.4455)" id="svg_51" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="260.751225" x="143.684615" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Plan</text>
+                            <circle stroke="#000000" id="svg_64" r="70.734344" cy="320.346078" cx="574.594759" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none" />
+                            <path id="svg_65" transform="rotate(-89.035 504.812 322.923)" stroke="#000000" d="m506.384705,322.922485l-15.572632,-18.474182l28.000061,18.474182l-28.000061,18.474121l15.572632,-18.474121z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path id="svg_66" d="m559.840698,285.958313l-0.278625,-0.5l0.500854,0.5l-0.500854,0.5l0.278625,-0.5z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000ff" />
+                            <path id="svg_67" d="m568.795654,244.168289l-0.278503,-0.5l0.500793,0.5l-0.500793,0.5l0.278503,-0.5z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000ff" />
+                            <path id="svg_68" stroke="#000000" d="m573.349182,250.891556l-15.572632,-18.474121l28,18.474121l-28,18.474106l15.572632,-18.474106z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path id="svg_69" transform="rotate(177.604 572.777 389.892)" stroke="#000000" d="m574.349182,389.891602l-15.572632,-18.474121l28,18.474121l-28,18.474121l15.572632,-18.474121z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <path id="svg_70" transform="rotate(93.5274 646.777 318.892)" stroke="#000000" d="m648.349182,318.891571l-15.572632,-18.474152l28,18.474152l-28,18.474152l15.572632,-18.474152z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#0000ff" />
+                            <text id="svg_71" stroke="#000000" transform="matrix(0.655406 0 0 0.820113 401.762 -72.8737)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="615.82258" x="269.319673" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Alignment</text>
+                            <text id="svg_72" stroke="#000000" transform="matrix(0.864278 0 0 0.853715 5.20263 -36.644)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="426.070647" x="804.801863" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Focus</text>
+                            <text id="svg_73" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="401.807495" x="384.732001" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Continuous</text>
+                            <text id="svg_74" stroke="#000000" transform="matrix(0.784914 0 0 0.848341 283.499 -10.7539)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="285.505421" x="360.268864" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Communication</text>
+                            <text style="cursor: move;" id="svg_75" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="183.090629" x="518.057034" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Preformanc Measurement</text>
+                            <text id="svg_76" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="196.766622" x="77.606554" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Deming Cycle</text>
+                            <text id="svg_77" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="217.28061" x="525.939817" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Managment Systems</text>
+                            <text id="svg_78" stroke="#000000" transform="matrix(1.01487 0 0 0.87745 39.3269 -29.3117)" xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" y="422.420153" x="380.109362" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Improvement</text>
+                            <circle stroke="#db631e" fill-opacity="0" id="svg_79" r="36.568451" cy="383.545441" cx="133.909089" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="#000000" />
+                            <path stroke="#000000" transform="rotate(-16.9206 316.306 435.732)" id="svg_80" d="m355.52832,476.886902l2.160614,-10.838959l-25.421753,-1.891235c-64.363647,-4.776947 -127.451172,-25.03244 -162.579407,-52.19989c-6.306351,-4.875488 -10.521667,-9.568542 -9.375565,-10.435486c2.632874,-1.984039 66.724884,-17.789764 72.144608,-17.789764c2.2099,0 7.51738,2.904449 11.796753,6.456512c18.260834,15.154541 65.503723,30.960693 98.770844,33.040802l13.486298,0.844208l-2.319824,-9.367889c-2.401703,-9.730804 -1.728058,-11.778076 3.898407,-11.778076c3.60498,0 111.095673,37.359222 114.166901,39.681854c2.330017,1.758911 -12.454712,8.284027 -65.387573,28.863098c-22.99231,8.944153 -44.438293,16.259491 -47.653046,16.259491c-5.14505,0 -5.592651,-1.297974 -3.687256,-10.844666l0,0z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#aad4ff" />
+                        </g>
+                    </svg>
+                    <h3 id="two">Return on Investment Plan</h3>
+
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+                    <h3 id="three">Line Item Breakdown</h3>
+                    
+                    <div id="mytreegrid"></div>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+                    <h3 id="four">Market Research</h3>
+
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+                    <h3 id="five">Product Development</h3>
+
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+            </article>
+
+
+        </section>
+        <!-- This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div> -->
+        <footer>
+            <div class="footer">
+                <small>
+                    &copy; 2015  ~  Created by:: Luke<a href="http://jcsc.biz">@jcsc.biz</a>
+                </small>
+            </div>
+        </footer>
+
+        <script src="js/meny.min.js"></script>
+        <script>
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'left',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: true
+			});
+
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+        </script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/index.js"></script>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="js/stickUp.js"></script>
+
+        <script type="text/javascript">
+              //initiating jQuery
+              jQuery(function($) {
+                $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                  $('.navbar-wrapper').stickUp({
+                                parts: {
+                                  0:'home',
+                                  1:'features',
+                                  2: 'news',
+                                  3: 'installation',
+                                  4: 'one-pager',
+                                  5: 'extras',
+                                  6: 'wordpress',
+                                  7: 'contact'
+                                },
+                                itemClass: 'menuItem',
+                                itemHover: 'active'
+                              });
+                });
+              });
+
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

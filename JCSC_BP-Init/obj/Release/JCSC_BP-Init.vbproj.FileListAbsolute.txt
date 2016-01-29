@@ -1,0 +1,7 @@
+C:\Users\Luke\Desktop\BenSamp6\bin\JCSC_BP-Init.dll.config
+C:\Users\Luke\Desktop\BenSamp6\bin\JCSC_BP-Init.dll
+C:\Users\Luke\Desktop\BenSamp6\bin\JCSC_BP-Init.pdb
+C:\Users\Luke\Desktop\BenSamp6\bin\JCSC_BP-Init.xml
+C:\Users\Luke\Desktop\BenSamp6\JCSC_BP-Init\JCSC_BP-Init\obj\Release\JCSC_BP-Init.dll
+C:\Users\Luke\Desktop\BenSamp6\JCSC_BP-Init\JCSC_BP-Init\obj\Release\JCSC_BP-Init.xml
+C:\Users\Luke\Desktop\BenSamp6\JCSC_BP-Init\JCSC_BP-Init\obj\Release\JCSC_BP-Init.pdb

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        //Referances
+
+        // http://www2.owen.vanderbilt.edu/Germain.Boer/mgt413/cvp/cvp.html
+
+    </script>
+   
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Units', 'Fixed Costs', 'Total Costs', 'Revanues'],
+              ['0', 322006, 322006, 0],
+              ['125', 322006, 498861, 284250],
+              ['249', 322006, 674301, 566226],
+              ['375', 322006, 852570, 852750],
+              ['498', 322006, 1026595, 1132452]
+            ]);
+
+            var options = {
+                title: 'Projected Break Even Anyalisis',
+                vAxis: { title: "Costs" },
+                hAxis: { title: "Units" }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+        </head>
+        <body>
+
+
+            <center>
+
+                <table>
+                    <tr>
+                        <td><b>Fixed Costs</b></td>
+                        <td>$322,006.57</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Unit Cost</b></td>
+                        <td>$1414.84</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sales Forecast</b></td>
+                        <td>1,132,909.17</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Unit Price</b></td>
+                        <td>$2,274.00</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Units</b></td>
+                        <td>375</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Break Even in Sales</b></td>
+                        <td>$852,750.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table><hr />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Units</th>
+                            <th>Fixed Costs</th>
+                            <th>Total Costs</th>
+                            <th>Revanues</th>
+                            <th>Profits</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>0</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$0.0</td>
+                        <td>-$322,006.57</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        <td>$322,006.57</td>
+                        <td>$498,861.22</td>
+                        <td>$284,250.00</td>
+                        <td>-$214,611.22</td>
+                    </tr>
+                    <tr>
+                        <td>249</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$566,266.00</td>
+                        <td>-$108,075.03</td>
+                    </tr>
+                    <tr>
+                        <td>375</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$852,750.00</td>
+                        <td>$179.48</td>
+                    </tr>
+                    <tr>
+                        <td>498</td>
+                        <td>$322,006.57</td>
+                        <td>$322,006.57</td>
+                        <td>$1,132,452.00</td>
+                        <td>$105,856.50</td>
+                    </tr>
+                </table><hr />
+
+
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            </center>
+        </body>
+        </html>

@@ -1,0 +1,281 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta charset="utf-8">
+        <title>SETTING UP YOUR MODULE DEVELOPMENT ENVIRONMENT</title>
+        <meta name="description" content="A three dimensional and space efficient menu created with JavaScript and CSS 3.">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="viewport" content="width=800, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/meny.css">
+	
+
+
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+        <!-- Style Sheets -->
+		<link rel="stylesheet" href="css/reveal.min.css" id="reveal">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- END Style Sheets -->
+
+        <!-- JavaScript -->
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+        <!-- END JavaScript -->
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+        
+            <div class="meny">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="loading.html">loading</a></li>
+                    <li><a href="http://lab.hakim.se/radar/">Radar</a></li>
+                    <li><a href="http://lab.hakim.se/forkit-js/">forkit.js</a></li>
+                    <li><a href="http://lab.hakim.se/scroll-effects/">stroll.js</a></li>
+                    <li><a href="http://lab.hakim.se/zoom-js">zoom.js</a></li>
+                    <li><a href="http://lab.hakim.se/reveal-js">reveal.js</a></li>
+                    <li><a href="http://itunes.apple.com/us/app/sinuous/id543097218">Sinuous for iOS</a></li>
+                    <li><a href="starfield.html">Starfield</a></li>
+                    <li><a href="http://hakim.se/experiments/css/holobox/">Contactus</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="meny-arrow"></div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="contents"><div class="reveal">
+
+
+    <div class="slides">
+        <section><h2>SETTING UP YOUR MODULE DEVELOPMENT ENVIRONMENT</h2><hr /></section>
+        <section><h3>This page will be discussing the development environment that I configure when I am doing DotNetNuke module development.</h3></section>
+        <section><h4>In this series we will configure an environment that works well for individual or team development, using the WAP (web application project) model for our projects in Visual Studio. Each developer will have their own local installation, their own instance of SQL server (at minimum their own database on a shared SQL instance). You can go through this process using Microsoft SQL Server Express, but I would suggest using a development or other licensed version of SQL Server as Express can be a real pain in the rear some times.</h4><hr /></section>
+        <section>
+            <h1>There are a few assumptions made in this configuration.</h1>
+            <ul>
+                <li><a href="">You have Visual Studio 2008, 2010 or 2012</a></li>
+                <li><a href="">You have IIS installed on your Operating System and ASP.NET extensions are installed and enabled.</a></li>
+                <li><a href="">You have .NET 3.5 SP1 installed, DNN 7 requires 4.0+</a></li>
+                <li><a href="">You are using SQL 2005/2008/2012 (not express)</a></li>
+                <li><a href="">You are running Visual Studio "As Administrator" this is required because of the use of IIS see Microsoft's article here.</a></li>
+
+            </ul>
+        </section>
+        <section>
+            <center>
+                <pre><b>UPDATE for 1-24-2013</b> These instructions are now configured for DNNDEV.ME as your development environment instead of just DNNDEV. DNNDEV.ME is a registered domain which points to the loopback address of 127.0.0.1, so it will always resolve locally for anyone.
+</pre>
+            </center>
+            <hr />
+            <p><b>This page contains legacy information - the latest documentation on setting up the christoc module development templates can be read at</b> <a href="http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx"></a></p>
+        </section>
+        <section><p>So let’s get started:</p></section>
+        <section><h2>Setting up your development environment</h2><hr />
+        <br />
+        <p>Setting up your development environment can vary based on what your end goal is. If you are doing module development for your own use, and within your own DNN environments, you can ignore a few of the settings below. If you are doing module development with the idea that you might turn around and give the modules away, or sell them, then you will likely want to follow the guidelines set forth below to support the widest array of DNN installation environments.
+</p>
+        </section>
+        <section>
+            <section><h2>CHOOSING A DOTNETNUKE VERSION</h2><hr /></section>
+            <section><p>Choosing a version of DotNetNuke is important when you start your development for couple of reasons. For modules that you are developing for yourself, you need to ask, what is the minimum version of DotNetNuke that you have in production. Are you running DNN 4.5.5? Are you running 4.9.5, 5.2.2 or 5.4.2? Based on the answer you can determine what version of DNN you should setup as your development environment. You shouldn’t be developing on a newer version of DNN than what you have running in production. As with everything there are ways around this, but I am not going to go into the details on that in this blog post.
+</p></section>
+            <section><p>As a developer working to create modules and release those, you might have production sites that are running on the latest and greatest version of DNN, but what about your customers? Or your potential customers? You have to ask yourself, do you want to provide support for really old versions of DotNetNuke? From a development perspective you will probably say no, but from a business perspective, you might say yes, and here’s why. Not everyone upgrades DotNetNuke websites as they should, and often times you will find that some people never upgrade. While I don’t advise taking that approach to managing a DotNetNuke website, it is a fact of life that people don’t always upgrade and there are thousands of people, if not tens of thousands, that have sites that aren’t running on the latest version of DNN. You should take that into account when you are doing your module development, if you compile your module against an older version of DNN then your module should run on newer versions of as well, for example. If you compile your module against DotNetNuke 4.5.1 it will likely run on every version of DNN released since then. Though there are extended cases where this won’t always work, DNN strives to maintain backwards compatibility, this isn’t always possible.</p></section>
+            <section><p>You might also want to use features that are only available starting with a specific version of DotNetNuke, such as the workflow functionality found starting in DNN 5.1, in that case you may choose not to support older versions of the platform out of necessity. This will minimize the market in which you can sell your modules, but also can make for less support and an easier development cycle due to the features that DNN provides.</p></section>
+            <section></section>
+            
+        </section>
+        <section>
+            <section><h2>CHOOSING THE RIGHT PACKAGE</h2></section>
+            <section><p>Now here’s one that may baffle you a bit. I’m going to recommend that you use the INSTALL package for whatever version of DotNetNuke that you download. What? The INSTALL package? What about the SOURCE package? Well you can use the source, but you don’t need it. The module development that I’m setting you up for doesn’t require source, and overall makes things cleaner. We aren’t going to be opening the DotNetNuke project when we do our module development, so why have the files sitting around for nothing?</p></section>
+            <section><p>The steps for setting up your development environment will apply to both the Community and Professional editions of DotNetNuke.</p></section>
+        </section>
+  
+            <section><h2>INSTALLATION CONFIGURATION</h2><br /><p>Once you have the version selection out of the way you can go through the installation process. While I’m not going to walk you through the minutest of details of each step of installing DotNetNuke in this post, I will at least try to point you in the right direction for each step. In future writings I will be doing a series of posts about installing DotNetNuke in various environments that will go into further details. This post half assumes that you have configured DotNetNuke before.</p></section>
+            <section><h2>DOWNLOAD</h2><br /><p><a href="https://dotnetnuke.codeplex.com/downloads/get/735039">Download</a> the INSTALL package of the version of DotNetNuke you want to use in your development environment. </p></section>
+            
+        
+        <section>
+            <section><h2>EXTRACT</h2><br /><img src="http://www.dnnsoftware.com/Portals/0/Blog/Files/21/2630/WLW-MyDotNetNukeModuleDevelopmentEnvironment_BF9F-image_thumb.png" /></section>
+            <section><p>Extract the files in the INSTALL package to a location of your choosing, this location is where you will point IIS (the web server) when we can configure the website. In my example I extracted to c:\websites\dnndev.me\ (One item of note: you may need to right click on the ZIP file and choose Properties before extracting, on the properties window if you have an UNBLOCK option click that. Some versions of Windows have started blocking files within the DotNetNuke ZIP files, which will cause you problems later during the actual install.)</p></section>
+            <section><img src="http://www.dnnsoftware.com/Portals/0/Blog/Files/21/2630/WLW-MyDotNetNukeModuleDevelopmentEnvironment_BF9F-image_thumb.png" /></section>
+        </section>
+        <section>
+            <section><h2>SETUP IIS</h2><br /><img src="http://www.dnnsoftware.com/Portals/0/Blog/Files/21/2630/WLW-MyDotNetNukeModuleDevelopmentEnvironment_BF9F-image_thumb_1.png" /></section>
+            <section><p>IIS is the web server that comes with Windows computers. In our example we’re going to create a new Website in IIS 7.5 on Windows 7, this isn’t possible in Windows XP because of limitations with IIS v5.1, but is possible in other versions of IIS.
+</p></section>
+            <section><p>You should create a new website (*if you use an existing website in IIS be sure to add the HOST binding for DNNDEV.ME)*, and point to the folder where you extracted the INSTALL package. </p></section>
+            <section><p>If you are using IIS 5 or IIS 6 you will need to verify that ASP.NET 2.0 is selected on the ASP.NET tab (you can configure 4.0 as well).</p></section>
+            <section><p>We are setting up a website so that I can access http://dnndev.me/ for the development environment. The old configuration was for DNNDEV which required that you modify your HOSTS file in step #4, with DNNDEV.me this is no longer neccessary.</p></section>
+            <section><p>You may notice in my screen shot that my Application Pool is setup to Classic .NET AppPool, by default your application pool will have a custom name (in IIS7.5), you can change this if you wish, but if you change you will need to configure permissions accordingly. See step #5 for more info about configuring the permissions.</p></section>
+            <section><img src="http://www.dnnsoftware.com/Portals/0/Blog/Files/21/2630/WLW-MyDotNetNukeModuleDevelopmentEnvironment_BF9F-image_thumb_1.png" /></section>
+        </section>
+        <section>
+            <section><h2>MODIFY THE HOSTS FILE (NOT NECESSARY IF YOU USE DNNDEV.ME)</h2></section>
+            <section><p><b>If you are using DNNDEV.ME skip this step.</b> In order to be able to access http://dnndev in our web browser we need to change the HOSTS file located in the c:\windows\system32\drivers\etc\ folder. You can open this HOSTS file with NOTEPAD or any other text editor. By modifying this file we essentially tell the computer that when we make a request to http://dnndev/ we should use the local IP address. See the screenshot for what this file looks like. Once you save this file you should restart your web browser to ensure that it has the latest settings.</p><img src="http://www.dnnsoftware.com/Portals/0/Blog/Files/21/2630/WLW-MyDotNetNukeModuleDevelopmentEnvironment_BF9F-image_thumb_2.png" /></section>
+        </section>
+        <section>
+            <section><h2>SET FILE PERMISSIONS</h2></section>
+            <section><p>Setting up the file permissions for your DNN install is often the step that causes the most trouble. You should right click on the FOLDER in which you extracted DNN (c:\websites\dnndev.me\) and choose properties. Choose the Security tab (if you don’t have a security tab you are likely using Windows XP and need to uncheck the Use Simple File Sharing option in the Tools/Options screen). You need to add permissions for the account in which your website is running under. You will want to setup the permissions to give the account Full or Modify permissions for the DNNDEV.ME folder. Which account you will use will vary based on your version of IIS, here’s a simple grid to see what the default account is for your version of IIS</p></section>
+            <section><p>                         IIS Version	Operating System	Account
+                         IIS 5, IIS 5.1	Windows 2000, Windows XP	localmachine\ASPNET
+                         IIS 6, IIS 7	Windows 2003, Windows Vista, Windows Server 2008	localmachine\Network Service
+                         IIS 7.5	Windows 2008 R2, Windows 7	IIS AppPool\APPPOOLNAME
+</p></section>
+            <section><p>If you are using IIS7.5 you’ll notice in the above table that we have APPPOOLNAME in the identity, this is because when you setup a new website in IIS a new application pool is created. In place of you should type in the name of the application pool that was created (automatically during step 3). You can also bypass this and configure your application pool to use the Network Service account instead of a dynamic account.</p></section>
+        </section>
+        <section>
+            <section><h2>CREATE DATABASE</h2></section>
+            <section><p>Test this link:<a href="DNNDEV.ME">DNNDEV.ME</a><hr />Did that work? if so proceed otherwise find the link to learn how to fix it</p></section>
+            <section><p>In SQL Server you should go through and create a new database. I always create a database with the same name as the website, so in this case <a href="DNNDEV.ME">DNNDEV.ME</a>. Once you have created the database, create a user that can access that database. I always use SQL authentication, turn off the enforce password requirements, and give the user DB Owner and Public access to the <a href="DNNDEV.ME">DNNDEV.ME</a> database. Remember the username and password you create here as you will need them when you walk through the installation process. </p></section>
+        </section>
+        <section>
+            <section><h2>ACCESS THE INSTALLATION WIZARD</h2></section>
+            <section><p>Now you get to walk through the easy portion of the installation. You should load up your website in a browser, http://dnndev.me/ this may take a few moments, but when it does you’ll come to an installation wizard screen. Choose the Typical option and step through the process of installing DNN. When you come to the database configuration screen you should choose the SQL 2005/2008 option, uncheck integrated authentication and populate the name of your SQL Server (likely (local), ., or IPADDRESS), Database Name (DNNDEV.ME), Username and Password.
+For the SQL Server name, if you open Microsoft SQL Server Management Studio, you can copy the name of the server (e.g. MYMachine\myMSSQLEXPRESS) from the connect dialog, or the Server Properties right-click context menu.
+Now there are two additional options you can configure, normally I would tell you not to modify these, but from a development environment perspective I do recommend that you change the objectQualifier setting. It should be blank by default, you should type in “dnn” (without quotes), this will prepend “dnn_” to all of the objects that get created by DNN such as Tables and Stored Procedures. This is not something I recommend from a production stand point, but if you are developing modules for sale, then supporting objectQualifier in your development is recommended. It will save you time down the road if you have a customer who has an objectQualifier defined on their production databases. Step through the rest of the installation screens, you should remember your HOST and ADMIN passwords that you define as you get to those screens, you will need these when you login to your site later.
+If you get a file not found, or a System.Security.SecurityException: then open the web.config file in the root directory of the DNN installation. Add the tag
+This can go just after the section.</p></section>
+        </section>
+        <section>
+            <h2>MODIFY THE WEB.CONFIG FILE</h2>
+            <p>One last thing we need to change in our development environment is to configure a setting in the web.config file. There’s a setting called ShowMissingKeys which is by default set to False, from a development perspective I recommend setting this to be True. This will make it so that any text in DotNetNuke that is localized will be displayed with an L in front of it, to show you what is localized and what is not. This is important if you are trying to create modules that can easily be customized for other languages, the ShowMissingKeys flag will also cause DNN to throw a message in place when a string that should be localized is missing from the Resource Files (resource files are XML files that contain the language definitions for localization).</p>
+        </section>
+        <section>You now have your DotNetNuke Development Website configured. Your next step will be to Customize the Module Development Template
+</section>
+        <section><p>The templates (C# and VB.NET) are available at <a href="http://christoctemplate.codeplex.com/">http://christoctemplate.codeplex.com/</a><hr />
+To learn more about DotNetNuke in our instructor led classes check out the <a href="http://bit.ly/dnntraininginfo">DotNetNuke Training</a> page.</p></section>
+        <section>
+            <center>
+                <table>
+                    <tr><td colspan="3"><h1>DNN Corp. (DotNetNuke)</h1></td></tr>
+                    <tr>
+                        <td>DNN provides a suite of solutions for creating rich, rewarding online experiences for customers, partners and employees. DNN products and technology are the foundation for 750,000+ websites worldwide. In addition to our commercial CMS and social community solutions, DNN is the steward of the DotNetNuke Open Source Project.</td>
+                        <td>                        </td>
+                        <td>COMPANY<br />
+
+                            <a href="http://www.dnnsoftware.com/about">About DNN</a> <a href="http://www.dnnsoftware.com/blog">DNN Blog</a>  <a href="http://www.dnnsoftware.com/about/leadership/management">Leadership Careers</a> <a href="http://www.dnnsoftware.com/about/in-the-news/press-releases">News</a> <a href="http://www.dnnsoftware.com/about/contact">Contact Us</a>
+                            <a href="">QUICK LINKS</a>
+    <a href="http://www.dnnsoftware.com/evoq-free-trial">Free Trial</a> <a href="http://www.dnnsoftware.com/Community/Download">Download</a> <a href="http://www.dnnsoftware.com/Community/Download/Manuals">Manuals</a>  <a href="http://www.dnnsoftware.com/Videos">Videos Community</a>  <a href="http://www.dnnsoftware.com/Community-Blog">Community Blog</a>
+</td>
+                    </tr>
+                </table>
+            </center>
+        </section>
+        <section>
+            <section>
+                <h1>THE END</h1>
+                <h3>BY Luke @ jcsc.biz</h3>
+            </section>
+            <section>
+            <h1>DOCUMENT SOURCE:</h1>
+            <iframe src="http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment" width="100%" height="600px"></iframe>
+            <p>http://www.dnnsoftware.com/wiki/setting-up-your-module-development-environment</p></section>
+            <section><b>JCSC.biz</b> Provided a small arrangement of already working data in to a new presentation.<br /><br /><p>Let me know if you like it.</p></section>
+        </section>
+        <section>
+            luke@jcsc.biz (650) 288.3150  (650) 288.3191 Follow     
+        </section>
+    </div>
+</div>
+        </div>
+
+        <script src="js/meny.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+        
+        <script>
+            // Create an instance of Meny
+            var meny = Meny.create({
+                // The element that will be animated in from off screen
+                menuElement: document.querySelector('.meny'),
+
+                // The contents that gets pushed aside while Meny is active
+                contentsElement: document.querySelector('.contents'),
+
+                // [optional] The alignment of the menu (top/right/bottom/left)
+                position: Meny.getQuery().p || 'left',
+
+                // [optional] The height of the menu (when using top/bottom position)
+                height: 200,
+
+                // [optional] The width of the menu (when using left/right position)
+                width: 260,
+
+                // [optional] Distance from mouse (in pixels) when menu should open
+                threshold: 40,
+
+                // [optional] Use mouse movement to automatically open/close
+                mouse: true,
+
+                // [optional] Use touch swipe events to open/close
+                touch: true
+            });
+
+            // API Methods:
+            // meny.open();
+            // meny.close();
+            // meny.isOpen();
+
+            // Events:
+            // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+            // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+            // Embed an iframe if a URL is passed in
+            if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
+                var contents = document.querySelector('.contents');
+                contents.style.padding = '0px';
+                contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u + '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+            }
+        </script>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

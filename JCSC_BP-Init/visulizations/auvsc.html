@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/harmputman/pen/auvsc -->
+    <title></title>
+    <style>
+        body {
+            background: rgba(44, 62, 80,1.0);
+            color: #fff;
+            font-family: sans-serif;
+        }
+
+        figure {
+            width: 196px;
+            height: 196px;
+            margin: 100px auto;
+            background: #fff;
+            overflow: hidden;
+            transform: rotate(45deg);
+            position: relative;
+        }
+
+            figure div {
+                display: block;
+                width: 280px;
+                height: 280px;
+                position: relative;
+                margin: -42px 0 0 -42px;
+                transform: rotate(-45deg);
+            }
+
+                figure div figcaption {
+                    position: absolute;
+                    width: 280px;
+                    height: 140px;
+                    background: rgba(231, 76, 60,0.8);
+                    z-index: 2;
+                    bottom: -140px;
+                    left: 0;
+                    text-align: center;
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    letter-spacing: 1px;
+                    padding: 1em 0;
+                    box-sizing: border-box;
+                    transition: all 0.25s ease-in-out;
+                }
+
+            figure:hover div figcaption {
+                bottom: 0;
+            }
+    </style>
+</head>
+<body>
+    <figure>
+        <div>
+            <img src="http://s3.amazonaws.com/juliankeenaghan_test_1/choices/4468/large.jpg?1372250434" />
+            <figcaption><h3>Developer</h3></figcaption>
+        </div>
+    </figure>
+</body>
+</html>

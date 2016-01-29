@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Units', 'Fixed Costs', 'Total Costs', 'Revanues'],
+              ['0', 322006, 322006, 0],
+              ['125', 322006, 498861, 284250],
+              ['249', 322006, 674301, 566226],
+              ['375', 322006, 852570, 852750],
+              ['498', 322006, 1026595, 1132452]
+            ]);
+
+            var options = {
+                title: 'Monthly Coffee Production by Country',
+                vAxis: { title: "Costs" },
+                hAxis: { title: "Units" }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+</body>
+</html>
+
+<!--
+    var data = google.visualization.arrayToDataTable([
+              ['Sales in Units', 'Fixed Costs', 'Total Costs', 'Revanues'],
+              ['0', 322006, 322006, 0, -322006],
+              ['125', 322006, 498861, 284250,-214611],
+              ['249', 322006, 674301, 566226,-108075],
+              ['375', 322006, 852570, 852750,179],
+              ['498', 322006, 1026595,1132452,105856]
+            ]);
+
+-->

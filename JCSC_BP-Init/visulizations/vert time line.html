@@ -1,0 +1,1139 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- http://codepen.io/mkrtchyan/pen/FvJjA -->
+    <title></title>
+    <style>
+        @font-face {
+            font-family: 'Kelly Slab';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Kelly Slab'), local('KellySlab-Regular'), url(http://themes.googleusercontent.com/static/fonts/kellyslab/v3/4A8U9DtmhklTRFOO_fzgaBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+        }
+
+
+        /* General Demo Style */
+        body {
+            background: #f7f7f7 url(http://web-sonick.zz.mu/images/BG/bgtab-cont.jpg) repeat top left;
+            color: rgba(0,0,0,0.8);
+            font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        h1 {
+            font-size: 24px;
+            position: relative;
+            font-weight: 400;
+            padding: 30px 5px 10px 5px;
+            margin: 0px 15px;
+            color: rgba(153,157,181,0.6);
+            text-shadow: 0px 1px 1px #fff;
+            border-bottom: 1px solid rgba(17,17,22,0.1);
+        }
+        /* Header Style */
+        .header {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            line-height: 24px;
+            font-size: 11px;
+            background: #000;
+            opacity: 0.9;
+            text-transform: uppercase;
+            z-index: 9999;
+            position: relative;
+            -moz-box-shadow: 1px 0px 2px #000;
+            -webkit-box-shadow: 1px 0px 2px #000;
+            box-shadow: 1px 0px 2px #000;
+        }
+
+            .header a {
+                padding: 0px 10px;
+                letter-spacing: 1px;
+                color: #ddd;
+                display: block;
+                float: left;
+            }
+
+                .header a:hover {
+                    color: #fff;
+                }
+
+            .header span.right {
+                float: right;
+            }
+
+                .header span.right a {
+                    float: none;
+                    display: inline;
+                }
+
+        .demos {
+            position: relative;
+            z-index: 1000;
+            text-align: center;
+            float: right;
+            padding: 10px;
+        }
+
+            .demos a {
+                display: inline-block;
+                padding: 4px 6px;
+                background: #000;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: Arial;
+                font-size: 11px;
+                -webkit-font-smoothing: antialiased;
+                box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+                -webkit-transition: all 0.2s linear;
+                -moz-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                -ms-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
+
+                .demos a:hover {
+                    color: #fff;
+                    background: #c90047;
+                }
+
+                .demos a.current-demo,
+                .demos a.current-demo:hover {
+                    font-weight: bold;
+                    background: #c90047;
+                    color: #fff;
+                    cursor: default;
+                }
+
+        h2.ss-subtitle {
+            padding: 10px 10px 40px;
+            font-size: 52px;
+            text-transform: uppercase;
+            color: rgba(0,0,0,0.8);
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+            h2.ss-subtitle:before {
+                width: 4px;
+                height: 40px;
+                background: rgba(17,17,22,0.8);
+                content: '';
+                position: absolute;
+                right: 75%;
+                margin-right: -4px;
+                bottom: -4px;
+                -moz-border-radius: 2px 2px 0px 0px;
+                -webkit-border-radius: 2px 2px 0px 0px;
+                border-radius: 2px 2px 0px 0px;
+            }
+
+            h2.ss-subtitle:after {
+                width: 25%;
+                height: 0px;
+                border-bottom: 4px dotted rgba(17,17,22,0.8);
+                content: '';
+                position: absolute;
+                right: 50%;
+                margin-right: -1px;
+                bottom: -4px;
+            }
+
+        .ss-links {
+            position: fixed;
+            left: 10px;
+            top: 166px;
+            width: 25%;
+            z-index: 100;
+        }
+
+            .ss-links a {
+                background: rgba(0,0,0,0.2);
+                font-size: 16px;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin: 5px;
+                float: left;
+                border-radius: 50%;
+                display: block;
+                text-align: center;
+                -webkit-transition: background 0.2s linear;
+                -moz-transition: background 0.2s linear;
+                -o-transition: background 0.2s linear;
+                -ms-transition: background 0.2s linear;
+                transition: background 0.2s linear;
+            }
+
+                .ss-links a:hover {
+                    background: rgba(0,0,0,0.4);
+                }
+
+        .ss-container {
+            width: 100%;
+            position: relative;
+            text-align: left;
+            float: left;
+            overflow: hidden;
+            padding-bottom: 500px;
+        }
+
+            .ss-container h2 {
+                font-size: 40px;
+                text-transform: uppercase;
+                color: rgba(78,84,123,0.2);
+                text-shadow: 0px 1px 1px #fff;
+                padding: 20px 0px;
+            }
+
+            .ss-container:before {
+                position: absolute;
+                width: 4px;
+                background: rgba(17,17,22,0.8);
+                top: 0px;
+                left: 50%;
+                margin-left: -2px;
+                content: '';
+                height: 100%;
+            }
+
+        .ss-row {
+            width: 100%;
+            clear: both;
+            float: left;
+            position: relative;
+            padding: 30px 0;
+        }
+
+        .ss-left, .ss-right {
+            float: left;
+            width: 48%;
+            position: relative;
+        }
+
+        .ss-right {
+            padding-left: 2%;
+        }
+
+        .ss-left {
+            text-align: right;
+            float: left;
+            padding-right: 2%;
+        }
+
+        .ss-circle {
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+            text-indent: -9000px;
+            text-align: left;
+            -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.7) inset, 0px 0px 0px 12px rgba(61,64,85,0.3);
+            -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.7) inset, 0px 0px 0px 12px rgba(61,64,85,0.3);
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.7) inset, 0px 0px 0px 12px rgba(61,64,85,0.3);
+            background-size: cover;
+            background-color: #f0f0f0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: static;
+        }
+
+        .ss-small .ss-circle {
+            width: 100px;
+            height: 100px;
+        }
+
+        .ss-medium .ss-circle {
+            width: 200px;
+            height: 200px;
+        }
+
+        .ss-large .ss-circle {
+            width: 300px;
+            height: 300px;
+        }
+
+        .ss-circle-deco:before {
+            width: 29%;
+            height: 0px;
+            border-bottom: 5px dotted #ddd;
+            border-bottom: 5px dotted rgba(17, 17, 22, 0.3);
+            -webkit-box-shadow: 0px 1px 1px #fff;
+            -moz-box-shadow: 0px 1px 1px #fff;
+            box-shadow: 0px 1px 1px #fff;
+            position: absolute;
+            top: 50%;
+            content: '';
+            margin-top: -3px;
+        }
+
+        .ss-circle-deco:after {
+            width: 0px;
+            height: 0px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+        }
+
+        .ss-left .ss-circle-deco:before {
+            right: 2%;
+        }
+
+        .ss-right .ss-circle-deco:before {
+            left: 2%;
+        }
+
+        .ss-left .ss-circle-deco:after {
+            right: 0;
+            border-right: 10px solid rgba(17,17,22,0.8);
+        }
+
+        .ss-right .ss-circle-deco:after {
+            left: 0;
+            border-left: 10px solid rgba(17,17,22,0.8);
+        }
+
+        .ss-left .ss-circle {
+            float: right;
+            margin-right: 30%;
+        }
+
+        .ss-right .ss-circle {
+            float: left;
+            margin-left: 30%;
+        }
+
+        .ss-container h3 {
+            margin-top: 34px;
+            padding: 10px 15px;
+            background: rgba(26, 27, 33, 0.6);
+            text-shadow: 1px 1px 1px rgba(26, 27, 33, 0.8);
+        }
+
+        .ss-container .ss-medium h3 {
+            margin-top: 82px;
+        }
+
+        .ss-container .ss-large h3 {
+            margin-top: 133px;
+        }
+
+        .ss-container .ss-left h3 {
+            border-right: 5px solid rgba(164,166,181,0.8);
+        }
+
+        .ss-container .ss-right h3 {
+            border-left: 5px solid rgba(164,166,181,0.8);
+        }
+
+        .ss-container h3 span {
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .ss-container h3 a {
+            font-size: 28px;
+            color: rgba(255,255,255,0.9);
+            display: block;
+        }
+
+            .ss-container h3 a:hover {
+                color: rgba(255,255,255,1);
+            }
+
+        .ss-circle-1 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-2 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-3 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-4 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-5 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-6 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-7 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-8 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-9 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-10 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-11 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-12 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-13 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-14 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-15 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-16 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-17 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-18 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-19 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-20 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-21 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-22 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-23 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-24 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-25 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-26 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-27 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-28 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-29 {
+            background-image: url(http://placehold.it/250x250);
+        }
+
+        .ss-circle-30 {
+            background-image: url(http://placehold.it/250x250);
+        }
+    </style>
+    <script>
+
+        $(function () {
+
+            var $sidescroll = (function () {
+
+                // the row elements
+                var $rows = $('#ss-container > div.ss-row'),
+					// we will cache the inviewport rows and the outside viewport rows
+					$rowsViewport, $rowsOutViewport,
+					// navigation menu links
+					$links = $('#ss-links > a'),
+					// the window element
+					$win = $(window),
+					// we will store the window sizes here
+					winSize = {},
+					// used in the scroll setTimeout function
+					anim = false,
+					// page scroll speed
+					scollPageSpeed = 2000,
+					// page scroll easing
+					scollPageEasing = 'easeInOutExpo',
+					// perspective?
+					hasPerspective = false,
+
+					perspective = hasPerspective && Modernizr.csstransforms3d,
+					// initialize function
+					init = function () {
+
+					    // get window sizes
+					    getWinSize();
+					    // initialize events
+					    initEvents();
+					    // define the inviewport selector
+					    defineViewport();
+					    // gets the elements that match the previous selector
+					    setViewportRows();
+					    // if perspective add css
+					    if (perspective) {
+					        $rows.css({
+					            '-webkit-perspective': 600,
+					            '-webkit-perspective-origin': '50% 0%'
+					        });
+					    }
+					    // show the pointers for the inviewport rows
+					    $rowsViewport.find('a.ss-circle').addClass('ss-circle-deco');
+					    // set positions for each row
+					    placeRows();
+
+					},
+					// defines a selector that gathers the row elems that are initially visible.
+					// the element is visible if its top is less than the window's height.
+					// these elements will not be affected when scrolling the page.
+					defineViewport = function () {
+
+					    $.extend($.expr[':'], {
+
+					        inviewport: function (el) {
+					            if ($(el).offset().top < winSize.height) {
+					                return true;
+					            }
+					            return false;
+					        }
+
+					    });
+
+					},
+					// checks which rows are initially visible 
+					setViewportRows = function () {
+
+					    $rowsViewport = $rows.filter(':inviewport');
+					    $rowsOutViewport = $rows.not($rowsViewport)
+
+					},
+					// get window sizes
+					getWinSize = function () {
+
+					    winSize.width = $win.width();
+					    winSize.height = $win.height();
+
+					},
+					// initialize some events
+					initEvents = function () {
+
+					    // navigation menu links.
+					    // scroll to the respective section.
+					    $links.on('click.Scrolling', function (event) {
+
+					        // scroll to the element that has id = menu's href
+					        $('html, body').stop().animate({
+					            scrollTop: $($(this).attr('href')).offset().top
+					        }, scollPageSpeed, scollPageEasing);
+
+					        return false;
+
+					    });
+
+					    $(window).on({
+					        // on window resize we need to redefine which rows are initially visible (this ones we will not animate).
+					        'resize.Scrolling': function (event) {
+
+					            // get the window sizes again
+					            getWinSize();
+					            // redefine which rows are initially visible (:inviewport)
+					            setViewportRows();
+					            // remove pointers for every row
+					            $rows.find('a.ss-circle').removeClass('ss-circle-deco');
+					            // show inviewport rows and respective pointers
+					            $rowsViewport.each(function () {
+
+					                $(this).find('div.ss-left')
+										   .css({ left: '0%' })
+										   .end()
+										   .find('div.ss-right')
+										   .css({ right: '0%' })
+										   .end()
+										   .find('a.ss-circle')
+										   .addClass('ss-circle-deco');
+
+					            });
+
+					        },
+					        // when scrolling the page change the position of each row	
+					        'scroll.Scrolling': function (event) {
+
+					            // set a timeout to avoid that the 
+					            // placeRows function gets called on every scroll trigger
+					            if (anim) return false;
+					            anim = true;
+					            setTimeout(function () {
+
+					                placeRows();
+					                anim = false;
+
+					            }, 10);
+
+					        }
+					    });
+
+					},
+					// sets the position of the rows (left and right row elements).
+					// Both of these elements will start with -50% for the left/right (not visible)
+					// and this value should be 0% (final position) when the element is on the
+					// center of the window.
+					placeRows = function () {
+
+					    // how much we scrolled so far
+					    var winscroll = $win.scrollTop(),
+							// the y value for the center of the screen
+							winCenter = winSize.height / 2 + winscroll;
+
+					    // for every row that is not inviewport
+					    $rowsOutViewport.each(function (i) {
+
+					        var $row = $(this),
+								// the left side element
+								$rowL = $row.find('div.ss-left'),
+								// the right side element
+								$rowR = $row.find('div.ss-right'),
+								// top value
+								rowT = $row.offset().top;
+
+					        // hide the row if it is under the viewport
+					        if (rowT > winSize.height + winscroll) {
+
+					            if (perspective) {
+
+					                $rowL.css({
+					                    '-webkit-transform': 'translate3d(-75%, 0, 0) rotateY(-90deg) translate3d(-75%, 0, 0)',
+					                    'opacity': 0
+					                });
+					                $rowR.css({
+					                    '-webkit-transform': 'translate3d(75%, 0, 0) rotateY(90deg) translate3d(75%, 0, 0)',
+					                    'opacity': 0
+					                });
+
+					            }
+					            else {
+
+					                $rowL.css({ left: '-50%' });
+					                $rowR.css({ right: '-50%' });
+
+					            }
+
+					        }
+					            // if not, the row should become visible (0% of left/right) as it gets closer to the center of the screen.
+					        else {
+
+					            // row's height
+					            var rowH = $row.height(),
+									// the value on each scrolling step will be proporcional to the distance from the center of the screen to its height
+									factor = (((rowT + rowH / 2) - winCenter) / (winSize.height / 2 + rowH / 2)),
+									// value for the left / right of each side of the row.
+									// 0% is the limit
+									val = Math.max(factor * 50, 0);
+
+					            if (val <= 0) {
+
+					                // when 0% is reached show the pointer for that row
+					                if (!$row.data('pointer')) {
+
+					                    $row.data('pointer', true);
+					                    $row.find('.ss-circle').addClass('ss-circle-deco');
+
+					                }
+
+					            }
+					            else {
+
+					                // the pointer should not be shown
+					                if ($row.data('pointer')) {
+
+					                    $row.data('pointer', false);
+					                    $row.find('.ss-circle').removeClass('ss-circle-deco');
+
+					                }
+
+					            }
+
+					            // set calculated values
+					            if (perspective) {
+
+					                var t = Math.max(factor * 75, 0),
+										r = Math.max(factor * 90, 0),
+										o = Math.min(Math.abs(factor - 1), 1);
+
+					                $rowL.css({
+					                    '-webkit-transform': 'translate3d(-' + t + '%, 0, 0) rotateY(-' + r + 'deg) translate3d(-' + t + '%, 0, 0)',
+					                    'opacity': o
+					                });
+					                $rowR.css({
+					                    '-webkit-transform': 'translate3d(' + t + '%, 0, 0) rotateY(' + r + 'deg) translate3d(' + t + '%, 0, 0)',
+					                    'opacity': o
+					                });
+
+					            }
+					            else {
+
+					                $rowL.css({ left: -val + '%' });
+					                $rowR.css({ right: -val + '%' });
+
+					            }
+
+					        }
+
+					    });
+
+					};
+
+                return { init: init };
+
+            })();
+
+            $sidescroll.init();
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Lateral On-Scroll Sliding with jQuery</h1>
+        <h2 class="ss-subtitle">Codrops Timeline</h2>
+        <div id="ss-links" class="ss-links">
+            <a href="#november">Nov</a>
+            <a href="#october">Oct</a>
+            <a href="#september">Sep</a>
+            <a href="#august">Aug</a>
+            <a href="#july">Jul</a>
+            <a href="#june">Jun</a>
+        </div>
+        <div id="ss-container" class="ss-container">
+            <div class="ss-row">
+                <div class="ss-left" style="left: 0%;">
+                    <h2 id="november">November</h2>
+                </div>
+                <div class="ss-right" style="right: 0%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left">
+                    <a href="#" class="ss-circle ss-circle-1">Typography Effects with CSS3 and jQuery</a>
+                </div>
+                <div class="ss-right">
+                    <h3>
+                        <span>November 28, 2011</span>
+                        <a href="#">Typography Effects with CSS3 and jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left">
+                    <h3>
+                        <span>November 22, 2011</span>
+                        <a href="#">Hover and Click Trigger for Circular Elements with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right">
+                    <a href="#" class="ss-circle ss-circle-2">Hover and Click Trigger for Circular Elements with jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-3">Elastic Image Slideshow with Thumbnail Preview</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>November 21, 2011</span>
+                        <a href="#">Elastic Image Slideshow with Thumbnail Preview</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>November 18, 2011</span>
+                        <a href="#">Fullscreen Image Blur Effect with HTML5</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-4">Fullscreen Image Blur Effect with HTML5</a>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-5">Interactive Typography Effects with HTML5</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>November 9, 2011</span>
+                        <a href="#">Interactive Typography Effects with HTML5</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-6">Animated Buttons with CSS3</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>November 7, 2011</span>
+                        <a href="#">Animated Buttons with CSS3</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>November 2, 2011</span>
+                        <a href="#">Original Hover Effects with CSS3</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-7">Original Hover Effects with CSS3</a>
+                </div>
+            </div>
+            <div class="ss-row">
+                <div class="ss-left" style="left: -50%;">
+                    <h2 id="october">October</h2>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>October 31, 2011</span>
+                        <a href="#">Fullscreen Image 3D Effect with CSS3 and jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-8">Fullscreen Image 3D Effect with CSS3 and jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-9">Creative CSS3 Animation Menus</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>October 24, 2011</span>
+                        <a href="#">Creative CSS3 Animation Menus</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-10">Blur Menu with CSS3 Transitions</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>October 19, 2011</span>
+                        <a href="#">Blur Menu with CSS3 Transitions</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>October 17, 2011</span>
+                        <a href="#">Wave Display Effect with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-11">Wave Display Effect with jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-12">Flexible Slide-to-top Accordion</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>October 12, 2011</span>
+                        <a href="#">Flexible Slide-to-top Accordion</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>October 10, 2011</span>
+                        <a href="#">Circle Navigation Effect with CSS3</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-13">Circle Navigation Effect with CSS3</a>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-14">Draggable Image Boxes Grid</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>October 7, 2011</span>
+                        <a href="#">Draggable Image Boxes Grid</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row">
+                <div class="ss-left" style="left: -50%;">
+                    <h2 id="september">September</h2>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>September 30, 2011</span>
+                        <a href="#">Scrollbar Visibility with jScrollPane</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-15">Scrollbar Visibility with jScrollPane</a>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-16">Multi-level Photo Map</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>September 27, 2011</span>
+                        <a href="#">Multi-level Photo Map</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-17">Responsive Image Gallery with Thumbnail Carousel</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>September 20, 2011</span>
+                        <a href="#">Responsive Image Gallery with Thumbnail Carousel</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>September 12, 2011</span>
+                        <a href="#">Elastislide - A Responsive jQuery Carousel Plugin</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-18">Elastislide - A Responsive jQuery Carousel Plugin</a>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-19">Slicebox - A fresh 3D image slider with graceful fallback </a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>September 5, 2011</span>
+                        <a href="#">Slicebox - A fresh 3D image slider with graceful fallback </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row">
+                <div class="ss-left" style="left: -50%;">
+                    <h2 id="august">August</h2>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>August 30, 2011</span>
+                        <a href="#">Automatic Image Montage with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-20">Automatic Image Montage with jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-21">Image Zoom Tour with jQuery</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>August 23, 2011</span>
+                        <a href="#">Image Zoom Tour with jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>August 16, 2011</span>
+                        <a href="#">Circular Content Carousel with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-22">Circular Content Carousel with jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-23">Portfolio Image Navigation with jQuery</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>August 9, 2011</span>
+                        <a href="#">Portfolio Image Navigation with jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>August 4, 2011</span>
+                        <a href="#">Expanding Fullscreen Grid Portfolio</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-24">Expanding Fullscreen Grid Portfolio</a>
+                </div>
+            </div>
+            <div class="ss-row">
+                <div class="ss-left" style="left: -50%;">
+                    <h2 id="july">July</h2>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-25">Content Rotator with jQuery</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>July 29, 2011</span>
+                        <a href="#">Content Rotator with jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>July 22, 2011</span>
+                        <a href="#">Vertical Sliding Accordion with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-26">Vertical Sliding Accordion with jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-medium">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-27">Animated Text and Icon Menu with jQuery</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>July 12, 2011</span>
+                        <a href="#">Animated Text and Icon Menu with jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>July 5, 2011</span>
+                        <a href="#">Fullscreen Slideshow with HTML5 Audio and jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-30">Fullscreen Slideshow with HTML5 Audio and jQuery</a>
+                </div>
+            </div>
+            <div class="ss-row ss-large">
+                <div class="ss-left" style="left: -50%;">
+                    <a href="#" class="ss-circle ss-circle-28">Sliding Background Image Menu with jQuery</a>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h3>
+                        <span>July 3, 2011</span>
+                        <a href="#">Sliding Background Image Menu with jQuery</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="ss-row">
+                <div class="ss-left" style="left: -50%;">
+                    <h2 id="june">June</h2>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <h2>2011</h2>
+                </div>
+            </div>
+            <div class="ss-row ss-small">
+                <div class="ss-left" style="left: -50%;">
+                    <h3>
+                        <span>June 9, 2011</span>
+                        <a href="#">Grid Navigation Effects with jQuery</a>
+                    </h3>
+                </div>
+                <div class="ss-right" style="right: -50%;">
+                    <a href="#" class="ss-circle ss-circle-29">Grid Navigation Effects with jQuery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://bayguzin.ru/demo/LateralOnScrollSliding/js/jquery.easing.1.3.js"></script>
+</body>
+</html>

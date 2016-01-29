@@ -1,0 +1,720 @@
+{
+  "ACTIVITY COST ESTIMATES" : {
+    "01 Introduction" : "Activity Cost Estimates are a valuable project management tool for determining the costs for a project. Much like how a project’s work is broken down into activities and work packages, the activity cost estimate breaks the project’s costs down to the activity level in order to improve the reliability and accuracy of the estimate.",
+    "02 Description" : "The activity cost estimate considers each project activity and the costs associated with completing the activity. These costs include direct costs for project resources, indirect costs which may be passed on to the project, and the amount held in contingency reserve for the activity. A given activity may have many resources allocated to it which all must be accounted for as part of the estimate for that activity. One characteristic of the activity cost estimate is documenting how the estimate was determined. This is usually done by either analogous or parametric estimating. Analogous estimating is done using similar past projects or activities to estimate cost. Parametric estimating is done by determining and using a unit cost calculated over a duration or quantity of units. Parametric estimating is usually more accurate and should result in a higher confidence level. Another characteristic of the activity cost estimate is that it often uses a range for the activity’s cost estimate as well as a confidence level. At different stages of project planning some activities may be more well-defined which may result in a much higher confidence level than that of an activity with more unknowns. It is important to note that like most project management documentation, the activity cost estimate should continue to be revised and improved throughout the project’s lifecycle.",
+    "03 Summary" : "In general, the more information and detail that is available for an activity, the more accurate the activity cost estimate will be. Once activity cost estimates are completed for all of a project’s activities, these can then be used to develop the overall project cost estimate.",
+    "Activity Cost Estimates" : {
+      "Additional Information" : "Information on cost of quality, interest rate, or other",
+      "Assumptions" : {
+        " Constraints" : "Any assumptions used in developing the estimate such as labor cost per hour"
+      },
+      "Confidence Level" : "Confidence Level",
+      "Direct Costs" : "Costs directly related to project work (staff salaries, supplies, training, etc.)",
+      "Estimate" : "Estimated cost",
+      "Indirect Costs" : "Costs not directly attributable to the project (utilities, rent, security, etc.)",
+      "Method" : "Method used such as parametric, analogous, etc.",
+      "Project" : "ID",
+      "Range" : "Range of estimate",
+      "Reserve" : "Amount of funding held in reserves for contingencies",
+      "Resource" : "Type of resource (labor, material, equipment, service, etc.)",
+      "WBS No" : "This should be the WBS number from the Work Breakdown Structure"
+    },
+    "Sample_Data" : {
+      "001" : {
+        "Confidence Level" : 8,
+        "Constraints" : "Must obtain functional manager approval to assign Jr. Programmer",
+        "Direct Costs" : "40 hrs @ $20.75 = $1,030",
+        "Estimate" : "$1,050.75",
+        "Indirect Costs" : "$0",
+        "Method" : "Parametric",
+        "Project" : "002",
+        "Range" : "$1020-$1075",
+        "Reserve" : "$20.75",
+        "Resource" : "Jr Programmer for 40 hours",
+        "WBS No" : "3.1.1"
+      },
+      "002" : {
+        "Confidence Level" : 7,
+        "Constraints" : "Must obtain functional manager approval to assign Network Specialist",
+        "Direct Costs" : "10 hrs @ $26.90 = $269",
+        "Estimate" : "$322.80",
+        "Indirect Costs" : "$0",
+        "Method" : "Parametric",
+        "Project" : "002",
+        "Range" : "$300-$350",
+        "Reserve" : 53.8,
+        "Resource" : "Network Specialist for 10 hours",
+        "WBS No" : "3.1.1"
+      },
+      "003" : {
+        "Additional Information" : "Lease from Test Supply Corp.",
+        "Confidence Level" : 9,
+        "Constraints" : "Assume test equipment will be available",
+        "Estimate" : "$504",
+        "Indirect Costs" : "12 hrs @ $42 = $504",
+        "Method" : "Parametric",
+        "Project" : "002",
+        "Range" : "$500-$510",
+        "Reserve" : 504,
+        "Resource" : "Lease Network Test Equipment",
+        "WBS No" : "3.1.1"
+      },
+      "Resource" : "Jr Programmer for 40 hours"
+    }
+  },
+  "ACTIVITY LIST" : {
+    "01 Introduction" : "The Activity List is a document which itemizes all scheduled activities for a particular project and provides a detailed description of the work to be performed for each activity. Depending on the complexity of the project these lists may be very long. Great care must be taken to provide as much detail as possible in describing the scope of work for each activity so the project team members involved can gain a thorough understanding of the activity.",
+    "02 Details" : "The Activity List should include an activity identification number which is referenced in other project documents like the activity attributes and activity cost estimates. The Activity List should also include the activity name, detailed description of the work to be performed, and may include the project team member(s) who are responsible for the work. The Activity List should also be reviewed by the project team to ensure activity descriptions are clear, thorough, and understood by everyone.",
+    "03 Activity List" : {
+      "01 Activity ID No" : "Each activity should have a reference number which goes here.",
+      "02 Activity Name" : "Each activity should have a name which is placed in this column.",
+      "03 Description of Work" : "Description of work for the activity should be placed in this column. Work should be described in enough detail so those responsible understand what is required to complete the activity.",
+      "04 Responsibility" : "Names of those responsible for the work goes in this column. There may be one team member or several. There may also be a primary and an alternate.",
+      "05 Project" : "ID / Name",
+      "Sample_Data" : [ null, {
+        "Activity ID No" : 1001,
+        "Activity Name" : "Complete work area parking",
+        "Description of Work" : "This activity consists of packing all billing group employee work areas into clearly labeled boxes with employee names written on the outside. This activity also includes disconnecting all workstations, telephone and electrical items.",
+        "Project" : "Billing Group Relocation",
+        "Responsibility" : "J. Doe has primary responsibility and P. Brown is the alternate"
+      }, {
+        "Activity ID No" : 1002,
+        "Activity Name" : "Complete preparation of new work area",
+        "Description of Work" : "This activity consists of ensuring electrical, telephone and network services are turned on for employees in the new work area. This activity also includes labeling and configuring cubicles per the workspace layout and ensuring all work areas are complete and serviceable. The workspace should also be safe and free of trash and clutter.",
+        "Project" : "Billing Group Relocation",
+        "Responsibility" : "F. White is responsible for this activity"
+      }, {
+        "Activity ID No" : 1003,
+        "Activity Name" : "Transport employee equipment",
+        "Description of Work" : "This activity consists of loading packed boxes into the company vehicle, transporting them to the new workspace and unloading the boxes into the labeled cubicles in the new location. Employees will unpack their respective boxes.",
+        "Project" : "Billing Group Relocation",
+        "Responsibility" : "B. Black is responsible for this activity"
+      }, {
+        "Activity ID No" : 1004,
+        "Activity Name" : "Complete discarding/recycling boxes and moving materials",
+        "Description of Work" : "This activity includes turning in all unused packing and shipping materials as well as breaking down and recycling all boxes. This also includes discarding used packing material in the appropriate bins.",
+        "Project" : "Billing Group Relocation",
+        "Responsibility" : "B. Black has primary responsibility and P. Brown is the alternate"
+      }, {
+        "Activity ID No" : 1005,
+        "Activity Name" : "Complete new workspace connections",
+        "Description of Work" : "This activity includes connecting all telephone services, network services and any other electrical items for employees in their new workspace.",
+        "Project" : "Billing Group Relocation",
+        "Responsibility" : "F. White is responsible for this activity"
+      } ]
+    }
+  },
+  "Assumption Log Template" : {
+    "Assumption Log" : {
+      "Log" : {
+        "Actions" : "Any actions associated with the assumption or validating the assumptions should be listed here.",
+        "Assumption" : "Define the assumption in this column.",
+        "Category" : "This should list what portion of the project the assumption impacts.",
+        "Due Date" : "This is the date the assumption should be validated by.",
+        "ID" : "Each assumption should have a corresponding ID number.",
+        "Responsibility" : "Assumptions should be assigned to a team member to validate.",
+        "Status" : "This tracks the assumption validation and if it's open or closed."
+      },
+      "Project:" : "value"
+    },
+    "Intro" : "The Assumption Log is a document which the project manager and team use to capture, document, and track assumptions throughout a project’s lifecycle. Assumptions are an important part of any project. Assumptions usually require some type of follow-up or validation in order to determine whether or not they will impact the project. Many assumptions may actually be project risks, or may become risks during the life of the project. In addition to creating an assumption log, be sure to perform proper risk management on your project with a risk management plan and risk register. The assumption log should be used to augment your risk register - it should never be used in place of the risk register.",
+    "Sample_Data" : [ null, {
+      "Actions" : "J. Brown to meet with operations manager on 4/15 to discuss line capacity.",
+      "Assumption" : "There is adequate capacity on manufacturing lines to produce prototypes for the project.",
+      "Category" : "Manufacturing",
+      "Due Date" : "8/20/2014",
+      "Project" : "003",
+      "Responsibility" : "J. Brown",
+      "Status" : "Open"
+    }, {
+      "Actions" : "Design team is currently verifying planned cable dimensions.",
+      "Assumption" : "Cable dimensions will not deviate significantly from existing product lines.",
+      "Category" : "Design",
+      "Due Date" : "8/2/2014",
+      "Project" : "003",
+      "Responsibility" : "T. Black",
+      "Status" : "Open"
+    }, {
+      "Actions" : "T. Black has verified that there is ample warehousing space available for the Xwave Fiber Project.",
+      "Assumption" : "There is adequate warehousing space for additional materials needed for this product.",
+      "Category" : "Suppy",
+      "Due Date" : "7/22/2014",
+      "Project" : "003",
+      "Responsibility" : "N. White",
+      "Status" : "Closed"
+    }, {
+      "Actions" : "A. Green will meet with Sponsor and all functional managers on 3/13 to discuss this topic.",
+      "Assumption" : "All project resources will remain available throughout the project lifecycle.",
+      "Category" : "Planning/ Execution",
+      "Due Date" : "9/12/2014",
+      "Project" : "003",
+      "Responsibility" : "A. Green",
+      "Status" : "Open"
+    } ],
+    "details" : "Each assumption should have an owner or team member responsible for following up and validating the assumption. The Assumption Log assigns each assumption an ID or reference number, a name and description of each assumption, responsible person, due date, status, closure date, and any actions which might be required as part of the follow-up or validation. The Assumption Log should be updated as items are closed or more information is obtained. The project team should also review the Assumption Log regularly to ensure all project team members are informed and any additional actions or information is captured."
+  },
+  "BUSINESS CASE" : {
+    "1 Executive Summary" : "This Business Case Template provides you with a good starting point for which to develop your project/organization specific Business Case. You can download the MS Word version of this template by clicking on the Word icon above.",
+    "1_1 Issue" : "This section of the business case should briefly describe the business problem that the proposed project will address. This section should not describe how the problem will be addressed, only what the problem is.",
+    "1_2 Anticipated Outcomes" : "This section should describe the anticipated outcome if the proposed project or initiative is implemented. It should include how the project will benefit the business and describe what the end state of the project should be.",
+    "1_3 Recommendation" : "This section summarizes the approach for how the project will address the business problem. This section should also describe how desirable results will be achieved by moving forward with the project.",
+    "1_4 Justification" : "This section justifies why the recommended project should be implemented and why it was selected over other alternatives. Where applicable, quantitative support should be provided and the impact of not implementing the project should also be stated.",
+    "2 Business Case Analysis Team" : "This section of the business case describes the roles of the team members who developed the business case. It is imperative that participants and roles are clearly defined for the business case as well as throughout the life of the project.",
+    "3 Problem Definition" : {
+      "3_1 Problem Statement" : "This section describes the business problem that this project was created to address. The problem may be process, technology, or product/service oriented. This section should not include any discussion related to the solution.",
+      "3_2 Organizational Impact" : "This section describes how the proposed project will modify or affect the organizational processes, tools, hardware, and/or software. It should also explain any new roles which would be created or how existing roles may change as a result of the project.",
+      "3_3 Technology Migration" : "This section of the Business Case Template provides a high-level overview of how the new technology will be implemented and how data from the legacy technology will be migrated. This section should also explain any outstanding technical requirements and obstacles which need to be addressed."
+    },
+    "4 Project Overview" : "This section describes high-level information about the project to include a description, goals and objectives, performance criteria, assumptions, constraints, and milestones. This section of the Business Case consolidates all project-specific information into one chapter and allows for an easy understanding of the project since the baseline business problem, impacts, and recommendations have already been established.",
+    "4_1 Project Description" : "This section describes the approach the project will use to address the business problem(s). This includes what the project will consist of, a general description of how it will be executed, and the purpose of it.",
+    "4_2 Goals and Objectives" : "This section lists the business goals and objectives which are supported by the project and how the project will address them.",
+    "4_3 Project Performance" : "This section describes the measures that will be used to gauge the project’s performance and outcomes as they relate to key resources, processes, or services.",
+    "4_4 Project Assumptions" : "This section lists the preliminary assumptions for the proposed project. As the project is selected and moves into detailed project planning, the list of assumptions will most likely grow as the project plan is developed. However, for the business case there should be at least a preliminary list from which to build.",
+    "4_5 Project Constraints" : "This section of the business case template lists the preliminary constraints for the proposed project. As the project is selected and moves into detailed project planning, the list of constraints will most likely grow as the project plan is developed. However, for the business case there should be at least a preliminary list from which to build.",
+    "4_6 Major Project Milestones" : "This section lists the major project milestones and their target completion dates. Since this is the business case, these milestones and target dates are general and in no way final. It is important to note that as the project planning moves forward, a base-lined schedule including all milestones will be completed.",
+    "5 Strategic Alignment" : "All projects should support the organization’s strategy and strategic plans in order to add value and maintain executive and organizational support. This section provides an overview of the organizational strategic plans that are related to the project. This includes the strategic plan, what the plan calls for, and how the project supports the strategic plan.",
+    "6 Cost Benefit Analysis" : "Many consider this one of the most important parts of a business case as it is often the costs or savings a project yields which win final approval to go forward. It is important to quantify the financial benefits of the project as much as possible in the business case. This is usually done in the form of a cost benefit analysis. The purpose of this is to illustrate the costs of the project and compare them with the benefits and savings to determine if the project is worth pursuing.",
+    "7 Alternative Analysis" : "All business problems may be addressed by any number of alternative projects. While the business case is the result of having selected one such option, a brief summary of considered alternatives should also be included—one of which should be the status quo, or doing nothing. The reasons for not selecting the alternatives should also be included.",
+    "8 Approvals" : "The business case is a document with which approval is granted or denied to move forward with the creation of a project. Therefore, the document should receive approval or disapproval from its executive review board"
+  },
+  "Business Case Assessment" : {
+    "10 Payback" : {
+      "0" : "To some extent, this has to be something of a best guess response. Using statistics   or other information relating to the current situation will help with a comparison of   what is promised by the new service/system. For instance if the current system is   heavily reliant on manual inputs and outputs and the new system offers an automated   alternative then payback can be calculated using the costs of associated employee   effort (based on salary costs or freeing up time to work on other tasks), and material   costs (etc) against new system costs.  Some form of cost/benefit analysis is useful in order to ascertain whether the project is   worthwhile from a savings/benefits perspective - is it going to cost more than it saves?",
+      "Answer" : {
+        "How and on what timescales will the projected costs be recouped as savings or benefits?" : "details"
+      }
+    },
+    "11 Timescales & Phasing" : {
+      "Answer" : {
+        "What are the timescales and deadlines for the proposed development?" : "info"
+      }
+    },
+    "3 Benefits" : {
+      "Examples" : [ null, "more effectively integrated systems", "ease of support", "increased system availability", "reduction of paper", "reduction of manual effort", "reduction in duplication of effort", "reduction of data entry", "streamlining of process", "movement of staff to more 'value added' tasks" ]
+    },
+    "4 Implications of not undertaking Proposal" : {
+      "Answer" : {
+        "Is the proposal solving an immediate problem or making a general improvement?" : "details",
+        "What problems will arise if the proposal does not go ahead?" : "details"
+      }
+    },
+    "5 Alternatives" : {
+      "Answer" : {
+        "Are there other potential ways to solve the problem" : {
+          "s and have the alternatives been fully   explored?" : "details"
+        },
+        "What are the alternatives to undertaking the proposed development?" : "info"
+      }
+    },
+    "6 Organisational Areas Affected" : {
+      "Answer" : {
+        "Any changes to current technology? - What are the effects regarding infrastructure" : {
+          "  databases" : {
+            "communication capabilities - is new software" : {
+              "hardware required?" : "info"
+            }
+          }
+        },
+        "Are there any staff changes? - is there a requirement to hire new staff" : {
+          "re-train  original staff?" : "info"
+        },
+        "Are there any staff contract changes and other potential HR-related issues?" : "info",
+        "How will processes change, if at all?" : "info",
+        "What are the support implications - in-house and outside of the organisation?" : "info",
+        "What staff, processes and systems will be affected by the proposed development?" : "info"
+      }
+    },
+    "7 Risks" : {
+      "Answer" : {
+        "What risks are involved in implementing the proposal and how will they be managed?" : "info"
+      }
+    },
+    "8 Investment Costs" : {
+      "Answer" : {
+        "What is the summary of capital investment costs for the proposed development?" : "info"
+      },
+      "Total" : "Important"
+    },
+    "9 Running Costs" : {
+      "TOTAL:" : "important",
+      "a" : "[Ongoing Annual Training,to cover staff turnover, manuals, refresher training, etc]"
+    },
+    "Authorised by" : "sig",
+    "Introduction" : "Give a brief description of the proposal including the key objectives.",
+    "Project Sponsor  Assigned" : "tbd",
+    "Project Title:" : "ui",
+    "References" : [ null, "https://drive.google.com/folderview?id=0B_VOWkwoW_F1SFRXYlhpQ1QyTWc&tid=0B_VOWkwoW_F1Q016YWxEU3l0OU0" ],
+    "Revision History" : [ null, {
+      "Changed by" : "Modifier",
+      "Date" : "now",
+      "Description" : "details",
+      "Version" : "this one"
+    } ],
+    "Slides" : [ null, {
+      "h1" : "Introduction"
+    } ],
+    "Strategies" : {
+      "Answer" : {
+        "Does it comply with the general approach and intention of the organisation?" : "info",
+        "How does the proposed project fit in with your Organisation's overall plan or strategy   for the future?" : "info"
+      },
+      "def" : "Identify aspects of the Organisational Plan and/or Information Strategy that are   addressed."
+    }
+  },
+  "Business Plan" : {
+    " 5 Industry" : ".",
+    "1 Links to Resources" : [ null, ".." ],
+    "11 OPERATIONS PLAN" : ".",
+    "12 MANAGEMENT TEAM" : ".",
+    "13 OVERALL SCHEDULE" : ".",
+    "14 CRITICAL RISKS, PROBLEMS AND ASSUMPTIONS" : ".",
+    "15 FINANCIAL PLAN" : ".",
+    "16 PROPOSED COMPANY OFFERING" : ".",
+    "2 Key Elements of a Business Plan" : {
+      "1 Executive Summary" : ".",
+      "2 Body" : ".",
+      "3 Financial Model" : "."
+    },
+    "4 Executive Summary" : ".",
+    "6 Company, Concept, and Product" : {
+      "1 The Company and Concept" : ".",
+      "2 Product" : ".",
+      "3 Entry and Growth Strategy" : "."
+    },
+    "7 Market Research and Analysis" : ".",
+    "9 THE MARKETING PLAN" : {
+      "1 Overall Marketing Strategy" : ".",
+      "2 Pricing" : ".",
+      "3 The Selling Cycle" : ".",
+      "4 Sales Tactics" : ".",
+      "5 Advertising and Sales Promotions" : ".",
+      "6 Publicity" : {
+        "1 Customer Service" : ".",
+        "2 Warranty or Guarantee Policies" : "."
+      }
+    },
+    "KT" : {
+      "Situation Appraisal" : {
+        "Identify Concerns" : {
+          "List threats and oppertunities" : ".",
+          "Questions" : {
+            "What bothers us about ___?" : "...",
+            "What changes are anticipated?" : "...",
+            "What decisions need to be made?" : "...",
+            "What deviations are occurring?" : "...",
+            "What opportunities exist?" : "...",
+            "What plans should be implimented" : "..."
+          },
+          "Separate and clarify Concerns" : {
+            "Questions" : {
+              "What differnt deviations, decisions, or plans are part of this concern?" : "...",
+              "What do we mean by ___?" : "...",
+              "What else concerns us about ___?" : "...",
+              "What evidence do we have ___?" : "...",
+              "What exactly is ___?" : "..."
+            }
+          }
+        },
+        "Plan Next Steps" : {
+          "Determine analysis needed" : {
+            "Decision Analysis" : {
+              "Do we need to make a choice?" : "..."
+            },
+            "Problem Analysis" : {
+              "Do we have a deviation?" : "...",
+              "Do we need to know the cause of a deviation to take effective action?" : "...",
+              "is cause unknown?" : "..."
+            }
+          }
+        },
+        "Set Priority" : {
+          "Consider current impact" : {
+            "Questions" : {
+              "What is the current impact on people, safty, cost, customers, productivity, reputation, ect?  What evidence do you have?" : "...",
+              "Which concern is most serious?" : "...",
+              "Which concern should we work on first?" : "..."
+            }
+          },
+          "Consider future impact " : {
+            "Questions" : {
+              "If left unresolved, how and when will the seriousness change?" : "...",
+              "What evidence do you have?" : "...",
+              "Which concern is getting worse quicker?" : "..."
+            }
+          },
+          "Consider time frame" : {
+            "Questions" : {
+              "What evidence do you have?" : "...",
+              "What is the deadline?" : "...",
+              "When do we need to start?" : "...",
+              "When would resolution become difficult, expensive, impossible, or meaningless?" : "...",
+              "Which concern will be the hardest to resolve later?" : "..."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Decision Support Tool" : [ null, 1 ],
+  "FEASIBILITY STUDY" : {
+    "1 Executive Summary" : "The executive summary provides an overview of the content contained in the feasibility study document. Many people write this section after the rest of the document is completed. This section is important in that it provides a higher level summary of the detail contained within the rest of the document. Remember to remove the green instructional portion of the Feasibility Study Template before making your document final.",
+    "10 conculsion" : "Based on the information presented in this feasibility study, it is recommended that ABC approves the online sales initiative and begins project initiation. The findings of this feasibility study show that this initiative will be highly beneficial to the organization and has a high probability of success. Key findings are as follows: Technology: Will utilize existing technology which lowers project risk E commerce infrastructure will be contracted out to vendor which allows ABC to share risk Once in place this technology is simple to operate and maintain for a relatively low cost Marketing: This initiative will allow ABC to reach large number of target groups electronically at a low cost ABC can expand customer base beyond geographic areas where stores are currently located The marketplace for online chocolate and confection sales is in a steady state of growth ABC is able to differentiate itself from its competitors and will utilize incentive programs to target new consumers Organizational: Minimal increases to staffing are required with no changes to organizational structure No new facilities or capital investments are required Financial: Break even point occurs early in the second year of operation Five year projections show online sales accounting for 25% of total sales ABC will be in position to capture greater market share by maintaining both an in-store and online presence",
+    "2 Description of Products and Services" : "This section of the feasibility study provides a high level description of the products and/or services which are being considered as past of the feasibility study. The purpose of this section is to provide detailed descriptions of exactly what the organization is considering so this information can be applied to the following sections of the document. It is important that this description captures the most important aspects of the products and/or services that the organization is considering as well as how it may benefit customers and the organization.",
+    "3 Technology Considerations" : "This section of the feasibility study should explain any considerations the organization must make with regards to technology. Many new initiatives rely on technology to manage or monitor various business functions. New technology may be developed internally or contracted through a service provider and always result in costs which must be weighed in determining the path forward.",
+    "4 Product" : {
+      "Service Marketplace" : "This part of the feasibility study describes the existing marketplace for the products and/or services the organization is considering. It may describe who the target market consists of for these products or services, who the competitors are, how products will be distributed, and why customers might choose to buy our products/services. Most marketplaces are dynamic environments in which things change constantly. To enter a new marketplace blindly will usually result in an organization not fully understanding its role and not maximizing its resulting benefits."
+    },
+    "5 Marketing Strategy" : "Here the feasibility study provides a high level description of how the organization will market its product or service. Some topics which should be included are: how does an organization differentiate itself from its competitors; types of marketing the organization will utilize; and who the organization will target. Marketing efforts must be focused on the right target groups in order to yield the greatest return on investment.",
+    "6 Organization and Staffing" : "With many new products or services there may be a need for additional staffing or for an organization to restructure in order to accommodate the change. These are important considerations as they may result in increased costs or require an organization to change its practices and processes.",
+    "7 Schedule" : "This section of the feasibility study is intended to provide a high level framework for implementation of the product or service being considered. This section is not intended to include a detailed schedule as this would be developed during project planning should this initiative be approved. This section may include some targeted milestones and timeframes for completion as a guideline only.",
+    "8 Financial Projections" : "The financial projections for the feasibility study provides a description of the financial projections the new initiative is expected to yield versus additional costs. Financial projections are one key aspect of new project selection criteria. There are many ways to present these projections. Net present value (NPV), cost-benefit calculations, and balance sheets are just some examples of how financial projections may be illustrated. This section should also provide the assumptions on which the illustrated financial projections are based.",
+    "9 Findings and Recommendations" : "This section of the feasibility study template provides an area where to summarize the findings of the feasibility study and explain why this course of action is or is not recommended. This section may include a description of pros and cons for the initiative being considered. This section should be brief since most of the detail is included elsewhere in the document. Additionally, it should capture the likelihood of success for the business idea being studied."
+  },
+  "Glossary" : {
+    "Impact" : "The impact of the risk on the project if the risk occurs (scale from 0 to 10 with 10 being the highest).",
+    "Probability" : "The likelihood that a risk or opportunity will occur (on a scale from 0 to 10 with 10 being the highest).",
+    "Risk" : "The risk stated in a complete sentence which states the cause of the risk, the risk, and the effect that the risk causes to the project.",
+    "Risk Category" : "Categorization of risks by area of project affected, source of risk or other useful category",
+    "Risk Owner" : "The person who the project manager assigns to watch for triggers, and manage the risk response if the risk occurs.",
+    "Risk Ranking" : "A priority list which is determined by the relative ranking of the risks (by their scores) within the project with the number one being the highest risk score.",
+    "Risk Response" : "The action which is to be taken if this risk occurs",
+    "Risk Score" : "Determined by multiplying probability and impact (scale from 0 to 100).",
+    "Trigger" : "Something which indicates that a risk is about to occur or has already occured."
+  },
+  "LESSONS LEARNED" : {
+    "01 Introduction" : "Capturing lessons learned is an integral part of every project and serves several purposes. While the finalization of a formal lessons learned document is completed during the project closeout process, capturing lessons learned should occur throughout the project lifecycle to ensure all information is documented in a timely and accurate manner. The lessons learned document serves as a valuable tool for use by other project managers within an organization who are assigned similar projects. This document should not only describe what went wrong during a project and suggestions to avoid similar occurrences in the future, but it should also describe what went well and how similar projects may benefit from this information. This document should be communicated to the project sponsor and Project Management Office (PMO) for inclusion in the organizational assets and archives as part of the lessons learned database. If the organization does not have a PMO then other, formal means of communicating the lessons learned should be utilized to ensure all project managers are included.",
+    "02 Lessons Learned Approach" : "The lessons learned approach describes how the document will be created, what it will consist of, and how lessons will be categorized. It is important that the lessons learned approach is covered in the initial stages of project planning. The reason for this is that a methodology along with an appropriate set of tools should be established to capture these lessons throughout the project’s lifecycle. A project journal is one example of a tool to capture these lessons. If no thought is given to lessons learned until project closeout then it is likely that many lessons and details will be omitted from the document. The contents of the lessons learned document should also be determined ahead of time. They should be detailed enough to provide value for future use and the contents should be consistent with other lessons learned documents or organizational standards. The categorization of lessons learned is another consideration. Many organizations categorize lessons by project lifecycle phase or by the knowledge area that the lesson applies to.",
+    "03 Lessons Learned From This Project" : "The lessons learned must be communicated in a consistent manner. In addition to the categorization and description of the lesson, it is important to state what the impact was and provide a recommendation for project managers to consider on future projects.",
+    "04 Lessons Learned Knowledge Base" : {
+      "Database" : "The Lesson Learned Knowledge Base contains historical information from previous projects. It is part of the organizational project assets and provides a valuable source of information to be used by similar projects in the future. All project lessons learned and other historical information need to be transferred to this knowledge/database in order to provide one centralized repository for ease of use. This should also include information on issues and risks as well as techniques that worked well which can be applied to future projects. Most lessons learned knowledge/databases contain large amounts of information, so it is important that there is a system for cataloging this information."
+    },
+    "05 Lessons Learned From Previous Projects" : "The lessons learned document might also state which historical lessons learned were used on this project. This information not only shows the value of the documentation of such lessons, but it also shows which lessons are consistently applied by other similar projects. It is important to reference not only what the lesson was but from which project it was associated with.",
+    "06 Process Improvement Recommendations" : "It is important that once lessons learned are collected and documented that the organization approves and implement any process improvements identified. It is important for organizations to strive for continuous improvement and this portion of the lessons learned process is an integral step."
+  },
+  "Moving Parts" : [ null, "Project Tracking", "Project Management", "Decision Support Tool", "Project Cost Calculator", "Project Timeline", "Issue Log", "Budget Planner", "Presentation Template", "Risk Register", "Team Contact List", "Gantt Chart", "Work Breakdown Structure", null, "Flow Charts", "Action Items", "Responsibilities" ],
+  "POST PROJECT REVIEW" : {
+    "1 Project Summary" : "This section of the Post Project Review should provide a summary of the project which was completed. It is important that this summary captures the scope of the project and contains enough detail to provide a full understanding of the project. Since this document will communicate what went right and wrong with the project, as well as lessons learned and recommendations for future projects, it is imperative that this section provide enough background information to base the details in the rest of the document on.",
+    "2 Project Team Staffing" : "This section provides information about who the project team consisted of. This usually includes names, titles, project role, and contact information. This information is useful when questions may arise on future projects which are similar in nature. It also provides a useful list of points of contact should more information be needed on lessons learned from the project.",
+    "3  Project Deliverables (Planned vs Actual)" : "This section of the Post Project Review describes the expected outcomes of the project as it was originally planned and compares these outcomes against the actual outcomes. This is beneficial in defining any occurrences of scope creep or whether a project may not have been completed as planned. This is helpful information for lessons learned and for future project teams conducting similar projects.",
+    "4 Transition to Operations" : "Here, the Post Project Review describes the transition of the project to operations upon completion. This section should include any difficulties or challenges faced during this transition. This section should also highlight what went right during the transition so future projects may reference and use best practices to improve project performance.",
+    "5 Project Costs" : "This section of the Post Project Review should describe how the planned or budgeted costs for the project compare with the actual costs. Costs may be affected by scope creep, poor planning, schedule delays, progressive elaboration, or many other factors. This section should highlight whether or not costs were controlled adequately and if there were additional or excessive costs the reasons should be stated. It is important to communicate why costs were met or may have been higher than planned so future projects can benefit from this information in building a more effective project management methodology within the organization.",
+    "6 Project Schedule" : "This portion of the Post Project Review describes the project’s planned schedule or timeline and how the project measured against this plan. This information is helpful in identifying and understanding what may have contributed to project delays or allowed the project to complete early or on time. This can then be used by the team members on future projects or be referenced by other project teams for use on future projects. Archiving project information during the project closure phase is one of the best ways for an organization to improve its project management methodologies and effectiveness.",
+    "7 Recommendations" : "This section of the Post Project Review Template highlights any recommendations and lessons learned which would be of use on future projects. This is a valuable part of the project closeout phase and organizational project archives. In the project planning phase one of the first steps is to research organizational archives to identify useful information for planning and executing a project. These recommendations and lessons learned are one of the most important pieces or project success in any effective project management group."
+  },
+  "PROCESS IMPROVEMENT PLAN" : {
+    "01 Introduction" : "The process improvement plan is a component of the Project Management Plan. The purpose of the process improvement plan is to document how the project team will analyze various processes, determine where improvements can be made, and implement improvement measures. Like a large part of project management methodology, process improvement is an iterative process that is performed throughout the project’s lifetime.",
+    "02 Process Boundaries" : "Process boundaries must be identified as part of the process improvement plan. This establishes where each process begins and ends as well as what the process inputs and outputs are. Additionally, there must be accountability for each process with a process owner assigned who is responsible for overseeing process improvement measures. Boundaries are important to ensure that the work being done to improve the process falls within the boundaries and not outside of the process which would result in extraneous work with no impact on the process.",
+    "03 Process Configuration" : "Process configuration is an illustrated and/or graphical depiction of the project’s processes. By presenting the process configurations in this manner, the project team has the ability to visualize the processes which can be helpful in facilitating analysis, identifying area where the processes are weak, and determining ways the processes may be improved throughout the project. It is important to note that like all other project documentation, as changes are made to the processes, the configurations must be updated.",
+    "04 Process Metrics" : "Metrics are an extremely important part of process improvement and project quality. A metric is a measure or measures which allow the project team to assess various performance parameters of a given process. These measures allow the team to continuously monitor, measure, and track a process’s performance in order to determine the efficiency and effectiveness of the process. The team must ensure that metrics are based on the project or customer requirements to ensure project quality. The metrics must also be based on what comprises an acceptable measurement as well as control limits within which acceptable measurements may fall.",
+    "05 Targets for Improved Performance" : "In order to effectively improve a process a project team needs a thorough understanding of where there processes currently are, as well as where they want to be at the end of the project. While processes may fall within the acceptable control limits, building quality management into the project plan requires continuous improvement throughout the project’s duration. To drive this cycle of continuous improvement, the project team needs to establish targets for each specific metric. These targets should be specific, measurable, and achievable."
+  },
+  "PROJECT ACCEPTANCE" : {
+    "Approval" : "bool"
+  },
+  "PROJECT CHARTER" : {
+    "01 Executive Summary" : "The executive summary should be a high-level summary of what issues or problems the project was created to correct. Typically, the executive summary also provides the background information and general statements regarding the project’s purpose or justification which will be covered in more detail in the appropriate section(s) of the charter.",
+    "02 Project Purpose" : {
+      "Business Need" : "Discuss the logic for the Business Need/Case (market demand, organizational need, customer request, technological advance, legal requirement, ecological impacts, social need, etc). This section should also include the intended effects of the business case (i.e. cost savings, process improvement, new product development, etc).",
+      "Business Objectives" : "Here the project charter should list the Business Objectives for the project which should support the organizational strategic plan.",
+      "Justification" : "This section of the project charter describes the purpose and justification of the project in the form of business case and objectives. The business case should provide the reasoning behind the need for this project as it relates to a function of the business."
+    },
+    "03 Project Description" : "This section of the project charter provides a high-level description of the project. This description should not contain too much detail but should provide general information about what the project is, how it will be done, and what it is intended to accomplish. As the project moves forward the details will be developed, but for the project charter, high-level information is what should be provided.",
+    "04 Project Objectives and Success Criteria" : "Objectives should be SMART: Specific, Measurable, Attainable, Realistic, and Time-bound. The project manager must be able to track these objectives in order to determine if the project is on the path to success. Vague, confusing, and unrealistic objectives make it difficult to measure progress and success.",
+    "05 Requirements" : "The project team should develop a list of all high-level project requirements. These requirements are clear guidelines within which the project must conform and may be a result of input from the project sponsor, customer, stakeholders, or the project team.",
+    "06 Constraints" : "Constraints are restrictions or limitations that the project manager must deal with pertaining to people, money, time, or equipment. It is the project manager’s role to balance these constraints with available resources in order to ensure project success.",
+    "07 Assumptions" : "The project team must identify the assumptions they will be working under as the project goes forward and document them in the project charter. These assumptions are what the project manager/team expect to have or be made available without anyone specifically stating so.",
+    "08 Preliminary Scope Statement" : "The preliminary scope statement is a general paragraph which highlights what the project will include, any high-level resource or requirement descriptions, and what will constitute completion of the project. This preliminary scope statement is exactly that: preliminary. All of this information will be expanded upon in greater detail as the project moves forward and undergoes progressive elaboration.",
+    "09 Risks" : "All projects have some form of risk attached. This section of the project charter should provide a list of high-level risks that the project team has determined apply to this project.",
+    "10 Project Deliverables" : "This section should list all of the deliverables that the customer, project sponsor, or stakeholders require upon the successful completion of the project. Every effort must be made to ensure this list includes all deliverables and project sponsor approval must be required for adding additional deliverables in order to avoid scope creep.",
+    "11 Summary Milestone Schedule" : "This section of the project charter provides an estimated schedule of all high-level project milestones. It is understood that this is an estimate and will surely change as the project moves forward and the tasks and milestones and their associated requirements are more clearly defined.",
+    "12 Summary Budget" : "The summary budget should contain general cost components and their planned costs. As the project moves forward these costs may change as all tasks and requirements become clearer. Any changes must be communicated by the project manager.",
+    "13 Project Approval Requirements" : "The organization must understand when the project has reached a successful completion. These criteria must be clear and should be accepted by whoever will sign-off on the project’s closeout. Once the project charter is signed-off by the authorized person, the project is deemed approved and is successful as long as it has met all of the agreed upon requirements.",
+    "14 Project Manager" : "This section of the project charter explicitly states who is assigned as the PM, their responsibility, and authority level. Depending on the organization and scope of the project, the project manager may have varying levels of responsibility and authority for personnel, project expenditures, and scheduling.",
+    "15 Authorization" : {
+      "isApproved?" : "bool"
+    },
+    "PROJECT CHARTER TEMPLATE" : {
+      "Paragraph 1" : "Formally authorize the project in this section of the Project Charter.",
+      "Paragraph 2" : "Project Scope - State the scope of the project, its deliverable and what business needs, problems or opportunities the project addresses – a market demand, business need, legal requirement, social need, customer request or technological advance.",
+      "Paragraph 3" : "Identify the Project Manager and give him authority to apply organization resources to the project.",
+      "Paragraph 4" : "Provide the summary milestone schedule in the Project Charter.",
+      "Paragraph 5" : "Project Budget – state the budget for the project and identify funding sources.",
+      "Sponsor Acceptance" : "Approved by the Project Sponsor"
+    }
+  },
+  "PROJECT MANAGEMENT PLAN" : {
+    "01 Introduction" : "The Introduction provides a high level overview of the project and what is included in this Project Management Plan. This should include a high level description of the project and describe the projects deliverables and benefits. Excessive detail is not necessary in this section as the other sections of the project plan will include this information. This section of the project plan template should provide a summarized framework of the project and its purpose. Look back at the Project Charter for information to include in this section.",
+    "02 Project Management Approach" : "This section of the Project Plan is where you outline the overall management approach for the project. This section should describe, in general terms, the roles and authority of project team members. It should also include which organizations will provide resources for the project and any resource constraints or limitations. If there are any decisions which must be made by specific individuals—for example authorizing additional funding by the project sponsor—this should also be stated here. It should be written as an Executive Summary for the Project Management Plan.",
+    "03 Project Scope" : "State the scope of the project in this section of the Project Management Plan. The scope statement from the project charter should be used as a starting point; however, the project plan needs to include a much more detailed scope than the charter. This detail should include what the project does and does not include. The more detail included in this section, the better the product. This will help to clarify what is included in the project and help to avoid any confusion from project team members and stakeholders.",
+    "04 Milestone List" : "Provide a summary list of milestones including dates for each milestone. Include an introductory paragraph in this section which provides some insight to the major milestones. This section of the project plan template should also mention or discuss actions taken if any changes to the milestones or delivery dates are required.",
+    "05 Schedule Baseline and Work Breakdown Structure" : "This section of the Project Management Plan should discuss the WBS, WBS Dictionary, and Schedule baseline and how they will be used in managing the project’s scope. The WBS provides the work packages to be performed for the completion of the project. The WBS Dictionary defines the work packages. The schedule baseline provides a reference point for managing project progress as it pertains to schedule and timeline. The schedule baseline and work breakdown structure (WBS) should be created in Microsoft Project. The WBS can be exported from the MS Project file. Be sure to consult our Work Breakdown Structure Template.",
+    "06 Change Management Plan" : "This part of the Project Plan should describe your change control process. Ideally, this process will be some type of organizational standard which is repeatable and done on most or all projects when a change is necessary. Changes to any project must be carefully considered and the impact of the change must be clear in order to make any type of approval decisions. Many organizations have change control boards (CCBs) which review proposed changes and either approve or deny them. This is an effective way to provide oversight and ensure adequate feedback and review of the change is obtained. This section of the project plan template gives you an place where you should also identify who has approval authority for changes to the project, who submits the changes, how they are tracked and monitored.",
+    "07 Communications Management Plan" : "The purpose of the Communications Management Plan is to define the communication requirements for the project and how information will be distributed to ensure project success. You should give considerable thought to how you want to manage communications on every project. By having a solid communications management approach you’ll find that many project management problems can be avoided. In this section you should provide an overview of your communications management approach. Generally, the Communications Management Plan defines the following: Communication requirements based on roles What information will be communicated How the information will be communicated When will information be distributed Who does the communication Who receives the communication Communications conduct For larger and more complex projects, the Communications Management Plan may be included as an appendix or separate document apart from the Project Management Plan. We have a detailed Communications Management Plan Template available on our website.",
+    "08 Cost Management Plan" : "The Cost Management Plan clearly defines how the costs on a project will be managed throughout the project’s lifecycle. It sets the format and standards by which the project costs are measured, reported, and controlled. Working within the cost management guidelines is imperative for all project team members to ensure successful completion of the project. These guidelines may include which level of the WBS cost accounts will be created in and the establishment of acceptable variances. The Cost Management Plan: Identifies who is responsible for managing costs Identifies who has the authority to approve changes to the project or its budget How cost performance is quantitatively measured and reported upon Report formats, frequency and to whom they are presented For complex or large projects the Cost Management Plan may be included as an appendix to the Project Plan or as a separate, stand-alone document. In addition to this project plan template we have a detailed Cost Management Plan Template available on our website.",
+    "09 Procurement Management Plan" : "The Procurement Management Plan should be defined enough to clearly identify the necessary steps and responsibilities for procurement from the beginning to the end of a project. The project manager must ensure that the plan facilitates the successful completion of the project and does not become an overwhelming task in itself to manage. The project manager will work with the project team, contracts/purchasing department, and other key players to manage the procurement activities. For larger projects or projects with more complicated procurement management requirements, you can include the Procurement Management Plan as a separate document apart from the Project Management Plan. In addition to this Project Plan Template we have a detailed Procurement Management Plan Template available on our website.",
+    "10 Project Scope Management Plan" : "It is important that the approach to managing the projects’ scope be clearly defined and documented in detail. Failure to clearly establish and communicate project scope can result in delays, unnecessary work, failure to achieve deliverables, cost overruns, or other unintended consequences. This section provides a summary of the Scope Management Plan in which it addresses the following: Who has authority and responsibility for scope management How the scope is defined (i.e. Scope Statement, WBS, WBS Dictionary, Statement of Work, etc.) How the scope is measured and verified (i.e. Quality Checklists, Scope Baseline, Work Performance Measurements, etc.) The scope change process (who initiates, who authorizes, etc.) Who is responsible for accepting the final project deliverable and approves acceptance of project scope We have a detailed Scope Management Plan Template available on our website which can be included as an appendix to the Project Management Plan for larger or more complex projects. Be sure to review it and determine if it's necessary for managing your project.",
+    "11 Schedule Management Plan" : "This section of the Project Plan provides a general framework for the approach which will be taken to create the project schedule. Effective schedule management is necessary for ensuring tasks are completed on time, resources are allocated appropriately, and to help measure project performance. This section of the Project Plan should include discussion of the scheduling tool/format, schedule milestones, and schedule development roles and responsibilities. Be sure to check out the detailed Schedule Management Plan Template available on our website. The separate Schedule Management Plan is suitable for larger projects or projects where the schedule management is more formalized. The Schedule Management Plan can be broken out as an appendix to the Project Plan.",
+    "12 Quality Management Plan" : "This portion of the Project Management Plan Template discusses how quality management will be used to ensure that the deliverables for the project meet a formally established standard of acceptance. All project deliverables should be defined in order to provide a foundation and understanding of the tasks at hand and what work must be planned. Quality management is the process by which the organization not only completes the work, but completes the work to an acceptable standard. Without a thorough Quality Management Plan, work may be completed in a substandard or unacceptable manner. This section should include quality roles and responsibilities, quality control, quality assurance, and quality monitoring. For larger or more complex projects, the Quality Management Plan may be included as an appendix or separate document from the Project Management Plan. A detailed Quality Management Plan Template is available for use on our website.",
+    "13 Risk Management Plan" : "This part of the Project Plan provides a general description for the approach taken to identify and manage the risks associated with the project. It should be a short paragraph or two summarizing the approach to risk management on this project. Since risk management is a science in itself, we have many risk management templates available on our website. Look for the detailed Risk Management Plan Template, Risk Register Template along with our article on how to perform a risk assessment meeting.",
+    "13a Risk Register" : "The Risk Register for this project is provided in Appendix Risk Register.",
+    "14 Staffing Management Plan" : "Here the Project Plan Template discusses how you plan to staff the project. This section should include discussion on matrixed or projectized organizational structure depending on which is being used for this project. This section of the project plan should also include how resources will be procured and managed as well as the key resources needed for the project.",
+    "15 Resource Calendar" : "Include a Resource Calendar as part of your project plan. The resource calendar identifies key resources needed for the project and the times/durations they'll be needed. Some resources may be needed for the entire length of the project while others may only be required for a portion of the project. This information must be agreed to by the Project Sponsor and Functional Managers prior to beginning the project.",
+    "16 Cost Baseline" : "This section of the Project Plan Template contains the cost baseline for the project upon which cost management will be based. The project will use earned value metrics to track and manage costs and the cost baseline provides the basis for the tracking, reporting, and management of costs.",
+    "17 Quality Baseline" : "This section of the Project Management Plan should include the quality baseline for the project. The purpose of this baseline is to provide a basis for ensuring that quality can be measured to determine if acceptable quality levels have been achieved. It is important for all projects to clearly define and communicate quality standards and the quality baseline serves this purpose. This is why the quality baseline is included in the Project Management Plan Template."
+  },
+  "PROJECT STATUS REPORT" : {
+    "Deliverables and Milestones" : "This section is a quick table which shows the status of the project milestones and deliverables.",
+    "Key Performance Indicators (KPI's)" : "Many managers turn right to this section as it provide a clear view of the status of the project according the earned value metrics. In your project you need to decide which metrics to monitor, but be sure not to include too many as you may end up providing the same information but in different forms. We like to track SV, SPI, CV and CPI in the layout below. Next to the schedule and cost headings you should state whether the project is ahead of or behind schedule and over or under budget. Notice we left out the word on - it is highly unlikely that you. If you like you can also include a paragraph at the beginning of this section of the project status report presenting the earned value results in verbose.",
+    "Open Change Requests" : "Use this section of the project status report to track all changes to the project and report the status of those changes. Tracking of changes starts with the request for the change, tracks the approval status and ends when the change is added to the project, the project plan and schedule update and it has become a part of the project.",
+    "Open Issues" : "This part of the project status report should contain a list of open issues along with their status.",
+    "Open Risks" : "This section should contain a list of all open risks (risks which have occurred, or are on the verge of occurring).",
+    "Project Status Summary" : "This section of the project status report provides a quick executive overview of the status of the project. It is intended for high level management so it should not get too much into the details of the project. However, it should highlight anything specific which should be brought to their attention. The Scope/Schedule/Cost/Quality table above is a quick way to present a color coded dashboard for the status report. Typically a variance of +/- 5% will warrant a yellow cautionary color and +/- 10% will warrant a red warning color. For a project which needs tighter control +/- 2% and +/- 5% are used for these thresholds; whereas, other projects with less strict control may use 10% and 20% variances. The percent complete here should be the percent completion of the entire project. For any constraint which is yellow or red this section should contain brief explanation the reason why.",
+    "Report" : {
+      "Cost" : "..",
+      "Percent Complete" : "xx%",
+      "Quality" : "..",
+      "Risks" : "..",
+      "Schedule" : "..",
+      "Scope" : ".."
+    },
+    "Work Completed Last Week" : "In this section you should provide a highlight of work performed and milestones and/or deliverables met during the past week.",
+    "Work Planned for Next Week" : "Provide an overview of the work being performed during the next week and any milestones or deliverables you expect to meet.",
+    "Worked Planned Last Week" : "For this section of the project status report you can copy the \"Worked Planned for Next Week\" section from last week's status report and paste it into this section."
+  },
+  "Project Infrastructure Checklist" : {
+    "01 Accommodation" : {
+      "Required" : "[Desktop, Server, Laptop, Docking Station,Desk, chair, drawer space, desktop accessories]"
+    },
+    "02 Equipment" : {
+      "Required" : [ "Power points for equipment & hardware", "Desktop", "Telephones", "Mobile phones", "Laptop", "Servers" ]
+    },
+    "03 User accounts" : {
+      "configuration" : {
+        "Access to file space on a shared network drive" : "bool",
+        "Access to shared calendars" : "bool",
+        "Project e-mail address" : "isvalid(me@project)",
+        "Secure access rights to parts of shared drive" : "bool",
+        "Use of systems for sharing information between Project staff   and external partners" : "ff"
+      }
+    },
+    "04 Software" : {
+      "Office Applications" : [ null, "TEXT Editor", "Page Design" ],
+      "Specialist Applications" : [ null, "Adobe Pro", "Consturct2", "Sculprits", "Blender", "IDE" ]
+    },
+    "05 Hardware" : {
+      "Required" : [ null, "Network points or Wifi hubs for PCs and printers" ],
+      "basics" : "hardware needed to run  equipment"
+    },
+    "Cost codes" : "NFC"
+  },
+  "RACI Matrix" : {
+    "Assigning people to facilities" : {
+      "details" : "tbd"
+    },
+    "Book Suggestion" : "Effective Project Management: Traditional, Agile, Extreme  RACI Matrix: Section #I, Chapter #2",
+    "Content Autor" : "Duncan Haughey, PMP",
+    "Content Contributor" : " BALAJI VISWANATHAN",
+    "Content URL" : "http://www.projectsmart.co.uk/raci-matrix.php",
+    "Creating a RACI Matrix (step-by-step)" : [ null, "Identify all the tasks involved in delivering the project and list them on the left-hand side of the chart in completion order.", "Identify all the project roles and list them along the top of the chart.", "Complete the cells of the chart identifying who has responsibility, accountability and who will be consulted and informed for each task.", "Ensure every task has a role responsible and a role accountable for it.", "No tasks should have more than one role accountable. Resolve any conflicts where there is more than one for a particular task.", "Share, discuss and agree the RACI Matrix with your stakeholders before your project starts." ],
+    "Definition" : {
+      "Accountable" : "The person who is accountable for the correct and thorough completion of the task. This must be one person and is often the project executive or project sponsor. This is the role that responsible is accountable to and approves their work.",
+      "Consulted" : "The people who provide information for the project and with whom there is two-way communication. This is usually several people, often subject matter experts.",
+      "IMG_URL" : "http://project-management.com/wp-content/uploads/2012/05/raci-matrix-responsible-accountable.png",
+      "Informed" : "The people who are kept informed about progress and with whom there is one-way communication. These are people that are affected by the outcome of the tasks so need to be kept up-to-date.",
+      "Responsible" : "The person who does the work to achieve the task. They have responsibility for getting the work done or decision made. As a rule this is one person; examples might be a business analyst, application developer or technical architect.",
+      "The acronym RACI stands for:" : "Responsible: The person who does the work to achieve the task. They have responsibility for getting the work done or decision made. As a rule this is one person; examples might be a business analyst, application developer or technical architect. Accountable: The person who is accountable for the correct and thorough completion of the task. This must be one person and is often the project executive or project sponsor. This is the role that responsible is accountable to and approves their work. Consulted: The people who provide information for the project and with whom there is two-way communication. This is usually several people, often subject matter experts. Informed: The people who are kept informed about progress and with whom there is one-way communication. These are people that are affected by the outcome of the tasks so need to be kept up-to-date."
+    },
+    "Description" : "Delegation is an essential part of a project manager's role, so identifying roles and responsibilities early in a project is important. Applying the RACI model can help. As project manager it is important that you set the expectations of people involved in your project from the outset. Projects require many people's involvement, but how do you avoid a situation where people are struggling against one another to do a task. Equally difficult is dealing with a situation where nobody will take ownership and make a decision. How do people know their level of responsibility; when they should involve you as their project manager, or when they should exercise their own judgment? The RACI model is a straightforward tool used for identifying roles and responsibilities and avoiding confusion over those roles and responsibilities during a project.",
+    "How to make the RACI work better?" : [ null, "Make sure that every task has at least one person assigned for “R” and “A” roles. In some cases both the roles might be taken by the same person (if the task is simple and non-critical).", "Make sure that every task has only one person assigned as “A”. Though responsibilities can be shared, accountabilities have to be fixed to a single person.", "If there are too many people in the “C” category, figure out if all of them need to be in the loop. Consider moving some of them to the “I” category. Also keep the “I” category to a minimum to reduce the noise in communication." ],
+    "Introduction" : "In project management, it is very important for all the stakeholders to understand the responsibilities and accountabilities of each person. While smaller teams can have more informal rules to keep track of responsibilities, in bigger teams with cross-department and inter-organizational collaboration, it is very important to create a more formal process to track responsibilities. This helps reduce confusion and leads project to faster completion.",
+    "Referances" : [ null, {
+      "URL" : "http://en.wikipedia.org/wiki/Responsibility_assignment_matrix"
+    }, {
+      "URL" : "http://project-management.com/understanding-responsibility-assignment-matrix-raci-matrix/"
+    } ],
+    "Role distinction" : "There is a distinction between a role and individually identified people: a role is a descriptor of an associated set of tasks; may be performed by many people; and one person can perform many roles. For example, an organisation may have ten people who can perform the role of project manager, although traditionally each project only has one project manager at any one time; and a person who is able to perform the role of project manager may also be able to perform the role of business analyst and tester.",
+    "Sample Matrix" : {
+      "Table HTML" : "<table class=\"tab\"> <thead> <tr> <th>Step</th> <th class=\"tab5\">Project Initiation</th> <th class=\"tab5\">Project Executive</th> <th class=\"tab5\">Project Manager</th> <th class=\"tab5\">Business Analyst</th> <th class=\"tab5\">Technical Architect</th> <th class=\"tab5\">Application Developers</th> </tr> </thead> <tbody> <tr> <td class=\"tab5\" data-label=\"Step\">1</td> <td class=\"tab5\" data-label=\"Project Initiation\">Task 1</td> <td class=\"tab3\" data-label=\"Project Executive\">C</td> <td class=\"tab2\" data-label=\"Project Manager\">A/R</td> <td class=\"tab3\" data-label=\"Business Analyst\">C</td> <td class=\"tab4\" data-label=\"Technical Architect\">I</td> <td class=\"tab4\" data-label=\"Application Developers\">I</td> </tr> <tr> <td class=\"tab5\" data-label=\"Step\">2</td> <td class=\"tab5\" data-label=\"Project Initiation\">Task 2</td> <td class=\"tab2\" data-label=\"Project Executive\">A</td> <td class=\"tab4\" data-label=\"Project Manager\">I</td> <td class=\"tab1\" data-label=\"Business Analyst\">R</td> <td class=\"tab3\" data-label=\"Technical Architect\">C</td> <td class=\"tab4\" data-label=\"Application Developers\">I</td> </tr> <tr> <td class=\"tab5\" data-label=\"Step\">3</td> <td class=\"tab5\" data-label=\"Project Initiation\">Task 3</td> <td class=\"tab2\" data-label=\"Project Executive\">A</td> <td class=\"tab4\" data-label=\"Project Manager\">I</td> <td class=\"tab1\" data-label=\"Business Analyst\">R</td> <td class=\"tab3\" data-label=\"Technical Architect\">C</td> <td class=\"tab4\" data-label=\"Application Developers\">I</td> </tr> <tr> <td class=\"tab5\" data-label=\"Step\">4</td> <td class=\"tab5\" data-label=\"Project Initiation\">Task 4</td> <td class=\"tab3\" data-label=\"Project Executive\">C</td> <td class=\"tab2\" data-label=\"Project Manager\">A</td> <td class=\"tab4\" data-label=\"Business Analyst\">I</td> <td class=\"tab1\" data-label=\"Technical Architect\">R</td> <td class=\"tab4\" data-label=\"Application Developers\">I</td> </tr> </tbody> </table>"
+    },
+    "Summary" : "In summary, RACI matrix is a great project management tool that greatly improves the communication within the team and helps getting the tasks done faster. If used right it would reduce the amount of email noise (getting emails for tasks that you don’t need to be informed of) and helps the whole team to stay productive.",
+    "USE" : "A RACI matrix supports the model and is used to discuss, agree and communicate roles and responsibilities.",
+    "Variations" : {
+      "RACI-VS" : "with the 'V' standing for 'Verify' and the 'S' for 'Signatory'",
+      "RACIO" : "with the 'O' standing for 'Out of the Loop' or 'Omitted'",
+      "RASCI" : "with the 'S' standing for 'Support'",
+      "RSI" : "A variation of RACI used by the Project Management Institute (PMI) is RSI, responsible, sponsor and informed."
+    },
+    "Video_URL" : [ null, "https://www.youtube.com/watch?v=1U2gngDxFkc" ],
+    "Why is a RACI matrix useful?" : [ null, "It lets the organization know if some people are assigned with too many or too few responsibilities.", "It keeps everybody on the same page on who is accountable for a particular task.", "Keeps all the necessary people in the loop and reduces miscommunications.", "It helps you develop a simple communication system to keep those in the “I” category informed (through email or IM), while involving only those in the “C” categories for meetings and interactive communication. This saves everybody’s time." ]
+  },
+  "RISK REGISTER" : {
+    "Risk Identification" : {
+      "Impact" : "0-10",
+      "Probability" : "stat",
+      "Qualitative Rating" : "data",
+      "Risk" : "ID #",
+      "Risk Category" : "Cat_Def",
+      "Risk Owner" : " The person who the project manager assigns to watch for triggers, and manage the risk response if the risk occurs.",
+      "Risk Ranking" : "A priority list which is determined by the relative ranking of the risks (by their scores) within the project with the number one being the highest risk score.",
+      "Risk Response" : "The action which is to be taken if this risk occurs.",
+      "Risk Score" : "Determined by multiplying probability and impact (scale from 0 to 100).",
+      "Risks" : "The risk stated in a complete sentence which states the cause of the risk, the risk, and the effect that the risk causes to the project.",
+      "Trigger" : "Something which indicates that a risk is about to occur or has already occured."
+    }
+  },
+  "ROOT CAUSE ANALYSIS" : {
+    "01 Introduction" : "This section highlights the purpose and importance of the Root Cause Analysis (RCA). It provides a discussion of the approach taken to identify and document the root cause of a particular problem. The RCA also includes the follow-up actions necessary to properly address the root cause. It also highlights what root causes should/should not consist of.",
+    "02 Event Description" : "This section provides a description of the event that is being analyzed. It provides a clear and concise description of the problem that triggered this Root Cause Analysis. It should state the date, time, detailed description of the event/problem, who detected the problem, who it affected, and how it affected them. It is important that the descriptions are as detailed as possible since this problem is the source of the entire RCA.",
+    "03 Chronology of Events" : {
+      "Timeline" : "In this section of the Root Casue Analysis you are to provide a detailed chronology of the events leading up to, and following, the problem. This is an important piece of the RCA as the chronology of events may lead to clues in determining how or why the problem occurred. Be sure to include names, times and detailed descriptions of all activities."
+    },
+    "04 Investigative Team and Method" : "This section of the Root Cause Analysis should describe how the investigative team is assembled, who it consists of, and how it gathers the data to be used in the analysis. As with any process, it is important in the RCA that clear roles and methodologies be established in order to allow for the process to move in a controlled and deliberate manner. This is also an important part of the RCA because a majority of time spent in RCA is gathering data about the event/problem.",
+    "05 Findings and Root Cause" : "This part of the Root Cause Analysis should describe the findings of the investigation and explain the root cause(s) based on these findings. It is possible that a RCA results in findings that are not directly related to the root cause of the problem. These should also be captured as product/process improvement steps in an effort to improve the product/project. It is important to note that this section does not describe the corrective actions to be taken as a result of identifying root cause. Corrective action will be discussed separately in the next paragraph. All findings must be formally communicated with the project team in order to ensure any project changes can be made in accordance with the project’s change management process.",
+    "06 Corrective Action" : "As the purpose of the Root Cause Analysis is to determine the root cause of a problem, it should result in some corrective actions that may be taken to ensure the same problem is not repeated. Often, these corrective actions will result in changes to a project’s scope, schedule, or cost. It is imperative that all of the findings and corrective actions are detailed and formally communicated with the project team so changes can go through the change management process and be implemented in the project plan upon approval."
+  },
+  "Referances" : [ null, "http://en.wikipedia.org/wiki/Management_by_objectives", "http://www.projectmanagementdocs.com/project-planning-templates/project-management-plan.html", "http://www.projectmanagementdocs.com/project-documents/activity-list.html", "http://www.projectmanagementdocs.com/project-planning-templates/risk-register.html", "https://drive.google.com/previewtemplate?id=0AvjvNIF0-6S2dGVMdGJCYlFXMkRFaThMcVJUbkhkVmc&mode=public", "https://drive.google.com/previewtemplate?id=0AjB1eFqhMvf-dENKLUVtSTBUUEpzTlNTVHJEeTJXa0E&mode=public?id=0AjB1eFqhMvf-dENKLUVtSTBUUEpzTlNTVHJEeTJXa0E&mode=public", "https://drive.google.com/previewtemplate?id=0ArNF2a5ZQFU3dHlPY0ZUSnhLMEEyUGg2Y2FJbU5henc&mode=public", "https://drive.google.com/previewtemplate?id=0As3tAuweYU9QcHlVM3hrY2tocEkwQ3J4NE44aVBxZVE&mode=public", "http://www.projectmanagementdocs.com/project-initiation-templates/feasibility-study.html", "http://www.projectmanagementdocs.com/project-documents/assumption-log.html", "http://www.projectmanagementdocs.com/project-documents/activity-cost-estimates.html", "http://www.projectmanagementdocs.com/project-planning-templates/process-improvement-plan.html", "http://www.projectmanagementdocs.com/project-initiation-templates/business-case.html", "http://www.projectmanagementdocs.com/project-controlling-templates/root-cause-analysis.html", "http://www.projectmanagementdocs.com/project-closing-templates/lessons-learned.html", "http://www.projectmanagementdocs.com/project-controlling-templates/project-status-report.html", "http://www.projectmanagementdocs.com/project-closing-templates/post-project-review.html", "http://www.projectmanagementdocs.com/initiating-process-group/project-charter-long.html", "http://www.projectmanagementdocs.com/project-initiation-templates/project-statement-of-work.html", "http://www.projectmanagementdocs.com/project-initiation-templates/stakeholder-management-strategy.html", "http://njsbdc.com/blog/wp-content/uploads/2010/04/HOW-TO-WRITE-A-BUSINESS-PLAN-FOR-PROSPECTIVE-INVESTORS.pdf", "http://sbinfocanada.about.com/cs/businessplans/a/bizplanwhy.htm" ],
+  "STAKEHOLDER MANAGEMENT STRATEGY" : {
+    "1 Introduction" : "This section of the Stakeholder Management Strategy should introduce and discuss the goals and objectives of the Stakeholder Management Strategy for the project. Effectively managing stakeholders is a key component of successful project management and should never be ignored. Proper stakeholder management can be used to gain support for a project and anticipate resistance, conflict, or competing objectives among the project’s stakeholders.",
+    "2 Identify Stakeholders" : "This section of the Stakeholder Management Strategy should discuss the methodology the project team will use to identify stakeholders and how stakeholders are defined. It is imperative that all stakeholders are identified regardless of how major or minor they are. This is because they will be categorized after they’re identified. If stakeholders are omitted there is a likelihood that they may become evident at some point during the project’s lifecycle and introduce delays or other obstacles to the project’s success. Great care and effort should be dedicated to this step of the Stakeholder Management Strategy.",
+    "3 Key Stakeholders" : "This part of the Stakeholder Management Strategy identifies the sub-set of stakeholders who have been identified as key stakeholders and the reasoning for determining that they are key stakeholders. Key stakeholders are often those who potentially have the most influence over a project or those who may be most affected by the project. They may also be stakeholders who are resistant to the change represented by the project. These key stakeholders may require more communication and management throughout the project’s lifecycle and it is important to identify them to seek their feedback on their desired level of participation and communication.",
+    "4 Stakeholder Analysis" : "Here, the Stakeholder Management Strategy describes how the project team will analyze its list of identified stakeholders. This discussion should include how stakeholders will be categorized or grouped as well as the level of impact they may have based on their power, influence, and involvement in the project. There are several tools and techniques that can be used to help quantify stakeholders. A description of these tools and techniques should also be included in this section.",
+    "The following criteria will be used to determine if an individual will be included as a stakeholder" : [ null, "Will the person or their organization be directly or indirectly affected by this project?", "Does the person or their organization hold a position from which they can influence the project?", "Does the person have an impact on the project’s resources (material, personnel, funding)?", "Does the person or their organization have any special skills or capabilities the project will require?", "Does the person potentially benefit from the project or are they in a position to resist this change?" ]
+  },
+  "STATEMENT OF WORK" : {
+    "1 Executive Summary" : "This project Statement of Work template is provided free of charge. We recommend you download the MS Word version (by clicking on the icon above) and using it as a starting point to developing your own Statement of Work. Be sure to look at the many other templates available for free on our website.",
+    "2 Business Need" : "This section of the Statement of Work (SOW) describes the business need of the organization which resulted in the creation of the project. This business need may be based on new technology developments, the need to reduce costs, market demand, or the creation of new legal or regulatory requirements. All projects must align with a business need and organizational strategy.",
+    "3 Product Scope Description" : "This part of the Statement of Work describes the scope of the product which will be created by the project. Some of the elements to be included in this section are key characteristics of the product, features and functions of the product, and the relationship between the product and the business need it addresses. It is important to note that the product scope differs greatly from project scope. While project scope deals with all of the work involved to complete the project, product scope pertains only to the product or service which is the project’s deliverable.",
+    "4 Strategic Plan" : "This section of the Statement of Work describes the organizational strategic plan and how it relates to the project and its deliverables. In an effective organization, all projects must have executive support and be aligned with organizational strategies, goals, and objectives. Approved projects, and their resulting products or services must support these strategies in order to contribute to the organization accomplishing its goals and objectives.",
+    "5 Approvals" : "The project Statement of Work (SOW) is a document with which approval is granted or denied to move forward with the creation of a project charter. Therefore, the document should receive approval or disapproval from its executive review board.",
+    "summary" : "This section of the Statement of Work (SOW) should provide a summary of the business need the organization is addressing with the project, the scope and characteristics of the product or project deliverable, and how the project and product align with the corporate strategy, goals, and objectives. The executive summary should consist of high-level language which provides a framework of the detail included in the subsequent SOW sections. This section may be completed last as the purpose is to summarize the details included in the other sections of the SOW."
+  },
+  "Stakeholder Analysis" : {
+    "Expectations of  the Stakeholder" : "tdb",
+    "Perceived attitudes   and" : {
+      "or risks" : {
+        "Risks" : [ null, "tbd" ]
+      }
+    },
+    "Potential  Impact  on   Project" : [ 0, 1, 2 ],
+    "Responsibility" : [ null, 2 ],
+    "Stake in the Project" : "tbd",
+    "Stakeholder  Management  Strategy" : "tbd",
+    "Stakeholders" : [ 0, {
+      "Stake in the Project" : "tbd"
+    }, 2, 3, 4 ]
+  },
+  "TRANSITION OUT PLAN" : {
+    "1 Executive Summary" : "The purpose of the executive summary is to describe the transition plan at a high level and what the plan should accomplish. This section of the transition plan should include an overview and history of the contract, who the contract is currently with, who it is transitioning to, and the timeframe/period of transition.",
+    "10 Handover and Acceptance" : "This section of the contract transition out plan should discuss how the customer will formally accept the handover at the end of the transition. This may include whether or not there’s a checklist for acceptance or formal sign-off. There are typically several people who need to accept the handover (i.e. security office for all badges, IT Manager for system accounts, Contracts Manager, etc.).",
+    "2 Transition Approach" : "This section of the contract transition out plan discusses the overall approach to the transition. Some items which must be considered are: will you scale down your staff during the transition or will you bring in additional staff to handle and manage the transition? How long is the transition? What are your assumptions (i.e. the staff of the new contractor will be available onsite to participate in the transition and receive knowledge transfer, etc.)?",
+    "3 Transition Team Organization" : "This section of the transition out plan should provide an organizational chart showing all resources and their roles in the transition (i.e. Transition Project Manager, etc.). Key team members should be from both the incumbent and new contractors as well as the customer.",
+    "4 Workforce Transition" : "It is not uncommon for the workforce to transition from one contractor to another as part of the contract transition. The workforce may stay in place with the client or customer and simply “re-badge” from the incumbent to the new contractor. It is also common for the incumbent workforce to leave the site once the transition is completed and approved. In order to set expectations and allow for adequate transition planning, the workforce must be determined and communicated ahead of time.",
+    "5 Work Execution During Transition" : "Discuss the level of work which is to be performed during the transition period and the impact of the transition on that work (i.e. system maintenance, software development, support services, etc.).",
+    "6 Subcontracts" : "Here the project transition out plan documents all the existing contracts and if/how they will be transitioned. It should contain this information in a table format (subcontract agreements, software/hardware maintenance contracts, etc.).",
+    "7 Property Transition" : {
+      "1 Government Furnished Equipment (GFE)" : "This section of the transition plan describes the transition of any equipment for a scenario where the customer is a government entity and provides the contractor with government property. This property may include hardware such as laptops/PCs, software bundles or add-ons, portable electronic devices (PEDs), and security badges. Typically, GFE will be turned back over to the government customer during a transition and may or may not be re-issued to the new contractor.",
+      "2 Incumbent Owned Equipment" : "Equipment owned by the incumbent contractor will usually remain with them when they transition off of the contract. However, there may be instances where incumbent owned equipment supports customer applications and services. This section should state that incumbent owned equipment will remain with the incumbent - and identify options where this equipment may be available for purchase by the new contractor or customer for their use (i.e. application server and application for helpdesk, etc.).",
+      "3 Intellectual Property" : "This section of the contract transition out plan should describe how intellectual property will be handled as part of the transfer process. Intellectual property may include various documentation, supplier and subcontractor information, service agreements, or original designs or plans. Intellectual property generates many legal considerations and may include the completion of non-disclosure agreements (NDAs) between the incumbent and the customer. Intellectual property may be transferred, sold, or retained by the incumbent depending on the contractual agreements in place.",
+      "4 User Accounts and Passwords" : "This section should discuss how any accounts will be transitioned, who they will be transitioned to (i.e. system administrator accounts). Provide a table of all user accounts to be transitioned/disabled."
+    },
+    "8 Knowledge Transfer" : "This section of the project transition out plan should discuss how knowledge will be transferred from the incumbent staff to the staff of the new contractor (documentation/instruction manuals including as-built documents, formal training classes, one-on-one training/knowledge transfer, etc.). This is an important consideration as the transfer of knowledge is what provides continuity for the contract.",
+    "9 Schedule" : "This part of the transition plan should contain a GANTT chart schedule of the transition. The complexity of the transition will dictate the level of detail required in the schedule. However, all major milestones as well as transition start and completion dates should be included at a minimum."
+  },
+  "TimeLine" : {
+    "Deleverables" : [ null, 1 ]
+  },
+  "WORK BREAKDOWN STRUTURE" : {
+    "01 Introduction" : "The Work Breakdown Structure (WBS) is a view into the project which shows what work the project encompasses. It is a tool which helps to easily communicate the work and processes involved to execute the project. The Project Manager and project team use the WBS to develop the project schedule, resource requirements and costs. There are many ways you can present the WBS for your project; this template provides many of the most popular layouts from which you can choose. Depending on where in the Project Plan you're putting the WBS a different layout may be more suitable for you. For instance many Project Managers include a high level WBS within the project plan, then a detailed version as an appendix to the plan. You may find that you prefer one layout for a high level WBS and a different one for a detailed WBS.",
+    "02 Outline View" : "The outline view presents an easy to view and understand layout for the WBS. It is also a good layout to use when developing the WBS because you can easily make changes, especially since the Microsoft Word auto numbering feature updates the WBS Code automatically.",
+    "03 Hierarchical Structure" : "The hierarchal structure is similar to the outline view but without indentation. Although this format is more difficult to read, it may be useful where you have many levels and indenting each level would make the table to large to fit into a document.",
+    "04 Tabular View" : "The Tabular View is a nicely organized table view of the WBS. It is a good option for organizations which prefer table formats.",
+    "05 Tree Structure View" : "The Tree Structure View is the most popular format for the Work Breakdown Structure. It presents an easy to understand view into the WBS; however, it is also tricky to create without an application specifically designed for creating this organizational chart structure. The Tree Structure below was created using only Microsoft Word and the SmartArt graphics option under the insert menu.",
+    "06 WBS Dictionary" : "The WBS Dictionary contains all the details of the Work Breakdown Structure which are necessary to successfully complete the project. Most importantly it contains a definition of each Work Package which can be thought of as a mini scope statement. Resources on the project will look at the WBS dictionary to determine the scope of the Work Package they've been assigned, so it's important to be clear when writing the definition. Most WBS dictionaries contain more information than we show in our sample. These things usually include Level of Effort, Cost Control Numbers, Resource Assignments, Responsibility Assignments - just to name a few.",
+    "07 Glossary of Terms" : "It's important that you provide a glossary of terms as some of the terms are not understood by persons without a project management background. For instance what the PMI Practice Standard for Work Breakdown Structures refers to as the WBS Code is commonly referred to as the WBS number."
+  },
+  "WebUI" : {
+    "Communications" : {
+      "1" : 1,
+      "Received from Customers" : {
+        "List" : "..."
+      },
+      "Send To" : "[To,BCC,CC, From,Subject, Body, Priority]",
+      "SubContractors" : [ null, 1 ],
+      "Vendors" : {
+        "List" : "..."
+      }
+    },
+    "Configuration" : {
+      "Job Scheuling" : [ null, 1 ],
+      "Profile" : [ null, 1 ],
+      "Settings" : {
+        "Properties" : {
+          "Attribute" : 1
+        },
+        "css" : "..."
+      }
+    },
+    "Cost" : {
+      "Cost Categories" : [ null, 1 ],
+      "Expenses" : [ null, 1 ],
+      "Hour Types" : [ null, 1 ],
+      "Time Sheets" : [ null, 1 ]
+    },
+    "Personal Settings" : {
+      "Password" : "#hash",
+      "Preferances" : "obj"
+    },
+    "Planning" : {
+      "Company View" : [ null, 1 ],
+      "Project List" : [ null, 1 ],
+      "Project Planing" : [ null, 1 ],
+      "Query-Based Resource Planing" : [ null, 1 ],
+      "Resource Load" : [ null, 1 ]
+    },
+    "Reports" : {
+      "Estimated - Planned Hours Per Project" : [ null, 1 ],
+      "Estimated - Planned Hours Per Task" : [ null, 1 ],
+      "Hours Worked Per Month" : {
+        "sql" : "..."
+      },
+      "Hours Worked Per Resource" : {
+        "sql" : "..."
+      },
+      "Materials Needed At Date" : {
+        "sql" : "..."
+      },
+      "Project Costs" : {
+        "sql" : "..."
+      },
+      "Project Planing" : [ null, 1 ],
+      "Project Status" : {
+        "sql" : "..."
+      },
+      "Task Scheduling Status" : {
+        "sql" : "..."
+      },
+      "Work & Progress Per Project" : {
+        "sql" : "..."
+      },
+      "Work & Progress Per Task" : {
+        "sql" : "..."
+      }
+    },
+    "Resources" : {
+      "Calendar" : {
+        "Exception Days" : "[ Feb 12, July 4, October 30]"
+      },
+      "Criteria" : [ null, 1 ],
+      "Labels" : [ null, 1 ],
+      "Machines" : [ null, 1 ],
+      "Materials" : [ null, 1 ],
+      "Progress Types" : [ null, 1 ],
+      "Virtual Worker" : [ null, 1 ],
+      "Worker" : [ null, 1 ]
+    }
+  },
+  "Work Breakdown Structure" : {
+    "wbs" : "A Work Breakdown Structure, or WBS, dissects the phases, deliverables and work packages into a hierarchy. The WBS is beneficial during the planning process as it assists with determining the budget and time you will require to complete the project successfully.  Start with a whiteboard, poster board or easel pad, markers and sticky notes. Distribute Post-Its and markers to the team and ask them to write one deliverable per note, sticking them to the board in no particular order as they finish.  When you cannot think of any more deliverables, stack or discard similar sticky notes and group others in the same category. Once you have grouped all of the deliverables, create category names and write them on sticky notes placed at the top of each grouping.  Check for any deliverables you may have forgotten and add them as needed. Clarify items with the team and create new notes that are more concise. Remember to include Project Management as a category."
+  },
+  "html" : "data"
+}
